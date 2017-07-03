@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  height: 8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#logo {
+  color: #0070b8;
+}
+
+.nav-item {
+  list-style: none;
+  color: white;
+  float: right;
+  max-height: 1em;
+  padding: 1em 1em 0 1em;
+}
+
+.main {
+  margin-top: 75px;
+}
