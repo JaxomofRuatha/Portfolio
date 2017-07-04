@@ -5,32 +5,34 @@ html, body {
   height: 100%;
 }
 
-#logo {
-  color: #0070b8;
+a {
   text-decoration: none;
+  padding: 16px;
+  color: inherit;
 }
 
-#navbar {
+#logo {
+  color: #0070b8;
+  font-size: 30px;
+}
+
+nav {
   position: fixed;
-  background-color: black;
+  background-color: transparent;
   width: 100%;
   top: 0;
   height: 8%;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
+  overflow: hidden;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 .nav-item {
+  float: right;
   color: white;
-  padding: 1em 1em 0 1em;
-  text-decoration: none;
-}
-
-.main {
-  margin-top: 8%;
 }
