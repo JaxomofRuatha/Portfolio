@@ -1,10 +1,16 @@
-* {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
 }
 
-header {
+#logo {
+  color: #0070b8;
+  text-decoration: none;
+}
+
+#navbar {
   position: fixed;
   background-color: black;
   width: 100%;
@@ -15,18 +21,16 @@ header {
   align-items: flex-end;
 }
 
-#logo {
-  color: #0070b8;
+ul {
+  list-style: none;
 }
 
 .nav-item {
-  list-style: none;
   color: white;
-  float: right;
-  max-height: 1em;
   padding: 1em 1em 0 1em;
+  text-decoration: none;
 }
 
 .main {
-  margin-top: 75px;
+  margin-top: 8%;
 }
