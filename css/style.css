@@ -3,17 +3,8 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-}
-
-a {
-  text-decoration: none;
-  padding: 16px;
-  color: inherit;
-}
-
-#logo {
-  color: #0070b8;
-  font-size: 30px;
+  background-color: black;
+  overflow-x: hidden;
 }
 
 nav {
@@ -32,7 +23,24 @@ ul {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  padding: 16px;
+  color: inherit;
+}
+
 .nav-item {
   float: right;
   color: white;
+}
+
+#logo {
+  color: #0070b8;
+  font-size: 30px;
+}
+
+#welcome-background {
+  height: 100%;
+  opacity: 0.6;
+  position: absolute;
 }
