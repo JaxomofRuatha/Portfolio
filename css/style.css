@@ -129,6 +129,10 @@ h2 {
   padding: 20px;
 }
 
+h3, h4 {
+  text-align: center;
+}
+
 #education-summary {
   flex: 2 0 0;
   padding: 20px;
@@ -136,12 +140,23 @@ h2 {
 
 #project-links {
   display: flex;
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .project-thumbnail {
   max-width: 100%;
-  height: auto;
+  max-height: 25vh;
+}
+
+.project-label {
+  font-size: 20px;
+  color: #d1bcff;
+  text-align: center;
+  margin-top: 0;
 }
