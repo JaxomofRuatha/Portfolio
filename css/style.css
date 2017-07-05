@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   background-color: black;
   overflow-x: hidden;
+  transition: 0.35s all;
 }
 
 nav {
@@ -39,8 +40,34 @@ a {
   font-size: 30px;
 }
 
+#welcome-title {
+  background-color: black;
+  opacity: 0.5;
+  text-align: center;
+  position: absolute;
+  width: 30%;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  color: aqua;
+  opacity: 1;
+}
+
+h2 {
+  color: white;
+  opacity: 1;
+}
+
 #welcome-background {
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.4;
   position: absolute;
+}
+
+.scrolledNav {
+  background-color: black;
+  opacity: 0.4;
 }
