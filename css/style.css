@@ -2,9 +2,10 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: black;
   overflow-x: hidden;
   transition: 0.35s all;
+  font-family: Verdana, Arial, sans-serif;
+  background-color: rgb(29, 0, 92)
 }
 
 nav {
@@ -14,7 +15,7 @@ nav {
   top: 0;
   height: 8%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   overflow: hidden;
 }
@@ -28,9 +29,13 @@ a {
   padding: 16px;
   color: inherit;
 }
-
+header {
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, rgb(29, 0, 92));
+}
 #nav-links {
   display: flex;
+  flex-flow: wrap;
 }
 
 .nav-item {
@@ -41,7 +46,7 @@ a {
 
 #logo {
   color: #0070b8;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #welcome-title {
@@ -67,18 +72,22 @@ h2 {
   font-size: 30px;
 }
 
-#welcome-section {
-  height: 100%;
-}
-
 #welcome-background {
-  height: 100%;
+  height: 100vh;
   opacity: 0.4;
   position: relative;
 }
 
 .scrolledNav {
   background-color: black;
+}
+
+#skill-icons {
+  width: 90%;
+  background-color: black;
+  opacity: 0.7;
+  color: aqua;
+  text-align: center;
 }
 
 .tech-icon {
