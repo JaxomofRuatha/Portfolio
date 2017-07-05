@@ -1,5 +1,5 @@
 "use strict";
-var pixScrolled = window.innerHeight * 0.4;
+var pixScrolled = window.innerHeight * 0.30;
 var activeBar = false;
 window.onscroll = function () {
   if (document.body.scrollTop > pixScrolled || document.documentElement.scrollTop > pixScrolled) {
