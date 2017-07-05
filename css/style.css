@@ -2,7 +2,6 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
   background-color: black;
   overflow-x: hidden;
   transition: 0.35s all;
@@ -15,7 +14,7 @@ nav {
   top: 0;
   height: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
@@ -57,6 +56,7 @@ a {
 }
 
 h1 {
+  font-size: 4em;
   color: aqua;
   opacity: 1;
 }
@@ -64,22 +64,21 @@ h1 {
 h2 {
   color: white;
   opacity: 1;
+  font-size: 30px;
+}
+
+#welcome-section {
+  height: 100%;
 }
 
 #welcome-background {
   height: 100%;
   opacity: 0.4;
-  position: absolute;
+  position: relative;
 }
 
 .scrolledNav {
   background-color: black;
-  opacity: 0.4;
-}
-
-.content-section {
-  display: block;
-  position: relative;
 }
 
 .tech-icon {

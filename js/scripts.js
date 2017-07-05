@@ -1,12 +1,7 @@
 "use strict";
 
-$(function() {
-   $(window).scroll(function () {
-      if ($(this).scrollTop() > 50) {
-         $(‘nav’).addClass(‘scrolledNav’)
-      }
-      if ($(this).scrollTop() < 50) {
-         $(‘nav’).removeClass(‘scrolledNav’)
-      }
-   });
-});
+window.onscroll = function () {
+  if (document.body.scrollTop > 360 || document.documentElement.scrollTop > 360) {
+    document.getElementById("navbar").style.backgroundColor = "black";
+  }
+}
