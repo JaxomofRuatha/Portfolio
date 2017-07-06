@@ -4,11 +4,12 @@
   <title>Portfolio - John Chritton</title>
   <link href = "./css/style.css" type = "text/css" rel="stylesheet">
   <script type="text/javascript" src="./js/scripts.js"></script>
+  <link rel="icon" href="./media/logoicon.png">
 </head>
 <body>
   <header>
   <nav id = "navbar">
-    <a id = "logo" href = "#"><img src = "./media/cflogo.svg"></a>
+    <a id = "logo" href = "#"><img src = "./media/logodragonlong.svg"></a>
     <ul id = "nav-links">
       <li class = "nav-item"><a href = "#welcome-section">Home</a></li>
       <li class = "nav-item"><a href = "#projects">Projects</a></li>
@@ -24,7 +25,7 @@
         <a href = "https://github.com/JaxomofRuatha"><img class = "profile-icon" src = "./media/githubicon.svg"></a>
         <a href = "https://www.linkedin.com/in/john-w-chritton/"><img class = "profile-icon" src = "./media/linkedinicon.svg"></a>
         <a href = "https://twitter.com/jaxwhitedragon"><img class = "profile-icon" src = "./media/twittericon.svg"></a>
-        <a href = "https://www.freecodecamp.com/jaxomofruatha"><img class = "profile-icon" src = "./media/fccicon.svg"></a>
+        <a id = "profile-link" href = "https://www.freecodecamp.com/jaxomofruatha"><img class = "profile-icon" src = "./media/fccicon.svg"></a>
       </div>
     </div>
   </section>
@@ -84,32 +85,38 @@
     <div id = "project-links">
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">Speller</p>
+        <p class = "project-tile">Speller</p>
       </div>
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">Tribute</p>
+        <p class = "project-tile">Tribute</p>
       </div>
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">Landing</p>  
+        <p class = "project-tile">Landing</p>  
       </div>
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">Technical</p>  
+        <p class = "project-tile">Technical</p>  
       </div>
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">WhackAMole</p>  
+        <p class = "project-tile">WhackAMole</p>  
       </div>
       <div>
         <a href = "#"><img class = "project-thumbnail" src = "./media/spellerthumb.jpg"></a>
-        <p class = "project-label">Quote Generator</p>  
+        <p class = "project-tile">Quote Generator</p>  
       </div>
     </div>
   </section>
   <section class = "content-section" id = "contact">
-
+    <div id = "email-form">
+      <form id = "email-form" action = "mailto:jchritton33@gmail.com?subject=Email%20from%your%portfolio" method="POST" enctype="text/plain">
+        <input class = "form-input" type = "text" placeholder = "E-mail">
+        <input class = "form-input" type = "text" placeholder = "Name">
+        <textarea class = "form-input" placeholder = "Message (plain text, please do not include sensitive information)"></textarea>
+      </form>
+    </div>
   </section>
   </div>
 </body>
