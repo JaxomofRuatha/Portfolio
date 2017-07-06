@@ -34,31 +34,59 @@
   <div "main-content">
   <section class = "content-section" id = "projects">
     <div id = "skill-icons">
-      <h3>Skills and Technologies</h3>
-      <div id = "icon-row">
-        <img class = "tech-icon" src = "./media/htmlicon.svg">
-        <img class = "tech-icon" src = "./media/css3icon.svg">
-        <img class = "tech-icon" src = "./media/jsicon.svg">
-        <img class = "tech-icon" src = "./media/jqueryicon.svg">
-        <img class = "tech-icon" src = "./media/bootstrapicon.svg">
-        <img class = "tech-icon" src = "./media/cicon.svg">
-        <img class = "tech-icon" src = "./media/javaicon.svg">
-        <img class = "tech-icon" src = "./media/pythonicon.svg">
-        <img class = "tech-icon" src = "./media/nodejsicon.svg">
-        <img class = "tech-icon" src = "./media/mongodbicon.svg">
-        <img class = "tech-icon" src = "./media/mysqlicon.svg">
-        <img class = "tech-icon" src = "./media/giticon.svg">
-        <img class = "tech-icon" src = "./media/linuxicon.svg">
+      <h3 id = "skill-title">Skills and Technologies</h3>
+      <div id = "skill-flex">
+        <div class = "tech-section" id = "web-tech">
+          <div>
+            <img class = "tech-icon" src = "./media/htmlicon.svg">
+            <img class = "tech-icon" src = "./media/css3icon.svg">
+            <img class = "tech-icon" src = "./media/jqueryicon.svg">
+            <img class = "tech-icon" src = "./media/bootstrapicon.svg">
+          </div>
+          <div>
+            <h4 class = "tech-label">Web Development</h4>
+          </div>
+        </div>
+        <div class = "tech-section" id = "lang-tech">
+          <div>
+            <img class = "tech-icon" src = "./media/cicon.svg">
+            <img class = "tech-icon" src = "./media/jsicon.svg">
+            <img class = "tech-icon" src = "./media/javaicon.svg">
+            <img class = "tech-icon" src = "./media/pythonicon.svg">
+          </div>
+          <div>
+            <h4 class = "tech-label">Primary Languages</h4>
+          </div>
+        </div>
+        <div class = "tech-section" id = "db-tech">
+          <div>
+            <img class = "tech-icon" src = "./media/nodejsicon.svg">
+            <img class = "tech-icon" src = "./media/mongodbicon.svg">
+            <img class = "tech-icon" src = "./media/mysqlicon.svg">
+          </div>
+          <div>
+            <h4 class = "tech-label">Database and Server</h4>
+          </div>
+        </div>
+        <div class = "tech-section" id = "tools-tech">
+          <div>
+            <img class = "tech-icon" src = "./media/giticon.svg">
+            <img class = "tech-icon" src = "./media/linuxicon.svg">
+          </div>
+          <div>
+            <h4 class = "tech-label">Other Tools</h4>
+          </div>
+        </div>
       </div>
     </div>
     <div id = "profile">
       <div id = "education-profile">
         <h3>Education</h3>
         <h4>University of Wisconsin - Green Bay</h4>
-        <p>
+        <p class = "text-content">
           B.A. Psychology, Social Change and Development, History
         </p>
-        <p>
+        <p class = "text-content">
           Member of first place team for competition presenting analysis of designed
           experiment test group, member of Psi Chi Honors Society, Section editor for
           school newspaper “The Fourth Estate,” Staff member for Sheepshead Review writing
@@ -66,16 +94,16 @@
           provider of technical support for campus library.
         </p>
         <h4>Completed Courses</h4>
-        <p>
+        <p class = "text-content">
           CS50: Introduction to Computer Science - Harvard University
         </p>
-        <p>
+        <p class = "text-content">
           Full online version of Harvard course through edx.org, working through projects
           in C, Python, and JavaScript.
         </p>
       </div>
       <div id = "summary-profile"> 
-        <p>
+        <p class = "text-content">
           
         </p>
       </div>
@@ -108,8 +136,9 @@
     </div>
   </section>
   <section class = "content-section" id = "contact">
-    <div>
-      <form id = "email-form" action = "mailto:jchritton33@gmail.com?subject=Email%20from%your%portfolio" method="POST" enctype="text/plain">
+    <div id = "email-form">
+      <h2>It would be my pleasure to discuss making your next project incredible!</h2>
+      <form action = "mailto:jchritton33@gmail.com?subject=Email%20from%your%portfolio" method="POST" enctype="text/plain">
         <input class = "form-input" type = "text" placeholder = "E-mail">
         <input class = "form-input" type = "text" placeholder = "Name">
         <textarea class = "form-input" placeholder = "Message (plain text, please do not include sensitive information)"></textarea>
