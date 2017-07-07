@@ -3,9 +3,8 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  transition: 0.8s all;
   font-family: 'Lato', sans-serif;
-  background-color: rgb(29, 0, 92)
+  background-color: #1F1A44;
 }
 
 /* Navigation bar */
@@ -15,6 +14,7 @@ nav {
   background-color: transparent;
   width: 100%;
   top: 0;
+  height: 9vh;
   padding-top: 10px;
   padding-bottom: 10px;
   display: flex;
@@ -22,6 +22,7 @@ nav {
   align-items: center;
   overflow: hidden;
   z-index: 3;
+  transition: background-color 0.4s;
 }
 
 .scrolledNav {
@@ -45,7 +46,11 @@ a {
 #nav-links {
   display: flex;
   flex-flow: wrap;
-  font-size: 1.5vh;
+  font-size: 18px;
+}
+
+a:target {
+  padding-top: 250px;
 }
 
 .nav-item {
@@ -62,7 +67,7 @@ a {
 
 header {
   height: 100vh;
-  background: linear-gradient(to bottom, #000000, rgb(29, 0, 92));
+  background: linear-gradient(to bottom, #000000, #1F1A44);
 }
 
 #welcome-section {
@@ -146,14 +151,18 @@ h2 {
   background-color: #1E1E1D;
   border-radius: 25px;
   display: flex;
+  align-items: flex-start;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
 }
 
+#profile>div {
+  padding: 10px 20px 10px 20px;
+}
+
 #education-profile {
   flex: 1 0 30%;
-  padding: 20px;
 }
 
 h3 {
@@ -189,8 +198,8 @@ h3, h4 {
 }
 
 .project-thumbnail {
-  max-width: 100%;
-  max-height: 25vh;
+  max-width: 360px;
+  height: 300px;
 }
 
 .project-tile {
@@ -239,6 +248,10 @@ button {
   border-style: none;
   background-color: #FFED65;
   padding: 2px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 #flex-end {
