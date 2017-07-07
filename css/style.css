@@ -49,10 +49,6 @@ a {
   font-size: 18px;
 }
 
-a:target {
-  padding-top: 250px;
-}
-
 .nav-item {
   float: right;
   clear: both;
@@ -100,6 +96,8 @@ h2 {
   display: flex;
   justify-content: center;
   background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8), transparent);
+  min-height: 55px;
+  max-height: 55px;
 }
 
 #social-icons > a {
@@ -109,12 +107,18 @@ h2 {
 .profile-icon {
   height: 30px;
   padding: 10px;
+  transition: height 0.3s;
+}
+
+.profile-icon:hover {
+  height: 33px;
 }
 
 #welcome-background {
   height: 100vh;
   opacity: 0.4;
   position: relative;
+  width: 100%;
 }
 
 /* Skills and projects section */
@@ -222,6 +226,10 @@ h3, h4 {
   background-color: #1E1E1D;
 }
 
+#email-form > h2 {
+  width: 40%;
+}
+
 .form-input {
   background-color: #5C4DCC;
   border-radius: 5px;
@@ -241,7 +249,7 @@ form {
 }
 
 button {
-  width: 50%;
+  width: 60%;
   align-self: center;
   margin: 5px;
   border-radius: 5px;
