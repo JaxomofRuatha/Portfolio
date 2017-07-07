@@ -41,8 +41,13 @@ a {
 }
 
 #logo {
-  width: 20vw;
+  padding: 0;
+}
+
+#logo > img {
+  max-height: 90%;
   min-height: 90%;
+  height: 9vh;
 }
 
 #nav-links {
@@ -120,7 +125,8 @@ h2 {
   height: 100vh;
   opacity: 0.4;
   position: relative;
-  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 /* Skills and projects section */
@@ -205,7 +211,9 @@ h3, h4 {
 
 .project-thumbnail {
   max-width: 360px;
+  min-width: 360px;
   height: 300px;
+  border-style: none;
 }
 
 .project-tile {
@@ -270,4 +278,14 @@ button:hover {
   background-color: black;
   color: #FDFFF7;
   height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flex-end > img {
+  height: 4vh;
+  max-height: 90%;
+  padding: 5px;
+  margin: 0px 5px 0px 5px;
 }
