@@ -7,6 +7,22 @@ html, body {
   background-color: #1F1A44;
 }
 
+@media only screen and (max-width: 400px) {
+  #profile {
+    flex-flow: column wrap;
+  }
+
+  #project-links {
+    flex-flow: column wrap;
+    max-width: 80%;
+    min-width: 80%;
+  }
+
+  #email-form {
+    flex-flow: column wrap;
+  }
+}
+
 /* Navigation bar */
 
 nav {
