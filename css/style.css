@@ -7,22 +7,6 @@ html, body {
   background-color: #1F1A44;
 }
 
-@media only screen and (max-width: 400px) {
-  #profile {
-    flex-flow: column wrap;
-  }
-
-  #project-links {
-    flex-flow: column wrap;
-    max-width: 80%;
-    min-width: 80%;
-  }
-
-  #email-form {
-    flex-flow: column wrap;
-  }
-}
-
 /* Navigation bar */
 
 nav {
@@ -272,6 +256,7 @@ form {
 
 ::placeholder {
   color: #1E1E1D;
+  font-size: 0.8em;
 }
 
 button {
@@ -304,4 +289,52 @@ button:hover {
   max-height: 90%;
   padding: 5px;
   margin: 0px 5px 0px 5px;
+}
+
+/* Media query adjustments */
+
+@media only screen and (max-width: 400px) {
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  #profile {
+    flex-flow: column wrap;
+  }
+
+  #project-links {
+    flex-flow: column wrap;
+  }
+
+  .project-thumbnail {
+    max-width: 90%;
+    min-width: 90%;
+    height: 230px;
+  }
+
+  #email-form {
+    flex-flow: column wrap;
+  }
+
+  #email-form > h2 {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .tech-section {
+    min-width: 150px;
+  }
+
+  #skill-flex {
+    flex-flow: column wrap;
+  }
 }
