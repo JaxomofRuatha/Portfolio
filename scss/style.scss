@@ -1,16 +1,89 @@
-html, body {
+$white: #FDFFF7;
+$aqua: #59FFA0;
+
+body {
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   background-color: #1F1A44;
 }
 
-nav {
+.navbar {
   position: fixed;
   background-color: transparent;
   width: 100%;
+  height: 9vh;
   top: 0;
-  padding: 10px;
+  padding: 20px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
+  transition: background-color 0.4s;
+  .navbar__logo {
+    width: 17rem;
+    height: auto;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    color: $white;
+  }
+}
+
+.nav-links__item:hover {
+  color: #59FFA0;
+}
+
+.scrolledNav {
+  background-color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 16px;
+  color: inherit;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  top: -20px; 
+  background: linear-gradient(to bottom, #000000, #1E1A44);
+  z-index: 1;
+  &:before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: url(../images/welcome-fire-background.jpg) no-repeat center center;
+    opacity: 0.4;
+    z-index: -1
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8), transparent);
+  height: 55px;
+}
+
+.social-icons__link {
+  max-width: 30px;
+  padding: 10px;
+}
+
+.social-icons__link:hover {
+  width: 33px;
+}
+
+.tech-section__icon {
+  max-width: 55px;
 }
