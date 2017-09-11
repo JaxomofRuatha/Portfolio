@@ -3,6 +3,8 @@ body {
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   background-color: #1F1A44;
+  text-align: center;
+  color: #FDFFF7;
 }
 
 .navbar {
@@ -49,6 +51,14 @@ a {
   color: inherit;
 }
 
+h3 {
+  color: #59FFA0;
+}
+
+h4 {
+  color: #FFED65;
+}
+
 header {
   position: relative;
   height: 100vh;
@@ -79,7 +89,7 @@ header:before {
 }
 
 .welcome-banner h1 {
-  font-size: 4em;
+  font-size: 4.5em;
   font-weight: bold;
   letter-spacing: 0.05em;
   color: #59FFA0;
@@ -92,7 +102,7 @@ header:before {
   margin-top: 0.2em;
 }
 
-.welcome-banner .social-icons {
+.social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,11 +110,92 @@ header:before {
   min-height: 2.5em;
 }
 
-.welcome-banner .social-icons .social-icons__link {
-  width: 2.3em;
-  padding: 0 0.3em;
+.social-icons .social-icons__link {
+  height: 2.3em;
+  padding: 0 0.5em;
 }
 
-.tech-section__icon {
-  max-width: 55px;
+.skill-icons {
+  background-color: #1E1E1D;
+  width: 90vw;
+  border-radius: 2em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-icons .skill-icons__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tech-section {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.tech-section h4 {
+  color: #FDFFF7;
+}
+
+.tech-section .tech-section__row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tech-section .tech-section__row:hover .tech-section__icon {
+  width: 4em;
+  padding: 0.5em;
+}
+
+.tech-section .tech-section__row:nth-child(2) {
+  border-top: 1px ridge #FFED65;
+}
+
+.tech-section .tech-section__row .tech-section__icon {
+  width: 0;
+}
+
+.profile-content {
+  background-color: #1E1E1D;
+  width: 90vw;
+  border-radius: 2em;
+  display: flex;
+  margin: 2em auto;
+}
+
+.profile-content div {
+  padding: 0.8em 1.4em;
+}
+
+#projects {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  font-size: 1.5em;
+  color: #FFED65;
+}
+
+#projects .project-tile * {
+  max-width: 30rem;
+  min-width: 30rem;
+}
+
+footer {
+  background-color: black;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 2.3em;
+  padding: 0.5em;
 }

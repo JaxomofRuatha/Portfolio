@@ -10,3 +10,4 @@ window.onscroll = function () {
     document.getElementByClassName("navbar").classList.remove("scrolledNav");
   }
 }*/
+const jquery = require('jquery');

@@ -42,7 +42,7 @@
       <h3 class="skill-icons__title">Skills and Technologies</h3>
       <div class="skill-icons__flex">
         <div class="tech-section">
-          <div>
+          <div class="tech-section__row">
             <img class="tech-section__icon" src="./images/htmlicon.svg">
             <img class="tech-section__icon" src="./images/css3icon.svg">
             <img class="tech-section__icon" src="./images/reacticon.svg">
@@ -50,49 +50,57 @@
             <img class="tech-section__icon" src="./images/bootstrapicon.svg">
             <img class="tech-section__icon" src="./images/sassicon.svg">
           </div>
-          <div>
+          <div class="tech-section__row">
+            <span class="tech-section__label">&#8643;</span>
             <h4 class="tech-section__label">Web Development</h4>
+            <span class="tech-section__label">&#8642;</span>
           </div>
         </div>
         <div class="tech-section">
-          <div>
+          <div class="tech-section__row">
             <img class="tech-section__icon" src="./images/cicon.svg">
             <img class="tech-section__icon" src="./images/jsicon.svg">
             <img class="tech-section__icon" src="./images/javaicon.svg">
             <img class="tech-section__icon" src="./images/pythonicon.svg">
           </div>
-          <div>
-            <h4 class="tech-section__label">Primary Languages</h4>
+          <div class="tech-section__row">
+            <span class="tech-section__label">&#8643;</span>
+            <h4 class="tech-section__label">Base Languages</h4>
+            <span class="tech-section__label">&#8642;</span>
           </div>
         </div>
         <div class="tech-section">
-          <div>
+          <div class="tech-section__row">
             <img class="tech-section__icon" src="./images/nodejsicon.svg">
             <img class="tech-section__icon" src="./images/expressicon.svg">
             <img class="tech-section__icon" src="./images/mongodbicon.svg">
             <img class="tech-section__icon" src="./images/mysqlicon.svg">
             <img class="tech-section__icon" src="./images/sasicon.svg">
           </div>
-          <div>
+          <div class="tech-section__row">
+            <span class="tech-section__label">&#8643;</span>
             <h4 class="tech-section__label">Database and Server</h4>
-          </div>
+            <span class="tech-section__label">&#8642;</span>
+          </div class="tech-section__row">
         </div>
         <div class="tech-section">
-          <div>
+          <div class="tech-section__row">
             <img class="tech-section__icon" src="./images/giticon.svg">
             <img class="tech-section__icon" src="./images/npmicon.svg">
             <img class="tech-section__icon" src="./images/mochaicon.svg">
             <img class="tech-section__icon" src="./images/gulpicon.svg">
             <img class="tech-section__icon" src="./images/linuxicon.svg">
           </div>
-          <div>
+          <div class="tech-section__row">
+            <span class="tech-section__label">&#8643;</span>
             <h4 class="tech-section__label">Other Tools</h4>
+            <span class="tech-section__label">&#8642;</span>
           </div>
         </div>
       </div>
     </div>
-    <div>
-      <div class="profile-content">
+    <div class="profile-content">
+      <div>
         <h3 class="profile-content__heading">Education</h3>
         <h4>University of Wisconsin - Green Bay</h4>
         <p class="profile-content__text">
@@ -114,7 +122,7 @@
           in C, Python, and JavaScript.
         </p>
       </div>
-      <div class="profile-content"> 
+      <div> 
         <h3 class="profile-content__heading">Profile and Direction</h3>
         <p class="profile-content__text">
           I am very excited to bring my vision and passion to life through detailed and responsive web development projects aimed to inspire. My background in psychology and gift for creating simple yet pleasurable user experiences brings a unique approach to applications.
@@ -128,29 +136,29 @@
       </div>
     </div>
     <div id="projects">
-      <div>
+      <div class="project-tile">
         <a href="https://github.com/JaxomofRuatha/CS50/tree/master/pset5/speller"><img class="project-thumbnail" src="./images/spellerthumb.jpg"></a>
-        <p class="project-tile">Speller</p>
+        <p>Speller</p>
       </div>
-      <div>
+      <div class="project-tile">
         <a href="https://jaxomofruatha.github.io/FCC-Tribute/"><img class="project-thumbnail" src="./images/tributethumb.jpg"></a>
-        <p class="project-tile">Local Weather App</p>
+        <p>Local Weather App</p>
       </div>
-      <div>
+      <div class="project-tile">
         <a href="https://jaxomofruatha.github.io/FCC-Landing/"><iframe class="project-thumbnail" src="https://jaxomofruatha.github.io/FCC-Landing/"></iframe></a>
-        <p class="project-tile">Timestamp Microservice</p>  
+        <p>Timestamp Microservice</p>  
       </div>
-      <div>
+      <div class="project-tile">
         <a href="https://jaxomofruatha.github.io/FCC-Technical/"><iframe class="project-thumbnail" src="https://jaxomofruatha.github.io/FCC-Technical/"></iframe></a>
-        <p class="project-tile">Header Parser Microservice</p>  
+        <p>Header Parser Microservice</p>  
       </div>
-      <div>
+      <div class="project-tile">
         <a href="https://github.com/JaxomofRuatha/SD1x-WhackAMole"><img class="project-thumbnail" src="./images/wamthumb.jpg"></a>
-        <p class="project-tile">WhackAMole</p>  
+        <p>WhackAMole</p>  
       </div>
-      <div>
+      <div class="project-tile">
         <a href="https://jaxomofruatha.github.io/Quote-Machine/"><iframe class="project-thumbnail" src="https://jaxomofruatha.github.io/Quote-Machine/"></iframe></a>
-        <p class="project-tile">Quote Generator</p>  
+        <p>Quote Generator</p>  
       </div>
     </div>
   </section>
@@ -165,17 +173,12 @@
       </form>
     </div>
   </section>
-  <section id="page-end">
-    <footer>
-      <div id="page-end__flex">
-        <p><small>&copy;</small> 2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;</p>
-        <img src="./images/wpicon.svg">
-        <img src="./images/youtubeicon.svg">
-        <img src="./images/twitchicon.svg">
-      </div>
-      </div>
-    </footer>
-  </section>
+  <footer>
+    <p><small>&copy;</small> 2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;</p>
+    <img src="./images/wpicon.svg">
+    <img src="./images/youtubeicon.svg">
+    <img src="./images/twitchicon.svg">
+  </footer>
   <script type="text/javascript" src="./js/scripts.js"></script>
 </body>
 </html>
