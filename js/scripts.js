@@ -16,11 +16,13 @@ $(document).ready(() => {
     }
   })
 
+  //TODO: Toggle selected style
+  //TODO: Make disappear without making shrink?
   $(".skill-icons__buttons button").click((e) => {
     
     const targetClass = $(event.target).attr("class");
 
-    $(".skill-icons__display").find(`div.${targetClass} *`).slideToggle(1000);
+    $(".skill-icons__display").find(`div.${targetClass} *`).slideToggle(500);
     e.stopPropagation();
   })
 })

@@ -33,12 +33,11 @@ h4 {
 
 button {
   border: none;
-  border-top: 0.1em solid $yellow;
   background-color: inherit;
   color: $white;
   font-family: inherit;
   padding: 0.5em;
-  margin: 0 -2px;
+  margin: 0 -3px;
 }
 
 .navbar {
@@ -55,7 +54,7 @@ button {
   z-index: 2;
 
   .navbar__logo {
-    width: 17rem;
+    width: 20vw;
     height: auto;
   }
 
@@ -131,21 +130,6 @@ header {
     padding: 0 0.5em;
   }
 }
-/*
-.skill-icons {
-  background-color: $slate;
-  width: 90vw;
-  border-radius: 2em;
-  margin: 2em auto;
-  display: flex;
-  flex-direction: column;
-  .skill-icons__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-*/
 
 .skill-icons {
   background-color: $slate;
@@ -169,64 +153,74 @@ header {
     align-items: center;
     padding-bottom: 1em;
     button {
+      border-top: 0.01em solid $yellow;
       transition: all .5s;
       width: (80% / 4);
       &:hover {
         background-color: $yellow;
         color: $slate;
       }
+      &:focus {
+        outline: 0;
+      }
     }
   }
 }
 
-/*
-.tech-section {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  h4 {
-    color: $white;
-  }
-  .tech-section__row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    &:hover .tech-section__icon {
-      width: 4em;
-      padding: 0.5em;
-    }
-    &:nth-child(2) {
-      border-top: 1px ridge $yellow;
-    }
-    .tech-section__icon {
-      width: 0;
-    }
-  }
-}
-*/
 .profile-content {
   background-color: $slate;
   width: 90vw;
   border-radius: 2em;
   display: flex;
   margin: 2em auto;
+  #education {
+    flex: 1 0 35%;
+  }
   div {
     padding: 0.8em 1.4em;
   }
 }
 
-#projects {
+.project-tile {
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  font-size: 1.5em;
-  color: $yellow;
-  .project-tile * {
-    max-width: 30rem;
-    min-width: 30rem;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+  button:hover {
+    background-color: $yellow;
+    color: $slate;
+  }
+  li {
+    padding: 2.5em;
+    text-align: left;
+  }
+  .project-tile__prod {
+    display: flex;
+    justify-content: space-around;
+    * {
+      width: (100% / 6);
+      border-bottom: 0.01em solid $yellow;
+    }
+  }
+  .project-tile__display {
+    display: flex;
+    background-color: $slate;
+    img {
+      width: 60%;
+      max-height: 65vh;
+    }
+  }
+  span {
+    background-color: $slate;
+    border-top: 0.01em solid $yellow;
+  }
+  .project-tile__wip {
+    display: flex;
+    justify-content: space-around;
+    * {
+      width: (100% / 6);
+      border-top: 0.01em solid $yellow;
+    }
   }
 }
 

@@ -38,67 +38,6 @@
     </section>
   </header>
   <section class="content-section" id="profile">
-    <!--<div class="skill-icons">
-      <h3 class="skill-icons__title">Skills and Technologies</h3>
-      <div class="skill-icons__flex">
-        <div class="tech-section">
-          <div class="tech-section__row">
-            <img class="tech-section__icon" src="./images/htmlicon.svg">
-            <img class="tech-section__icon" src="./images/css3icon.svg">
-            <img class="tech-section__icon" src="./images/reacticon.svg">
-            <img class="tech-section__icon" src="./images/jqueryicon.svg">
-            <img class="tech-section__icon" src="./images/bootstrapicon.svg">
-            <img class="tech-section__icon" src="./images/sassicon.svg">
-          </div>
-          <div class="tech-section__row">
-            <span class="tech-section__label">&#8643;</span>
-            <h4 class="tech-section__label">Web Development</h4>
-            <span class="tech-section__label">&#8642;</span>
-          </div>
-        </div>
-        <div class="tech-section">
-          <div class="tech-section__row">
-            <img class="tech-section__icon" src="./images/cicon.svg">
-            <img class="tech-section__icon" src="./images/jsicon.svg">
-            <img class="tech-section__icon" src="./images/javaicon.svg">
-            <img class="tech-section__icon" src="./images/pythonicon.svg">
-          </div>
-          <div class="tech-section__row">
-            <span class="tech-section__label">&#8643;</span>
-            <h4 class="tech-section__label">Base Languages</h4>
-            <span class="tech-section__label">&#8642;</span>
-          </div>
-        </div>
-        <div class="tech-section">
-          <div class="tech-section__row">
-            <img class="tech-section__icon" src="./images/nodejsicon.svg">
-            <img class="tech-section__icon" src="./images/expressicon.svg">
-            <img class="tech-section__icon" src="./images/mongodbicon.svg">
-            <img class="tech-section__icon" src="./images/mysqlicon.svg">
-            <img class="tech-section__icon" src="./images/sasicon.svg">
-          </div>
-          <div class="tech-section__row">
-            <span class="tech-section__label">&#8643;</span>
-            <h4 class="tech-section__label">Database and Server</h4>
-            <span class="tech-section__label">&#8642;</span>
-          </div class="tech-section__row">
-        </div>
-        <div class="tech-section">
-          <div class="tech-section__row">
-            <img class="tech-section__icon" src="./images/giticon.svg">
-            <img class="tech-section__icon" src="./images/npmicon.svg">
-            <img class="tech-section__icon" src="./images/mochaicon.svg">
-            <img class="tech-section__icon" src="./images/gulpicon.svg">
-            <img class="tech-section__icon" src="./images/linuxicon.svg">
-          </div>
-          <div class="tech-section__row">
-            <span class="tech-section__label">&#8643;</span>
-            <h4 class="tech-section__label">Other Tools</h4>
-            <span class="tech-section__label">&#8642;</span>
-          </div>
-        </div>
-      </div>
-    </div>/-->
     <div class="skill-icons">
       <h3>Skills and Technologies</h3>
       <div class="skill-icons__display">
@@ -139,7 +78,7 @@
       </div>
     </div>
     <div class="profile-content">
-      <div>
+      <div id="education">
         <h3 class="profile-content__heading">Education</h3>
         <h4>University of Wisconsin - Green Bay</h4>
         <p class="profile-content__text">
@@ -172,9 +111,41 @@
         <p class="profile-content__text">
           I would be glad to make your goal my goal. Let's partner to make your project the solution you deserve!
         </p>
+        <button>Resume</button>
       </div>
     </div>
-    <div id="projects">
+  </section>
+  <section class="content-section" id="projects">
+    <div class="project-tile">
+      <div class="project-tile__prod">
+        <button>Quote Machine</button>
+        <button>React Local Weather</button>
+        <button>Bikeshare Mapper</button>
+        <button>Bmore Around Town</button>
+        <button>Speller</button>
+        <button>Whack A Mole</button>
+      </div>
+      <div class="project-tile__display">
+        <img src="./images/spellerthumb.jpg">
+        <div>
+          <ul id="project-des">
+            <li>Language: C</li>
+            <li>The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary</li>
+            <li>Current Status: First iteration complete and functional</li>
+          </ul>
+        </div>
+      </div>
+      <span>-Work In Progress-</span>
+      <div class="project-tile__wip">
+        <button>Wikipedia Viewer</button>
+        <button>Markdown Previewer</button>
+        <button>Header Parser Microservice</button>
+        <button>Freeform Vote</button>
+        <button>Twitch Dashboard</button>
+        <button>Javascript Calculator</button>
+      </div>
+    </div>
+    <!--<div id="projects">
       <div class="project-tile">
         <a href="https://github.com/JaxomofRuatha/CS50/tree/master/pset5/speller"><img class="project-thumbnail" src="./images/spellerthumb.jpg"></a>
         <p>Speller</p>
@@ -199,7 +170,7 @@
         <a href="https://jaxomofruatha.github.io/Quote-Machine/"><img class="project-thumbnail" src="./images/spellerthumb.jpg"></a>
         <p>Quote Generator</p>  
       </div>
-    </div>
+    </div>-->
   </section>
   <section class="content-section" id="contact">
     <div id="email-form">

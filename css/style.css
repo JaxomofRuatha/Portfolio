@@ -28,12 +28,11 @@ h4 {
 
 button {
   border: none;
-  border-top: 0.1em solid #FFED65;
   background-color: inherit;
   color: #FDFFF7;
   font-family: inherit;
   padding: 0.5em;
-  margin: 0 -2px;
+  margin: 0 -3px;
 }
 
 .navbar {
@@ -51,7 +50,7 @@ button {
 }
 
 .navbar .navbar__logo {
-  width: 17rem;
+  width: 20vw;
   height: auto;
 }
 
@@ -127,21 +126,6 @@ header:before {
   padding: 0 0.5em;
 }
 
-/*
-.skill-icons {
-  background-color: $slate;
-  width: 90vw;
-  border-radius: 2em;
-  margin: 2em auto;
-  display: flex;
-  flex-direction: column;
-  .skill-icons__flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-*/
 .skill-icons {
   background-color: #1E1E1D;
   max-width: 90vw;
@@ -170,6 +154,7 @@ header:before {
 }
 
 .skill-icons .skill-icons__buttons button {
+  border-top: 0.01em solid #FFED65;
   transition: all .5s;
   width: 20%;
 }
@@ -179,32 +164,10 @@ header:before {
   color: #1E1E1D;
 }
 
-/*
-.tech-section {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  h4 {
-    color: $white;
-  }
-  .tech-section__row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    &:hover .tech-section__icon {
-      width: 4em;
-      padding: 0.5em;
-    }
-    &:nth-child(2) {
-      border-top: 1px ridge $yellow;
-    }
-    .tech-section__icon {
-      width: 0;
-    }
-  }
+.skill-icons .skill-icons__buttons button:focus {
+  outline: 0;
 }
-*/
+
 .profile-content {
   background-color: #1E1E1D;
   width: 90vw;
@@ -213,23 +176,64 @@ header:before {
   margin: 2em auto;
 }
 
+.profile-content #education {
+  flex: 1 0 35%;
+}
+
 .profile-content div {
   padding: 0.8em 1.4em;
 }
 
-#projects {
+.project-tile {
   display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  font-size: 1.5em;
-  color: #FFED65;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
 }
 
-#projects .project-tile * {
-  max-width: 30rem;
-  min-width: 30rem;
+.project-tile button:hover {
+  background-color: #FFED65;
+  color: #1E1E1D;
+}
+
+.project-tile li {
+  padding: 2.5em;
+  text-align: left;
+}
+
+.project-tile .project-tile__prod {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-tile .project-tile__prod * {
+  width: 16.66667%;
+  border-bottom: 0.01em solid #FFED65;
+}
+
+.project-tile .project-tile__display {
+  display: flex;
+  background-color: #1E1E1D;
+}
+
+.project-tile .project-tile__display img {
+  width: 60%;
+  max-height: 65vh;
+}
+
+.project-tile span {
+  background-color: #1E1E1D;
+  border-top: 0.01em solid #FFED65;
+}
+
+.project-tile .project-tile__wip {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-tile .project-tile__wip * {
+  width: 16.66667%;
+  border-top: 0.01em solid #FFED65;
 }
 
 footer {
