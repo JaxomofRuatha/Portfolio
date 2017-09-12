@@ -38,10 +38,7 @@ button {
   color: $white;
   font-family: inherit;
   padding: 0.5em;
-  &:visited {
-    border: none;
-    border-top: 0.1em solid $yellow;
-  }
+  margin: 0 -2px;
 }
 
 .navbar {
@@ -67,6 +64,7 @@ button {
     justify-content: center;
     font-size: 1.5vw;
     color: $white;
+    transiton: color 0.5s;
   }
 }
 
@@ -156,20 +154,23 @@ header {
   margin: 2em auto;
   display: flex;
   flex-direction: column;
-  .skill-icons__display {
+  .skill-icons__display > div{
     display: flex;
     justify-content: center;
     align-items: center;
     * {
-      width: 4em;
+      width: 5em;
       padding: 0.5em;
+      display: none;
     }
   }
   .skill-icons__buttons {
     justify-content: center;
     align-items: center;
+    padding-bottom: 1em;
     button {
       transition: all .5s;
+      width: (80% / 4);
       &:hover {
         background-color: $yellow;
         color: $slate;

@@ -33,11 +33,7 @@ button {
   color: #FDFFF7;
   font-family: inherit;
   padding: 0.5em;
-}
-
-button:visited {
-  border: none;
-  border-top: 0.1em solid #FFED65;
+  margin: 0 -2px;
 }
 
 .navbar {
@@ -64,6 +60,7 @@ button:visited {
   justify-content: center;
   font-size: 1.5vw;
   color: #FDFFF7;
+  transiton: color 0.5s;
 }
 
 .nav-links__item:hover {
@@ -154,24 +151,27 @@ header:before {
   flex-direction: column;
 }
 
-.skill-icons .skill-icons__display {
+.skill-icons .skill-icons__display > div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.skill-icons .skill-icons__display * {
-  width: 4em;
+.skill-icons .skill-icons__display > div * {
+  width: 5em;
   padding: 0.5em;
+  display: none;
 }
 
 .skill-icons .skill-icons__buttons {
   justify-content: center;
   align-items: center;
+  padding-bottom: 1em;
 }
 
 .skill-icons .skill-icons__buttons button {
   transition: all .5s;
+  width: 20%;
 }
 
 .skill-icons .skill-icons__buttons button:hover {
