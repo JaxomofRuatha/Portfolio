@@ -10,6 +10,38 @@ body {
   background-color: #1F1A44;
   text-align: center;
   color: $white;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 1em;
+  color: inherit;
+}
+
+h3 {
+  color: $aqua;
+}
+
+h4 {
+  color: $yellow;
+}
+
+button {
+  border: none;
+  border-top: 0.1em solid $yellow;
+  background-color: inherit;
+  color: $white;
+  font-family: inherit;
+  padding: 0.5em;
+  &:visited {
+    border: none;
+    border-top: 0.1em solid $yellow;
+  }
 }
 
 .navbar {
@@ -44,24 +76,6 @@ body {
 
 .scrolledNav {
   background-color: black;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  padding: 1em;
-  color: inherit;
-}
-
-h3 {
-  color: $aqua;
-}
-
-h4 {
-  color: $yellow;
 }
 
 header {
@@ -119,7 +133,7 @@ header {
     padding: 0 0.5em;
   }
 }
-
+/*
 .skill-icons {
   background-color: $slate;
   width: 90vw;
@@ -133,7 +147,38 @@ header {
     justify-content: space-around;
   }
 }
+*/
 
+.skill-icons {
+  background-color: $slate;
+  max-width: 90vw;
+  border-radius: 2em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  .skill-icons__display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    * {
+      width: 4em;
+      padding: 0.5em;
+    }
+  }
+  .skill-icons__buttons {
+    justify-content: center;
+    align-items: center;
+    button {
+      transition: all .5s;
+      &:hover {
+        background-color: $yellow;
+        color: $slate;
+      }
+    }
+  }
+}
+
+/*
 .tech-section {
   width: 45%;
   display: flex;
@@ -158,7 +203,7 @@ header {
     }
   }
 }
-
+*/
 .profile-content {
   background-color: $slate;
   width: 90vw;

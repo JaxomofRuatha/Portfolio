@@ -5,6 +5,39 @@ body {
   background-color: #1F1A44;
   text-align: center;
   color: #FDFFF7;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 1em;
+  color: inherit;
+}
+
+h3 {
+  color: #59FFA0;
+}
+
+h4 {
+  color: #FFED65;
+}
+
+button {
+  border: none;
+  border-top: 0.1em solid #FFED65;
+  background-color: inherit;
+  color: #FDFFF7;
+  font-family: inherit;
+  padding: 0.5em;
+}
+
+button:visited {
+  border: none;
+  border-top: 0.1em solid #FFED65;
 }
 
 .navbar {
@@ -39,24 +72,6 @@ body {
 
 .scrolledNav {
   background-color: black;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  padding: 1em;
-  color: inherit;
-}
-
-h3 {
-  color: #59FFA0;
-}
-
-h4 {
-  color: #FFED65;
 }
 
 header {
@@ -115,51 +130,81 @@ header:before {
   padding: 0 0.5em;
 }
 
+/*
+.skill-icons {
+  background-color: $slate;
+  width: 90vw;
+  border-radius: 2em;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  .skill-icons__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+*/
 .skill-icons {
   background-color: #1E1E1D;
-  width: 90vw;
+  max-width: 90vw;
   border-radius: 2em;
   margin: 2em auto;
   display: flex;
   flex-direction: column;
 }
 
-.skill-icons .skill-icons__flex {
+.skill-icons .skill-icons__display {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
+.skill-icons .skill-icons__display * {
+  width: 4em;
+  padding: 0.5em;
+}
+
+.skill-icons .skill-icons__buttons {
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-icons .skill-icons__buttons button {
+  transition: all .5s;
+}
+
+.skill-icons .skill-icons__buttons button:hover {
+  background-color: #FFED65;
+  color: #1E1E1D;
+}
+
+/*
 .tech-section {
   width: 45%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  h4 {
+    color: $white;
+  }
+  .tech-section__row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &:hover .tech-section__icon {
+      width: 4em;
+      padding: 0.5em;
+    }
+    &:nth-child(2) {
+      border-top: 1px ridge $yellow;
+    }
+    .tech-section__icon {
+      width: 0;
+    }
+  }
 }
-
-.tech-section h4 {
-  color: #FDFFF7;
-}
-
-.tech-section .tech-section__row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.tech-section .tech-section__row:hover .tech-section__icon {
-  width: 4em;
-  padding: 0.5em;
-}
-
-.tech-section .tech-section__row:nth-child(2) {
-  border-top: 1px ridge #FFED65;
-}
-
-.tech-section .tech-section__row .tech-section__icon {
-  width: 0;
-}
-
+*/
 .profile-content {
   background-color: #1E1E1D;
   width: 90vw;
