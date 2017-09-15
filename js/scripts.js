@@ -1,5 +1,6 @@
 //const jquery = require('jquery');
 
+/*
 $(document).ready(() => {
 
   //TODO: make black if starting lower than the pixScrolled
@@ -25,4 +26,16 @@ $(document).ready(() => {
     $(".skill-icons__display").find(`div.${targetClass} *`).slideToggle(500);
     e.stopPropagation();
   })
+})*/
+
+[].forEach.call(document.querySelectorAll('.skill-icons__buttons button'), (el) => {
+  el.addEventListener('click', () => {
+    this.
+  })
 })
+
+/*
+*  Project display
+*/
+
+//TODO: Default selection is Portfolio project summary, no actual button.

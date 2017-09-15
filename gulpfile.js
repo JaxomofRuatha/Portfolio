@@ -3,12 +3,12 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 
 gulp.task('sass', () => {
-    return gulp.src('./scss/*.scss')
+    return gulp.src('./sass/*.scss')
         .pipe(plumber())    
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch('/sass/*.scss', ['sass']);
+    gulp.watch('./sass/*.scss', ['sass']);
 });
