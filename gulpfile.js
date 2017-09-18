@@ -10,14 +10,14 @@ gulp.task('sass', () => {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', () => {
-    gulp.watch('./sass/*.scss', ['sass']);
+gulp.task('watch', () => {
+    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./view/**/*.pug', ['pug']);
 });
 
-//Compile Pug into index.html
-
 gulp.task('pug', () => {
-    return gulp.src('./view/**/*.pug')
-        .pipe(pug().on('error', pug.logError))
-        .pipe(gulp.dest('./index.html'))
+    return gulp.src('./view/index.pug')
+        .pipe(plumber())     
+        .pipe(pug())
+        .pipe(gulp.dest('./'))
 });

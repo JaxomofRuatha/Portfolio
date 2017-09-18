@@ -1,0 +1,20 @@
+/* Layout styles (_base.scss) */
+
+header {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #1E1A44);
+  z-index: 1;
+
+  &:before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: url(../images/welcome-fire-background.jpg) no-repeat center center;
+    opacity: 0.4;
+    z-index: -1
+  }
+}

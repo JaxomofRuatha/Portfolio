@@ -1,0 +1,50 @@
+/* Projects window module styles (_projects.scss) */
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+  button {
+    &:hover {
+      transition: all 0.25s;
+      background-color: $yellow;
+      color: $slate;
+    }
+    &:focus {
+        outline: 0;
+    }
+  }
+  li {
+    padding: 2.5rem;
+    text-align: left;
+  }
+  .project-tile__prod {
+    display: flex;
+    justify-content: space-around;
+    * {
+      width: (100% / 6);
+      border-bottom: 0.01rem solid $yellow;
+    }
+  }
+  .project-tile__display {
+    display: flex;
+    background-color: $slate;
+    img {
+      width: 60%;
+      max-height: 65vh;
+    }
+  }
+  span {
+    background-color: $slate;
+    border-top: 0.01rem solid $yellow;
+  }
+  .project-tile__wip {
+    display: flex;
+    justify-content: space-around;
+    * {
+      width: (100% / 6);
+      border-top: 0.01rem solid $yellow;
+    }
+  }
+}

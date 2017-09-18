@@ -4,8 +4,8 @@ html
         title Portfolio - John Chritton
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
-        link(rel="stylesheet" type="text/css" href="./style.css")
+        link(rel="stylesheet" type="text/css" href="./css/normalize.css")
+        link(rel="stylesheet" type="text/css" href="./css/style.css")
         link(rel="icon" href="./images/logoicon.png")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
     body
@@ -21,8 +21,8 @@ html
         section(class="content-section" id="contact")
             include ./components/contact.pug
         footer
-            p. #[small &copy;]  2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;
-            img(src="../../images/wpicon.svg")
-            img(src="../../images/youtubeicon.svg")
-            img(src="../../images/twitchicon.svg")
+            p #[small &copy;]  2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;
+            img(src="./images/wpicon.svg")
+            img(src="./images/youtubeicon.svg")
+            img(src="./images/twitchicon.svg")
         script(type="text/javascript" src="./js/scripts.js")

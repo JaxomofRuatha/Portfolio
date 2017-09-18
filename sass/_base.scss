@@ -1,0 +1,67 @@
+/* Base styles (_base.scss) */
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Lato', Helvetica, sans-serif;
+  background-color: #1F1A44;
+  text-align: center;
+  color: $white;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 1rem;
+  color: inherit;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    color: $aqua;
+    margin: 0;
+}
+
+h2 {
+    color: $white;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+h3 {
+  color: $aqua;
+}
+
+h4 {
+  color: $yellow;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  color: $white;
+  font-family: inherit;
+  padding: 0.5rem;
+  margin: 0 -3px;
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+footer {
+  background-color: black;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 2.3rem;
+    padding: 0.5rem;
+  }
+}
