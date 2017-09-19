@@ -1,20 +1,33 @@
-div.project-view
+div(class="project-view flex-cont-centered")
     ul.project-tabs
-        li.project-tabs__prod
-            a(href="#project-tile__quote-machine" class="project-tabs__prod-link") Quote Machine
-        li.project-tabs__prod
-            a(href="#project-tile__local-weather" class="project-tabs__prod-link") React Local Weather
-        li.project-tabs__prod
-            a(href="#project-tile__bikeshare" class="project-tabs__prod-link") Bikeshare Mapper
-        li.project-tabs__prod
-            a(href="#project-tile__bmore-at" class="project-tabs__prod-link") Bmore Around Town
-        li.project-tabs__prod
-            a(href="#project-tile__speller" class="project-tabs__prod-link") Speller
-        li.project-tabs__prod
-            a(href="#project-tile__wam" class="project-tabs__prod-link") Whack A Mole
+        li
+            a(href="#project-tile__quote-machine") Quote Machine
+        li
+            a(href="#project-tile__local-weather") React Local Weather
+        li
+            a(href="#project-tile__bikeshare") Bikeshare Mapper
+        li
+            a(href="#project-tile__bmore-at") Bmore Around Town
+        li
+            a(href="#project-tile__speller") Speller
+        li
+            a(href="#project-tile__wam") Whack A Mole
     div.project-tile
         img(src="./images/spellerthumb.jpg")
         div.project-tile__sum
             p Language: C
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
             p Current Status: First iteration complete and functional
+    ul.project-tabs
+        li
+            a(href="#") Wikipedia Viewer
+        li
+            a(href="#") Markdown Previewer
+        li
+            a(href="#") Header Parser Microservice
+        li
+            a(href="#") Freeform Vote
+        li
+            a(href="#") Twitch Dashboard
+        li
+            a(href="#") Javascript Calculator

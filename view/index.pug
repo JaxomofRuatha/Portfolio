@@ -13,13 +13,14 @@ html
             include ./components/navbar.pug
             section#welcome
                 include ./components/welcomebanner.pug
-        section(class="content-section" id="profile")
-            include ./components/skilltabs.pug
-            include ./components/profile.pug
-        section(class="content-section" id="projects")
-            include ./components/projects.pug
-        section(class="content-section" id="contact")
-            include ./components/contact.pug
+        main
+            section(class="content-section" id="profile")
+                include ./components/skilltabs.pug
+                include ./components/profile.pug
+            section(class="content-section" id="projects")
+                include ./components/projects.pug
+            section(class="content-section" id="contact")
+                include ./components/contact.pug
         footer
             p #[small &copy;]  2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;
             img(src="./images/wpicon.svg")
