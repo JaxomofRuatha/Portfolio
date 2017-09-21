@@ -1,33 +1,44 @@
-div(class="project-view flex-cont-centered")
-    ul.project-tabs
-        li
-            a(href="#project-tile__quote-machine") Quote Machine
-        li
-            a(href="#project-tile__local-weather") React Local Weather
-        li
-            a(href="#project-tile__bikeshare") Bikeshare Mapper
-        li
-            a(href="#project-tile__bmore-at") Bmore Around Town
-        li
-            a(href="#project-tile__speller") Speller
-        li
-            a(href="#project-tile__wam") Whack A Mole
-    div.project-tile
+div(class="flex-cont-centered project-view")
+    ul(class="display-tabs top-tabs")
+        li(class="flex-cont-centered tab-active" data-target="#tile-portfolio")
+            span Portfolio Site
+        li(class="flex-cont-centered" data-target="#tile-top2")
+            span Quote Machine
+        li(class="flex-cont-centered" data-target="#tile-top3")
+            span React Local Weather
+        li(class="flex-cont-centered" data-target="#tile-top4")
+            span Bikeshare Mapper
+        li(class="flex-cont-centered" data-target="#tile-top5")
+            span Bmore Around Town
+        li(class="flex-cont-centered" data-target="#tile-top6")
+            span Speller
+        li(class="flex-cont-centered" data-target="#tile-top7")
+            span Whack a Mole
+    div(class="display-tile tile-active")
         img(src="./images/spellerthumb.jpg")
-        div.project-tile__sum
+        div.project-tile(id="tile-portfolio")
+            div.project-techs
+                span C
+                span Data Structures
+                span Algorithms
+            p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
+            span.project-status Current Status: First iteration complete and functional
+    div.display-tile
+        img(src="./images/spellerthumb.jpg")
+        div.project-tile(id="tile-speller")
             p Language: C
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
             p Current Status: First iteration complete and functional
-    ul.project-tabs
-        li
-            a(href="#") Wikipedia Viewer
-        li
-            a(href="#") Markdown Previewer
-        li
-            a(href="#") Header Parser Microservice
-        li
-            a(href="#") Freeform Vote
-        li
-            a(href="#") Twitch Dashboard
-        li
-            a(href="#") Javascript Calculator
+    ul(class="display-tabs bottom-tabs")
+        li(class="flex-cont-centered" data-target="#tile-bottom1")
+            span Wikipedia Viewer
+        li(class="flex-cont-centered" data-target="#tile-bottom2")
+            span Markdown Previewer
+        li(class="flex-cont-centered" data-target="#tile-bottom3")
+            span Microservices
+        li(class="flex-cont-centered" data-target="#tile-bottom4")
+            span Freeform Vote
+        li(class="flex-cont-centered" data-target="#tile-bottom5")
+            span Twitch Dashboard
+        li(class="flex-cont-centered" data-target="#tile-bottom6")
+            span JavaScript Calculator

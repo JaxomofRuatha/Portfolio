@@ -29,6 +29,11 @@ header {
 ul {
   list-style-type: none; }
 
+li {
+  text-align: center;
+  cursor: pointer;
+  padding: 0; }
+
 a {
   text-decoration: none;
   padding: 1rem;
@@ -78,15 +83,15 @@ button {
 */
 footer {
   background-color: black;
-  height: 5%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  height: 5%; }
   footer img {
     width: 2.3rem;
     padding: 0.5rem; }
 
 /* Layout styles (_base.scss) */
+.display-tile {
+  display: none; }
+
 .flex-cont-centered {
   display: flex;
   justify-content: center;
@@ -135,11 +140,8 @@ footer {
   z-index: 2; }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8), transparent);
-  min-height: 2.5rem; }
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 20%, transparent 80%);
+  min-height: 3.5rem; }
   .social-icons img {
     height: 2.3rem;
     padding: 0 0.5rem; }
@@ -179,18 +181,40 @@ footer {
   flex-direction: column;
   width: 80vw;
   margin: 0 auto; }
-  .project-view .project-tabs {
+  .project-view .display-tabs {
     display: flex;
-    justify-content: space-around; }
-    .project-view .project-tabs li {
-      width: 16.66667%;
-      border-bottom: 0.01rem solid #FFED65; }
-  .project-view .project-tile {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+    .project-view .display-tabs li {
+      flex: 1;
+      min-height: 2.5rem;
+      padding: 0.5rem; }
+      .project-view .display-tabs li:hover {
+        background-color: #FFED65;
+        color: #1E1E1D;
+        font-weight: bold; }
+  .project-view .tile-active {
     display: flex;
-    background-color: #1E1E1D; }
-    .project-view .project-tile img {
-      width: 60%;
-      max-height: 65vh; }
+    background-color: #1E1E1D;
+    max-height: 65vh; }
+    .project-view .tile-active img {
+      width: 50%; }
+
+.project-tile {
+  display: flex;
+  flex-direction: column; }
+
+.project-techs {
+  display: flex; }
+
+.bottom-tabs {
+  border-bottom: none;
+  border-top: 0.01rem solid #FFED65; }
+
+.top-tabs {
+  border-bottom: 0.01rem solid #FFED65;
+  border-top: none; }
 
 /* Contact section styles (_navbar.scss) */
 .email-form {

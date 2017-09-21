@@ -4,20 +4,47 @@
   flex-direction: column;
   width: 80vw;
   margin: 0 auto;
-  .project-tabs {
+  .display-tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     li {
-      width: (100% / 6);
-      border-bottom: 0.01rem solid $yellow;
+      flex: 1;
+      min-height: 2.5rem;
+      padding: 0.5rem;
+      &:hover {
+        background-color: $yellow;
+        color: $slate;
+        font-weight: bold;
+      }
     }
   }
-  .project-tile {
+  .tile-active {
     display: flex;
     background-color: $slate;
+    max-height: 65vh;
     img {
-      width: 60%;
-      max-height: 65vh;
+      width: 50%;
     }
   }
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-techs {
+  display: flex;
+}
+
+.bottom-tabs {
+  border-bottom: none;
+  border-top: 0.01rem solid $yellow;
+}
+
+.top-tabs {
+  border-bottom: 0.01rem solid $yellow;
+  border-top: none
 }

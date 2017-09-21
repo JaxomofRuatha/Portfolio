@@ -1,5 +1,9 @@
 /* Layout styles (_base.scss) */
 
+.display-tile {
+  display: none;
+}
+
 .flex-cont-centered {
   display: flex;
   justify-content: center;

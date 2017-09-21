@@ -13,11 +13,8 @@
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8), transparent);
-  min-height: 2.5rem;
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 20%, transparent 80%);
+  min-height: 3.5rem;
 
   img {
     height: 2.3rem;
