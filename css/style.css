@@ -144,7 +144,8 @@ footer {
 .skill-icons {
   margin: 2rem auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  transition: all 0.25s; }
   .skill-icons img {
     width: 5rem;
     padding: 0.8rem; }

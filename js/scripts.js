@@ -13,8 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   document.querySelector(".skill-tabs").addEventListener("click", (e) => {
+    const targetIcons = document.querySelector(e.target.dataset.target);
+
+    document.querySelectorAll(".tech-section").forEach((icons) => {
+      icons.classList.remove("flex-cont-centered");
+    });
+
     if (e.target.tagName === "A") {
-      e.target.parentElement.classList.add("flex-cont-centered");
+      targetIcons.classList.add("flex-cont-centered");
     }
   });
 /*
