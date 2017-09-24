@@ -6,20 +6,16 @@
   flex-direction: column;
   img {
     width: 5rem;
-    padding: 0.5rem;
-    display: none;
+    padding: 0.8rem;
   }
-  ul {
-    padding-bottom: 1rem;
-    li {
+    a {
       padding: 0.5rem;
-      border-top: 0.01rem solid $yellow;
       transition: all 0.25s;
-      width: (80% / 4);
+      width: (70% / 4);
       &:hover {
         background-color: $yellow;
         color: $slate;
+        font-weight: bold;
       }
     }
-  }
 }

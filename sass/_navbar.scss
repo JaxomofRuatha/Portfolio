@@ -11,6 +11,7 @@
   justify-content: space-around;
   align-items: center;
   z-index: 2;
+  transition: background-color 0.2s;
 
   .navbar__logo {
     width: 20vw;

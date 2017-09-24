@@ -1,33 +1,32 @@
 div(class="skill-icons l-content-section")
     h3 Skills and Technologies
-    div.flex-cont-centered
-        div(class="tech-section web-dev")
-            img(src="./images/htmlicon.svg")
-            img(src="./images/css3icon.svg")
-            img(src="./images/reacticon.svg")
-            img(src="./images/jqueryicon.svg")
-            img(src="./images/bootstrapicon.svg")
-            img(src="./images/sassicon.svg")
-        div(class="tech-section core-lang")
-            img(src="./images/cicon.svg")
-            img(src="./images/jsicon.svg")
-            img(src="./images/javaicon.svg")
-            img(src="./images/pythonicon.svg")
-        div(class="tech-section db-server")
-            img(src="./images/nodejsicon.svg")
-            img(src="./images/expressicon.svg")
-            img(src="./images/mongodbicon.svg")
-            img(src="./images/mysqlicon.svg")
-            img(src="./images/postgresqlicon.svg")
-            img(src="./images/sasicon.svg")
-        div(class="tech-section tools")
-            img(src="./images/giticon.svg")
-            img(src="./images/npmicon.svg")
-            img(src="./images/mochaicon.svg")
-            img(src="./images/gulpicon.svg")
-            img(src="./images/linuxicon.svg")
-    ul.flex-cont-centered
-        li.web-dev Web Development
-        li.core-lang Core Languages
-        li.db-server Database and Server
-        li.tools Other tools
+    div(class="tech-section flex-cont-centered" id="web-dev")
+        img(src="./images/htmlicon.svg")
+        img(src="./images/css3icon.svg")
+        img(src="./images/reacticon.svg")
+        img(src="./images/sassicon.svg")
+        img(src="./images/jqueryicon.svg")
+        img(src="./images/bootstrapicon.svg")
+    div(class="tech-section" id="core-lang")
+        img(src="./images/cicon.svg")
+        img(src="./images/jsicon.svg")
+        img(src="./images/javaicon.svg")
+        img(src="./images/pythonicon.svg")
+    div(class="tech-section" id="db-server")
+        img(src="./images/nodejsicon.svg")
+        img(src="./images/expressicon.svg")
+        img(src="./images/mongodbicon.svg")
+        img(src="./images/mysqlicon.svg")
+        img(src="./images/postgresqlicon.svg")
+        img(src="./images/sasicon.svg")
+    div(class="tech-section" id="tools")
+        img(src="./images/giticon.svg")
+        img(src="./images/npmicon.svg")
+        img(src="./images/mochaicon.svg")
+        img(src="./images/gulpicon.svg")
+        img(src="./images/linuxicon.svg")
+    div(class="flex-cont-centered skill-tabs bottom-tabs")
+        a(data-target="web-dev") Web Development
+        a(data-target="core-lang") Core Languages
+        a(data-target="db-server") Database and Server
+        a(data-target="tools") Other tools

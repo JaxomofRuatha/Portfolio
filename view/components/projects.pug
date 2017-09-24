@@ -1,44 +1,31 @@
 div(class="flex-cont-centered project-view")
-    ul(class="display-tabs top-tabs")
-        li(class="flex-cont-centered tab-active" data-target="#tile-portfolio")
-            span Portfolio Site
-        li(class="flex-cont-centered" data-target="#tile-top2")
-            span Quote Machine
-        li(class="flex-cont-centered" data-target="#tile-top3")
-            span React Local Weather
-        li(class="flex-cont-centered" data-target="#tile-top4")
-            span Bikeshare Mapper
-        li(class="flex-cont-centered" data-target="#tile-top5")
-            span Bmore Around Town
-        li(class="flex-cont-centered" data-target="#tile-top6")
-            span Speller
-        li(class="flex-cont-centered" data-target="#tile-top7")
-            span Whack a Mole
-    div(class="display-tile tile-active")
+    div(class="project-tabs top-tabs")
+        a(class="flex-cont-centered tab-active" data-target="#tile-portfolio") Portfolio Site
+        a(class="flex-cont-centered" data-target="#tile-top2") Quote Machine
+        a(class="flex-cont-centered" data-target="#tile-top3") React Local Weather
+        a(class="flex-cont-centered" data-target="#tile-top4") Bikeshare Mapper
+        a(class="flex-cont-centered" data-target="#tile-top5") Bmore Around Town
+        a(class="flex-cont-centered" data-target="#tile-top6") Speller
+        a(class="flex-cont-centered" data-target="#tile-top7") Whack a Mole
+    div(class="display-tile tile-active" id="tile-portfolio")
         img(src="./images/spellerthumb.jpg")
-        div.project-tile(id="tile-portfolio")
+        div.project-tile
             div.project-techs
                 span C
                 span Data Structures
                 span Algorithms
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
             span.project-status Current Status: First iteration complete and functional
-    div.display-tile
+    div.display-tile(id="tile-top2")
         img(src="./images/spellerthumb.jpg")
         div.project-tile(id="tile-speller")
             p Language: C
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
             p Current Status: First iteration complete and functional
-    ul(class="display-tabs bottom-tabs")
-        li(class="flex-cont-centered" data-target="#tile-bottom1")
-            span Wikipedia Viewer
-        li(class="flex-cont-centered" data-target="#tile-bottom2")
-            span Markdown Previewer
-        li(class="flex-cont-centered" data-target="#tile-bottom3")
-            span Microservices
-        li(class="flex-cont-centered" data-target="#tile-bottom4")
-            span Freeform Vote
-        li(class="flex-cont-centered" data-target="#tile-bottom5")
-            span Twitch Dashboard
-        li(class="flex-cont-centered" data-target="#tile-bottom6")
-            span JavaScript Calculator
+    div(class="project-tabs bottom-tabs")
+        a(class="flex-cont-centered" data-target="#tile-bottom1") Wikipedia Viewer
+        a(class="flex-cont-centered" data-target="#tile-bottom2") Markdown Previewer
+        a(class="flex-cont-centered" data-target="#tile-bottom3") Microservices
+        a(class="flex-cont-centered" data-target="#tile-bottom4") Freeform Vote
+        a(class="flex-cont-centered" data-target="#tile-bottom5") Twitch Dashboard
+        a(class="flex-cont-centered" data-target="#tile-bottom6") JavaScript Calculator

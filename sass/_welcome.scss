@@ -1,19 +1,17 @@
 /* Welcome section styles (_welcome.scss) */
 
 .welcome-banner {
-
   flex-direction: column;
-
   width: 100%;
-  
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 40%;
-  z-index: 2;
+  padding-top: 1rem;
+  z-index: 1;
 }
 
 .social-icons {
-  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 20%, transparent 80%);
+  background: linear-gradient(to right, transparent, black, transparent);
   min-height: 3.5rem;
 
   img {

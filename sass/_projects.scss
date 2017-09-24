@@ -4,15 +4,22 @@
   flex-direction: column;
   width: 80vw;
   margin: 0 auto;
-  .display-tabs {
+  .project-tabs {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    li {
+    button {
       flex: 1;
-      min-height: 2.5rem;
+      min-height: 3.5rem;
       padding: 0.5rem;
+      border: none;
+      color: $white;
+      background-color: transparent;
+      letter-spacing: 0.08rem;
+      border-radius: 0;
+      font-size: 1rem;
+      font-weight: normal;
       &:hover {
         background-color: $yellow;
         color: $slate;
