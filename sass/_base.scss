@@ -45,6 +45,10 @@ a {
   cursor: pointer;
 }
 
+p {
+  margin: 0.8rem 0;
+}
+
 h1 {
     font-size: 4.5rem;
     font-weight: bold;
@@ -61,10 +65,13 @@ h2 {
 
 h3 {
   color: $aqua;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
 }
 
 h4 {
   color: $yellow;
+  font-size: 1.1rem;
 }
 
 button {

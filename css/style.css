@@ -37,6 +37,9 @@ a {
   color: inherit;
   cursor: pointer; }
 
+p {
+  margin: 0.8rem 0; }
+
 h1 {
   font-size: 4.5rem;
   font-weight: bold;
@@ -50,10 +53,13 @@ h2 {
   padding-bottom: 0.5rem; }
 
 h3 {
-  color: #59FFA0; }
+  color: #59FFA0;
+  font-size: 1.4rem;
+  padding-bottom: 1rem; }
 
 h4 {
-  color: #FFED65; }
+  color: #FFED65;
+  font-size: 1.1rem; }
 
 button {
   background-color: #FFED65;
@@ -148,6 +154,7 @@ footer {
   transition: all 0.25s; }
   .skill-icons img {
     width: 5rem;
+    height: 5rem;
     padding: 0.8rem; }
   .skill-icons a {
     padding: 0.5rem;
@@ -177,22 +184,15 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; }
-    .project-view .project-tabs button {
+    width: 100%;
+    margin: 0.3rem 0; }
+    .project-view .project-tabs a {
       flex: 1;
-      min-height: 3.5rem;
-      padding: 0.5rem;
-      border: none;
-      color: #FDFFF7;
-      background-color: transparent;
-      letter-spacing: 0.08rem;
-      border-radius: 0;
-      font-size: 1rem;
-      font-weight: normal; }
-      .project-view .project-tabs button:hover {
-        background-color: #FFED65;
-        color: #1E1E1D;
-        font-weight: bold; }
+      min-height: 3rem;
+      padding: 0.2rem;
+      letter-spacing: 0.08rem; }
+      .project-view .project-tabs a:hover {
+        background-color: #272156; }
   .project-view .tile-active {
     display: flex;
     background-color: #1E1E1D;
@@ -202,10 +202,24 @@ footer {
 
 .project-tile {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-between; }
 
 .project-techs {
-  display: flex; }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #59FFA0;
+  min-height: 3rem;
+  border-radius: 0 0 0.5rem 0.5rem; }
+  .project-techs span {
+    background-color: #FDFFF7;
+    color: #1E1E1D;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    min-width: 20%;
+    padding: 0.7rem;
+    margin: 0.5rem; }
 
 .bottom-tabs {
   border-bottom: none;
@@ -215,9 +229,14 @@ footer {
   border-bottom: 0.01rem solid #FFED65;
   border-top: none; }
 
+.tab-active {
+  background-color: #FFED65 !important;
+  color: #1E1E1D;
+  font-weight: bold; }
+
 /* Contact section styles (_navbar.scss) */
 .email-form {
   flex-direction: column;
   padding: 1rem; }
   .email-form button {
-    width: 40%; }
+    width: 10rem; }
