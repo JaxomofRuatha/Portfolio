@@ -68,7 +68,8 @@ button {
   border-radius: 5px;
   font-family: inherit;
   font-weight: bold;
-  padding: 0.5rem; }
+  padding: 0.5rem;
+  cursor: pointer; }
   button:focus {
     outline: none; }
 
@@ -220,6 +221,12 @@ footer {
     min-width: 20%;
     padding: 0.7rem;
     margin: 0.5rem; }
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  background-color: #FDFFF7;
+  color: #1E1E1D; }
 
 .bottom-tabs {
   border-bottom: none;

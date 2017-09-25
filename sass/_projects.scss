@@ -54,6 +54,13 @@
   }
 }
 
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  background-color: $white;
+  color: $slate;
+}
+
 .bottom-tabs {
   border-bottom: none;
   border-top: 0.01rem solid $yellow;

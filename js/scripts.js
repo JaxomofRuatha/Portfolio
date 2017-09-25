@@ -4,6 +4,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  //Setting opaque navbar on scroll
+
   window.addEventListener('scroll', () => {
     if (window.scrollY < 120) {
       document.querySelector('.navbar').setAttribute('style', 'background-color: transparent;');
@@ -11,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.navbar').setAttribute('style', 'background-color: black;');
     }
   })
+
+  //Tabs for skill icons
 
   document.querySelector(".skill-tabs").addEventListener("click", (e) => {
     const targetIcons = document.querySelector(e.target.dataset.target);
@@ -22,6 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.tagName === "A") {
       targetIcons.classList.add("flex-cont-centered");
     }
+  });
+
+  document.querySelectorAll(".project-tabs").forEach((tabs) => {
+    tabs.addEventListener("click", (e) => {
+      const targetTile = document.querySelector(e.target.dataset.target);
+
+      document.querySelectorAll(".project-tabs a").forEach((a) => {
+        a.classList.remove("tab-active");
+      });
+
+      e.target.classList.add("tab-active");
+
+      document.querySelectorAll(".display-tile").forEach((tile) => {
+        tile.classList.remove("tile-active");
+      });
+
+      targetTile.classList.add("tile-active");
+    })
   });
 /*
   const tabs = Array.from(document.querySelectorAll('.display-tabs span'));
