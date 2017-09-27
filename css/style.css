@@ -81,16 +81,15 @@ footer {
     padding: 0.5rem; }
 
 /* Layout styles (_base.scss) */
-.display-tile {
-  display: none; }
-
-.tech-section {
-  display: none; }
-
 .flex-cont-centered {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.hidden-tile {
+  opacity: 0;
+  width: 0;
+  height: 0; }
 
 .l-content-section {
   background-color: #1E1E1D;
@@ -98,9 +97,6 @@ footer {
   border-radius: 2rem;
   margin: 2rem auto;
   padding: 1rem; }
-
-.tab-active {
-  display: flex; }
 
 /* Navbar module styles (_navbar.scss) */
 .navbar {
@@ -151,20 +147,22 @@ footer {
 .skill-icons {
   margin: 2rem auto;
   display: flex;
-  flex-direction: column;
-  transition: all 0.25s; }
-  .skill-icons img {
-    width: 5rem;
-    height: 5rem;
-    padding: 0.8rem; }
-  .skill-icons a {
-    padding: 0.5rem;
-    transition: all 0.25s;
-    width: 17.5%; }
-    .skill-icons a:hover {
-      background-color: #FFED65;
-      color: #1E1E1D;
-      font-weight: bold; }
+  flex-direction: column; }
+
+.tech-section img {
+  transition: height 1s ease-in-out;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.8rem; }
+
+.tech-section a {
+  padding: 0.5rem;
+  transition: all 0.25s;
+  width: 17.5%; }
+  .tech-section a:hover {
+    background-color: #FFED65;
+    color: #1E1E1D;
+    font-weight: bold; }
 
 /* Profile section styles (_profile.scss) */
 .profile-content {
@@ -194,11 +192,11 @@ footer {
       letter-spacing: 0.08rem; }
       .project-view .project-tabs a:hover {
         background-color: #272156; }
-  .project-view .tile-active {
+  .project-view .display-tile {
     display: flex;
     background-color: #1E1E1D;
     max-height: 65vh; }
-    .project-view .tile-active img {
+    .project-view .display-tile img {
       width: 50%; }
 
 .project-tile {

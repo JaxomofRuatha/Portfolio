@@ -1,17 +1,15 @@
 /* Layout styles (_base.scss) */
 
-.display-tile {
-  display: none;
-}
-
-.tech-section {
-  display: none;
-}
-
 .flex-cont-centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden-tile {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .l-content-section {
@@ -20,8 +18,4 @@
   border-radius: 2rem;
   margin: 2rem auto;
   padding: 1rem;
-}
-
-.tab-active {
-  display: flex;
 }

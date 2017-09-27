@@ -4,20 +4,23 @@
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
-  transition: all 0.25s;
+}
+
+.tech-section {
   img {
+    transition: height 1s ease-in-out;
     width: 5rem;
     height: 5rem;
     padding: 0.8rem;
   }
-    a {
-      padding: 0.5rem;
-      transition: all 0.25s;
-      width: (70% / 4);
-      &:hover {
-        background-color: $yellow;
-        color: $slate;
-        font-weight: bold;
-      }
+  a {
+    padding: 0.5rem;
+    transition: all 0.25s;
+    width: (70% / 4);
+    &:hover {
+      background-color: $yellow;
+      color: $slate;
+      font-weight: bold;
     }
+  }
 }

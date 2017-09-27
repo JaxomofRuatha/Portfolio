@@ -1,7 +1,3 @@
-/*
-*  Project display
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
 
   //Setting opaque navbar on scroll
@@ -20,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetIcons = document.querySelector(e.target.dataset.target);
 
     document.querySelectorAll(".tech-section").forEach((icons) => {
-      icons.classList.remove("flex-cont-centered");
+      icons.classList.add("hidden-tile");
     });
 
     if (e.target.tagName === "A") {
-      targetIcons.classList.add("flex-cont-centered");
+      targetIcons.classList.remove("hidden-tile");
     }
   });
 
@@ -33,36 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetTile = document.querySelector(e.target.dataset.target);
 
       document.querySelectorAll(".project-tabs a").forEach((a) => {
-        a.classList.remove("tab-active");
+        a.classList.add("hidden-tile");
       });
 
-      e.target.classList.add("tab-active");
+      e.target.classList.remove("hidden-tile");
 
       document.querySelectorAll(".display-tile").forEach((tile) => {
-        tile.classList.remove("tile-active");
+        tile.classList.add("hidden-tile");
       });
 
-      targetTile.classList.add("tile-active");
+      targetTile.classList.remove("hidden-tile");
     })
   });
-/*
-  const tabs = Array.from(document.querySelectorAll('.display-tabs span'));
-  const tiles = Array.from(document.querySelectorAll('.display-tile'));
-  
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', (e) => {
-      console.log(e.target.tagName, e.target.dataset.target);
-        const targetTile = document.querySelector(e.target.dataset.target);
-
-        Array.from(tiles).forEach((tile) => {
-          if (tile === targetTile) {
-            tile.classList.add('tile-active');
-          } else {
-            tile.classList.remove('tile-active');
-          }
-        });
-    });
-  })*/
 });
-
-//Clicking "skill-icons button" should select related "skill-icons img" 
