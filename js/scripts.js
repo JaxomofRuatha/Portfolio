@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector(".skill-tabs").addEventListener("click", (e) => {
     const targetIcons = document.querySelector(e.target.dataset.target);
 
+    document.querySelectorAll(".skill-tabs a").forEach((a) => {
+      a.classList.remove("tab-active");
+    });
+
+    e.target.classList.add("tab-active");
+    
     document.querySelectorAll(".tech-section").forEach((icons) => {
       icons.classList.add("hidden-tile");
     });
@@ -29,10 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetTile = document.querySelector(e.target.dataset.target);
 
       document.querySelectorAll(".project-tabs a").forEach((a) => {
-        a.classList.add("hidden-tile");
+        a.classList.remove("tab-active");
       });
 
-      e.target.classList.remove("hidden-tile");
+      e.target.classList.add("tab-active");
 
       document.querySelectorAll(".display-tile").forEach((tile) => {
         tile.classList.add("hidden-tile");
