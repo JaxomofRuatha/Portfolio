@@ -4,4 +4,10 @@ $yellow: #FFED65;
 $slate: #1E1E1D;
 $icon-purple: #7063CC;
 
-@import "base", "layout", "navbar", "welcome", "skilltabs", "profile", "projects", "contact";
+@import "./base/reset";
+//@import "base", "layout", "navbar", "welcome", "skilltabs", "profile", "projects", "contact";
+
+body {
+    display: grid;
+    
+}
