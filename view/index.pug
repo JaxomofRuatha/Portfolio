@@ -8,21 +8,21 @@ html
         link(rel="icon" href="./images/logoicon.png")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
     body
-        header#welcome
-            include ./components/navbar.pug
-            section
-                include ./components/welcomebanner.pug
-        main
-            section(class="content-section" id="profile")
-                include ./components/skilltabs.pug
-                include ./components/profile.pug
-            section(class="content-section" id="projects")
-                include ./components/projects.pug
-            section(class="content-section" id="contact")
-                include ./components/contact.pug
-        footer.flex-cont-centered
-            p #[small &copy;]  2017 John Chritton &nbsp; &nbsp; &nbsp; &nbsp; {find me on:} &nbsp; &nbsp;
-            img(src="./images/wpicon.svg")
-            img(src="./images/youtubeicon.svg")
-            img(src="./images/twitchicon.svg")
+        div(class="top-bar")
+            img(src="./images/logodragonlong.svg")
+            nav(class="nav")
+                a(class="nav-item" href="") Home
+                a(class="nav-item" href="") Profile
+                a(class="nav-item" href="") Projects
+                a(class="nav-item" href="") Contact
+        div(class="view-container")
+            div(class="welcome-banner")
+                h1 John Chritton
+                h2 {Full stack software developer} 
+            div(class="social-icons")
+                img(src="./images/githubicon.svg")
+                img(src="./images/linkedinicon.svg")
+                img(src="./images/twittericon.svg")
+                img(src="./images/fccicon.svg")
+                img(src="./images/twitchicon.svg")
         script(type="text/javascript" src="./js/scripts.js")
