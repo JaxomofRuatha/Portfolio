@@ -3,18 +3,16 @@ $aqua: #59FFA0;
 $yellow: #FFED65;
 $slate: #1E1E1D;
 $icon-purple: #7063CC;
-$indigo: #0D0B1E;
+$indigo: #151230;
 
 @import "./base/reset";
+@import "./font-awesome/font-awesome";
 //@import "base", "layout", "navbar", "welcome", "skilltabs", "profile", "projects", "contact";
 
 /* Styles for _base.scss */
 
-* {
-    box-sizing: border-box;
-}
-
 body {
+    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     background-color: $slate;
 }
@@ -36,7 +34,7 @@ h1 {
 h2 {
   color: $white;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 h3 {
@@ -51,6 +49,14 @@ h4 {
 }
 
 /* Styles for _layout.scss */
+
+.pending-frame {
+    transform: translateY(100%);
+}
+
+.scrolled-past-frame {
+    transform: translateY(-100%);
+}
 
 .view-container {
     display: grid;
@@ -72,31 +78,6 @@ h4 {
     }
 }
 
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    height: 3rem;
-    width: 100%;
-    background: $indigo;
-    img {
-        max-height: 90%;
-        padding: 0 1rem;
-    }
-}
-
-.welcome-banner {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-height: 11rem;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-    grid-row: 4 / 6;
-    grid-column: 1 / 12;
-}
-
 /* Styles for _nav.scss */
 
 .nav {
@@ -109,19 +90,53 @@ h4 {
     }
 }
 
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    grid-row: 1;
+    grid-column: 1 / 12;
+    height: 3rem;
+    width: 100%;
+    background: $indigo;
+    img {
+        max-height: 90%;
+        padding: 0 1rem;
+    }
+}
+
 /* Styles for _social.scss */
 
 .social-icons {
     grid-column: 12;
-    grid-row: 3 / 7;
+    grid-row: 4 / 8;
     align-self: flex-start;
     justify-self: flex-end;
     display: flex;
     flex-direction: column;
-    padding: 0 0.7rem;
+    padding: 0 0.5rem;
     background: $indigo;
-    * {
-        width: 1.5rem;
-        padding: 1rem 0;
+    i {
+        text-align: center;
+        font-size: 1.7rem;
+        padding: 0.7rem 0;
+        color: $icon-purple;
+        &:hover {
+            color: $white;
+            cursor: pointer;
+        }
     }
+}
+
+/* Styles for _welcome.scss */
+
+.welcome-banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 11rem;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+    grid-row: 4 / 6;
+    grid-column: 1 / 12;
 }
