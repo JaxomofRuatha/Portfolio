@@ -7,7 +7,6 @@ $indigo: #151230;
 
 @import "./base/reset";
 @import "./font-awesome/font-awesome";
-//@import "base", "layout", "navbar", "welcome", "skilltabs", "profile", "projects", "contact";
 
 /* Styles for _base.scss */
 
@@ -53,16 +52,17 @@ h4 {
 }
 
 .scrolled-past-frame {
-    transform: translateY(150vh);
+    transform: translateY(-150vh);
 }
 
 .view-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 3rem repeat(8, 1fr);
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
+    transition: all 1s;
 }
 
 /* Styles for _nav.scss */

@@ -194,7 +194,8 @@ table {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+  -webkit-filter: none;
+          filter: none; }
 
 .fa-stack {
   position: relative;
@@ -2377,7 +2378,8 @@ table {
 
 /* Styles for _base.scss */
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   background: #151230; }
 
@@ -2407,30 +2409,45 @@ h4 {
 
 /* Styles for _layout.scss */
 .pending-frame {
-  transform: translateY(150vh); }
+  -webkit-transform: translateY(150vh);
+      -ms-transform: translateY(150vh);
+          transform: translateY(150vh); }
 
 .scrolled-past-frame {
-  transform: translateY(150vh); }
+  -webkit-transform: translateY(-150vh);
+      -ms-transform: translateY(-150vh);
+          transform: translateY(-150vh); }
 
 .view-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 3rem repeat(8, 1fr);
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
 
 /* Styles for _nav.scss */
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .nav-item:hover {
   color: #59FFA0; }
 
 .top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   height: 3rem;
@@ -2448,9 +2465,16 @@ h4 {
   position: fixed;
   right: 0;
   top: 35vh;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 0.5rem;
   background: #151230; }
   .social-icons i {
@@ -2462,10 +2486,17 @@ h4 {
 
 /* Styles for _welcome.scss */
 .welcome-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   max-height: 11rem;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(transparent));
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7), transparent);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
   grid-row: 5 / 7;
   grid-column: 1 / 12; }
@@ -2485,3 +2516,5 @@ h4 {
   background: #1E1E1D;
   grid-column: 2 / 11;
   grid-row: 10 / 15; }
+
+/*# sourceMappingURL=style.css.map */
