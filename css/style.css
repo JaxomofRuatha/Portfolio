@@ -2379,12 +2379,10 @@ table {
 body {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  background-color: #1E1E1D; }
+  background: #151230; }
 
 a {
-  text-decoration: none;
-  color: #FDFFF7;
-  padding: 1rem; }
+  text-decoration: none; }
 
 h1 {
   font-size: 4.5rem;
@@ -2409,28 +2407,18 @@ h4 {
 
 /* Styles for _layout.scss */
 .pending-frame {
-  transform: translateY(100%); }
+  transform: translateY(150vh); }
 
 .scrolled-past-frame {
-  transform: translateY(-100%); }
+  transform: translateY(150vh); }
 
 .view-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: 3rem repeat(8, 1fr);
   overflow: hidden;
   height: 100vh;
   width: 100vw; }
-  .view-container:before {
-    content: '';
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    background: url(../images/welcome-fire-background.jpg) no-repeat center center;
-    opacity: 0.4;
-    z-index: -1; }
 
 /* Styles for _nav.scss */
 .nav {
@@ -2444,33 +2432,33 @@ h4 {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  grid-row: 1;
-  grid-column: 1 / 12;
+  top: 0;
   height: 3rem;
   width: 100%;
   background: #151230; }
+  .top-bar a {
+    color: #FDFFF7;
+    padding: 1rem; }
   .top-bar img {
     max-height: 90%;
     padding: 0 1rem; }
 
 /* Styles for _social.scss */
 .social-icons {
-  grid-column: 12;
-  grid-row: 4 / 8;
-  align-self: flex-start;
-  justify-self: flex-end;
+  position: fixed;
+  right: 0;
+  top: 35vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
   padding: 0 0.5rem;
   background: #151230; }
   .social-icons i {
-    text-align: center;
     font-size: 1.7rem;
     padding: 0.7rem 0;
     color: #7063CC; }
     .social-icons i:hover {
-      color: #FDFFF7;
-      cursor: pointer; }
+      color: #FDFFF7; }
 
 /* Styles for _welcome.scss */
 .welcome-banner {
@@ -2479,5 +2467,21 @@ h4 {
   width: 100%;
   max-height: 11rem;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-  grid-row: 4 / 6;
+  grid-row: 5 / 7;
   grid-column: 1 / 12; }
+  .welcome-banner:before {
+    content: '';
+    top: 3rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: url(../images/welcome-fire-background.jpg) no-repeat center center;
+    opacity: 0.4;
+    z-index: -1; }
+
+/* Styles for _profile.scss */
+.profile-content {
+  background: #1E1E1D;
+  grid-column: 2 / 11;
+  grid-row: 10 / 15; }
