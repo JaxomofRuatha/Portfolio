@@ -2408,26 +2408,29 @@ h4 {
   font-size: 1.1rem; }
 
 /* Styles for _layout.scss */
-.pending-frame {
-  -webkit-transform: translateY(150vh);
-      -ms-transform: translateY(150vh);
-          transform: translateY(150vh); }
-
-.scrolled-past-frame {
-  -webkit-transform: translateY(-150vh);
-      -ms-transform: translateY(-150vh);
-          transform: translateY(-150vh); }
-
 .view-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 3rem repeat(8, 1fr);
+  grid-template-rows: repeat(16, 11.625vh);
   overflow-x: hidden;
-  height: 100vh;
-  width: 100vw;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+  margin-top: 7vh;
+  height: 93vh;
+  width: 100vw; }
+
+.flex-cent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.hidden-tile {
+  height: 0;
+  opacity: 0; }
 
 /* Styles for _nav.scss */
 .nav {
@@ -2450,7 +2453,7 @@ h4 {
           align-items: center;
   position: fixed;
   top: 0;
-  height: 3rem;
+  height: 7vh;
   width: 100%;
   background: #151230; }
   .top-bar a {
@@ -2463,7 +2466,7 @@ h4 {
 /* Styles for _social.scss */
 .social-icons {
   position: fixed;
-  right: 0;
+  right: 1.5vw;
   top: 35vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2476,7 +2479,10 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 0.5rem;
-  background: #151230; }
+  background: #151230;
+  border: 1px solid #7063CC;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px; }
   .social-icons i {
     font-size: 1.7rem;
     padding: 0.7rem 0;
@@ -2498,23 +2504,45 @@ h4 {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(transparent));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7), transparent);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-  grid-row: 5 / 7;
+  grid-row: 4 / 7;
   grid-column: 1 / 12; }
-  .welcome-banner:before {
-    content: '';
-    top: 3rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    background: url(../images/welcome-fire-background.jpg) no-repeat center center;
-    opacity: 0.4;
-    z-index: -1; }
+
+.welcome-background {
+  grid-row: 1 / 9;
+  grid-column: 1 / 13;
+  background: url(../images/welcome-fire-background.jpg) no-repeat center center;
+  opacity: 0.4;
+  z-index: -1; }
 
 /* Styles for _profile.scss */
-.profile-content {
-  background: #1E1E1D;
+.skill-icons {
   grid-column: 2 / 11;
-  grid-row: 10 / 15; }
+  grid-row: 10 / 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.tech-section img {
+  -webkit-transition: height 1s ease-in-out;
+  -o-transition: height 1s ease-in-out;
+  transition: height 1s ease-in-out;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.8rem; }
+
+.tech-section a {
+  padding: 0.5rem;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  width: 17.5%; }
+  .tech-section a:hover {
+    background-color: #FFED65;
+    color: #1E1E1D;
+    font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
