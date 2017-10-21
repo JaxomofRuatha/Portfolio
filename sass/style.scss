@@ -63,11 +63,6 @@ h4 {
   align-items: center;
 }
 
-.hidden-tile {
-    height: 0;
-    opacity: 0;
-}
-
 /* Styles for _nav.scss */
 
 .nav {
@@ -139,11 +134,23 @@ h4 {
     grid-row: 1 / 9;
     grid-column: 1 / 13;
     background: url(../images/welcome-fire-background.jpg) no-repeat center center;
-    opacity: 0.4;
+    opacity: 0.5;
     z-index: -1;
 }
 
 /* Styles for _profile.scss */
+
+.hidden-tile {
+    transform: translateY(7rem);
+    height: 0;
+    opacity: 0;
+}
+
+.tab-active {
+  background-color: $yellow !important;
+  color: $slate;
+  font-weight: bold;
+}
 
 .skill-icons {
     grid-column: 2 / 11;
@@ -152,14 +159,23 @@ h4 {
     flex-direction: column;
 }
 
+.top-box {
+    height: 6rem;
+    overflow: hidden;
+}
+
 .tech-section {
+    transition: all 0.5s ease-in-out;
   img {
-    transition: height 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     width: 5rem;
     height: 5rem;
     padding: 0.8rem;
   }
-  a {
+}
+
+.skill-tabs a {
+    text-align: center;
     padding: 0.5rem;
     transition: all 0.25s;
     width: (70% / 4);
@@ -168,5 +184,4 @@ h4 {
       color: $slate;
       font-weight: bold;
     }
-  }
 }

@@ -2428,10 +2428,6 @@ h4 {
       -ms-flex-align: center;
           align-items: center; }
 
-.hidden-tile {
-  height: 0;
-  opacity: 0; }
-
 /* Styles for _nav.scss */
 .nav {
   display: -webkit-box;
@@ -2511,10 +2507,22 @@ h4 {
   grid-row: 1 / 9;
   grid-column: 1 / 13;
   background: url(../images/welcome-fire-background.jpg) no-repeat center center;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: -1; }
 
 /* Styles for _profile.scss */
+.hidden-tile {
+  -webkit-transform: translateY(7rem);
+      -ms-transform: translateY(7rem);
+          transform: translateY(7rem);
+  height: 0;
+  opacity: 0; }
+
+.tab-active {
+  background-color: #FFED65 !important;
+  color: #1E1E1D;
+  font-weight: bold; }
+
 .skill-icons {
   grid-column: 2 / 11;
   grid-row: 10 / 15;
@@ -2526,21 +2534,30 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.tech-section img {
-  -webkit-transition: height 1s ease-in-out;
-  -o-transition: height 1s ease-in-out;
-  transition: height 1s ease-in-out;
-  width: 5rem;
-  height: 5rem;
-  padding: 0.8rem; }
+.top-box {
+  height: 6rem;
+  overflow: hidden; }
 
-.tech-section a {
+.tech-section {
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+  .tech-section img {
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.8rem; }
+
+.skill-tabs a {
+  text-align: center;
   padding: 0.5rem;
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
   width: 17.5%; }
-  .tech-section a:hover {
+  .skill-tabs a:hover {
     background-color: #FFED65;
     color: #1E1E1D;
     font-weight: bold; }
