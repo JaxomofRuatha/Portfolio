@@ -20,16 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
           document
             .querySelector(`${priorActive}`)
               .classList.add('hidden-tile');
-            document
-              .querySelector(`${priorActive}`)
-              .childNodes.forEach(icon => {
-                icon.classList.add('hidden-tile');
-              });  
           setTimeout(() => {
-              targetIcons.classList.remove('hidden-tile');
-                targetIcons.childNodes.forEach(icon => {
-              icon.classList.remove('hidden-tile');
-            });  
+              targetIcons.classList.remove('hidden-tile');  
           }, 500);
         }
         /*

@@ -2515,7 +2515,6 @@ h4 {
   -webkit-transform: translateY(7rem);
       -ms-transform: translateY(7rem);
           transform: translateY(7rem);
-  height: 0;
   opacity: 0; }
 
 .tab-active {
@@ -2532,22 +2531,33 @@ h4 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  max-height: 10rem; }
 
 .top-box {
   height: 6rem;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 .tech-section {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  position: absolute; }
   .tech-section img {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     width: 5rem;
-    height: 5rem;
     padding: 0.8rem; }
 
 .skill-tabs a {
