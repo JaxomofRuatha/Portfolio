@@ -2571,7 +2571,8 @@ h4 {
   .skill-tabs a:hover {
     background-color: #FFED65;
     color: #1E1E1D;
-    font-weight: bold; }
+    font-weight: bold;
+    cursor: pointer; }
 
 .profile-content {
   display: grid;
