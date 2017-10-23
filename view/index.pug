@@ -10,9 +10,9 @@ html
     body
         div(class="top-bar")
             img(src="./images/logodragonlong.svg")
-            nav(class="nav")
-                a(class="nav-item" href="") Home
-                a(class="nav-item" href="") Profile
+            nav(class="flex-cent")
+                a(class="nav-item" href="#welcome-section") Home
+                a(class="nav-item" href="#profile") Profile
                 a(class="nav-item" href="") Projects
                 a(class="nav-item" href="") Contact
         div(class="social-icons")
@@ -26,34 +26,35 @@ html
                 i(class="fa fa-free-code-camp")
             a(href="https://go.twitch.tv/jaxomofruatha")
                 i(class="fa fa-twitch")
-        div(class="view-container")
+        header(id="welcome-section")
             div(class="welcome-background")
             div(class="welcome-banner frame-home")
                 h1 John Chritton
                 h2 {Full stack software developer}
-            div(class="skill-icons")
+        section(id="profile")
+            div(class="l-content-section skill-icons")
                 h3 Skills and Technologies
                 div.top-box
-                    div(class="flex-cent tech-section" id="web-dev")
+                    div(class="flex-cent tech-section visible-tile" id="web-dev")
                         img(src="./images/htmlicon.svg")
                         img(src="./images/css3icon.svg")
                         img(src="./images/reacticon.svg")
                         img(src="./images/sassicon.svg")
                         img(src="./images/jqueryicon.svg")
                         img(src="./images/bootstrapicon.svg")
-                    div(class="flex-cent tech-section hidden-tile" id="core-lang")
+                    div(class="flex-cent tech-section" id="core-lang")
                         img(src="./images/cicon.svg")
                         img(src="./images/jsicon.svg")
                         img(src="./images/javaicon.svg")
                         img(src="./images/pythonicon.svg")
-                    div(class="flex-cent tech-section hidden-tile" id="db-server")
+                    div(class="flex-cent tech-section" id="db-server")
                         img(src="./images/nodejsicon.svg")
                         img(src="./images/expressicon.svg")
                         img(src="./images/mongodbicon.svg")
                         img(src="./images/mysqlicon.svg")
                         img(src="./images/postgresqlicon.svg")
                         img(src="./images/sasicon.svg")
-                    div(class="flex-cent tech-section hidden-tile" id="tools")
+                    div(class="flex-cent tech-section" id="tools")
                         img(src="./images/giticon.svg")
                         img(src="./images/npmicon.svg")
                         img(src="./images/mochaicon.svg")
@@ -64,7 +65,23 @@ html
                     a(data-target="#core-lang") Core Languages
                     a(data-target="#db-server") Database and Server
                     a(data-target="#tools") Other Tools
-            div(class="profile-content")
+            div(class="profile-content l-content-section")
+                div
+                    h3 Education
+                    h4 University of Wisconsin - Green Bay
+                    p
+                        em B.A. -- Psychology, Social Change and Development, History
+                    p Member of first place team for competition presenting analysis of designed experiment test group, member of Psi Chi Honors Society, Section editor for school newspaper “The Fourth Estate,” Staff member for Sheepshead Review writing journal, Key contributor and organizer for three extracurricular clubs, Volunteer provider of technical support for campus library.
+                    h4 Completed Courses
+                    p
+                        em CS50: Introduction to Computer Science -- Harvard University
+                    p Full online version of Harvard course through edx.org, working through projects in C, Python, and JavaScript.
+                div
+                    h3 Profile and Direction
+                    p I am very excited to bring my vision and passion to life through detailed and responsive web development projects aimed to inspire. My background in psychology and gift for creating simple yet pleasurable user experiences brings a unique approach to applications.
+                    p Currently I am refining my abilities with HTML, CSS, and JavaScript, with the eventual goal of mastering React and React Native to allow a fully immersive user experience no matter what their platform.
+                    p I would be glad to make your goal my goal. Let's partner to make your project the solution you deserve!
+                    button Resume
             div(class="project-view")
             div(class="contact-view")
         script(type="text/javascript" src="/js/bundle.js")
