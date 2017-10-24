@@ -72,7 +72,7 @@ html
                     p
                         em B.A. -- Psychology, Social Change and Development, History
                     p Member of first place team for competition presenting analysis of designed experiment test group, member of Psi Chi Honors Society, Section editor for school newspaper “The Fourth Estate,” Staff member for Sheepshead Review writing journal, Key contributor and organizer for three extracurricular clubs, Volunteer provider of technical support for campus library.
-                    h4 Completed Courses
+                    h4 Coursework
                     p
                         em CS50: Introduction to Computer Science -- Harvard University
                     p Full online version of Harvard course through edx.org, working through projects in C, Python, and JavaScript.
@@ -82,7 +82,7 @@ html
                     p Currently I am refining my abilities with HTML, CSS, and JavaScript, with the eventual goal of mastering React and React Native to allow a fully immersive user experience no matter what their platform.
                     p I would be glad to make your goal my goal. Let's partner to make your project the solution you deserve!
                     button Resume
-        section#projects
+        section#projects.l-content-section
             div(class="project-tabs top-tabs")
                 a(class="flex-cent tab-active" data-target="#tile-portfolio") Portfolio Site
                 a(class="flex-cent" data-target="#tile-top2") Quote Machine
@@ -91,27 +91,26 @@ html
                 a(class="flex-cent" data-target="#tile-top5") Bmore Around Town
                 a(class="flex-cent" data-target="#tile-top6") Speller
                 a(class="flex-cent" data-target="#tile-top7") Whack a Mole
-            div(class="display-tile" id="tile-portfolio")
-                img(src="./images/spellerthumb.jpg")
-                div.project-tile
-                    div.project-techs
-                        span C
-                        span Data Structures
-                        span Algorithms
-                    p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary
-                    div
-                        div(class="project-links")
-                            span {icon}
-                            span Code
-                            span {icon}
-                            span Demo
-                        span.project-status Current Status: First iteration complete and functional
+            div(class="project-view")
+                div(class="project-tile" id="tile-portfolio")
+                    div(class="project-thumb")
+                        img(src="../images/thumbnails/spellerthumb.jpg")
+                    div(class="project-links")
+                        i(class="fa fa-github")
+                        span Code
+                        i(class="fa fa-cogs")
+                        span Demo
+                    div.project-tech
+                        span C, Data Structures, Algorithms
+                        span Status: Current Status: First iteration complete and functional
+                    div.project-desc
+                        p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
             div(class="project-tabs bottom-tabs")
                 a(class="flex-cent" data-target="#tile-bottom1") Wikipedia Viewer
                 a(class="flex-cent" data-target="#tile-bottom2") Markdown Previewer
                 a(class="flex-cent" data-target="#tile-bottom3") Microservices
                 a(class="flex-cent" data-target="#tile-bottom4") Freeform Vote
                 a(class="flex-cent" data-target="#tile-bottom5") Twitch Dashboard
-                a(class="flex-cent" data-target="#tile-bottom6") JavaScript Calculator       
+                a(class="flex-cent" data-target="#tile-bottom6") JavaScript Calculator
         section#contact
         script(type="text/javascript" src="/js/bundle.js")
