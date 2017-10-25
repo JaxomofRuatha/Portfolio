@@ -91,20 +91,22 @@ html
                 a(class="flex-cent" data-target="#tile-top5") Bmore Around Town
                 a(class="flex-cent" data-target="#tile-top6") Speller
                 a(class="flex-cent" data-target="#tile-top7") Whack a Mole
-            div(class="project-view")
-                div(class="project-tile" id="tile-portfolio")
-                    div(class="project-thumb")
-                        img(src="../images/thumbnails/spellerthumb.jpg")
+            div(class="project-tile" id="tile-portfolio")
+                div(class="project-thumb")
+                    h2 Speller.c
+                    img(src="../images/thumbnails/spellerthumb.jpg")
                     div(class="project-links")
-                        i(class="fa fa-github")
-                        span Code
-                        i(class="fa fa-cogs")
-                        span Demo
-                    div.project-tech
-                        span C, Data Structures, Algorithms
-                        span Status: Current Status: First iteration complete and functional
-                    div.project-desc
-                        p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
+                        a(href="#")
+                            i(class="fa fa-github")
+                            span Code
+                        a(href="#")
+                            i(class="fa fa-cogs")
+                            span Demo
+                div.project-tech
+                    span C | Data Structures | Algorithms
+                    span Status: First iteration complete and functional
+                div.project-desc
+                    p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
             div(class="project-tabs bottom-tabs")
                 a(class="flex-cent" data-target="#tile-bottom1") Wikipedia Viewer
                 a(class="flex-cent" data-target="#tile-bottom2") Markdown Previewer
@@ -112,5 +114,12 @@ html
                 a(class="flex-cent" data-target="#tile-bottom4") Freeform Vote
                 a(class="flex-cent" data-target="#tile-bottom5") Twitch Dashboard
                 a(class="flex-cent" data-target="#tile-bottom6") JavaScript Calculator
-        section#contact
+        section#contact.l-content-section
+            div.contact-title
+                h3 Get in Contact
+            div.contact-main
+                div.contact-buttons
+                div.contact-location
+        footer
+
         script(type="text/javascript" src="/js/bundle.js")
