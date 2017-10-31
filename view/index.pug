@@ -96,16 +96,19 @@ html
                     h2 Speller.c
                     img(src="../images/thumbnails/spellerthumb.jpg")
                     div(class="flex-cent project-links")
-                        a(href="#")
+                        a(class="l-icon-labeled" href="#")
                             i(class="fa fa-github")
                             span Code
-                        a(href="#")
+                        a(class="l-icon-labeled" href="#")
                             i(class="fa fa-cogs")
                             span Demo
                 div.project-tech
-                    span C | Data Structures | Algorithms
-                    span Status: First iteration complete and functional
+                    span C
+                    span Data Structures
+                    span Algorithms
                 div.project-desc
+                    span(style="color: #FFED65") Status: &nbsp;
+                    span First iteration complete and functional
                     p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
             div(class="project-tabs bottom-tabs")
                 a(class="flex-cent" data-target="#tile-bottom1") Wikipedia Viewer
@@ -117,7 +120,9 @@ html
         section#contact(class="flex-cent l-content-section")
             img(src="http://via.placeholder.com/100x100")
             h3 Get in Contact
-            div.contact-buttons
+            button(class="l-icon-labeled")
+                i(class="fa fa-github")
+                span GitHub
         footer
             span #[small &copy;] 2017 John Chritton
         script(type="text/javascript" src="/js/bundle.js")

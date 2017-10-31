@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.project-tabs').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const targetTile = document.querySelector(e.target.dataset.target);
-      const priorActive = document.querySelector('.tab-active').dataset.target;
 
       document.querySelectorAll('.project-tabs a').forEach(a => {
         a.classList.remove('tab-active');
@@ -33,9 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.target.classList.add('tab-active');
 
-      document.querySelector(`${priorActive}`).classList.remove('visible-tile');
+      document.querySelectorAll('.project-tabs').forEach((tile) => {
+          tile.classList.remove('visible-project');
+      }); 
 
-      targetTile.classList.add('visible-tile');
+      targetTile.classList.add('visible-project');
     });
   });
 });

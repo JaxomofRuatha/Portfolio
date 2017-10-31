@@ -36,6 +36,7 @@ button {
 a {
     text-decoration: none;
     color: $white;
+    cursor: pointer;
 }
 
 h1 {
@@ -64,6 +65,11 @@ h4 {
   padding: 0.5rem;
 }
 
+footer {
+    text-align: center;
+    background: darken($indigo, 50%);
+}
+
 /* Styles for _layout.scss */
 
 .l-content-section {
@@ -79,6 +85,15 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.l-icon-labeled {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    * {
+        padding: 1rem 0.9rem;
+    }
 }
 
 /* Styles for _nav.scss */
@@ -250,25 +265,29 @@ h4 {
     height: 2rem;
     a {
         flex: 1;
+        &:hover {
+            background: lighten($slate, 4%);
+            cursor: pointer;
+        }
     }
 }
 
 .project-tile {
     display: grid;
     flex: 1 1 auto;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     box-shadow: inset 0 0 5px black;
     padding: 0.5rem;
     height: 100%;
     border-radius: 5px;
     overflow: hidden;
     .project-thumb {
-        grid-column: 1 / 4;
-        grid-row: 1 / 7;
+        grid-column: 1 / 5;
+        grid-row: 1 / 9;
         display: flex;
         flex-direction: column;
-        width: 30rem;
+        align-items: center;
         overflow: hidden;
         background: $indigo;
         img {
@@ -279,13 +298,12 @@ h4 {
         border-radius: 5px;
         .project-links {
             width: 30rem;
-            grid-row: 5;
             color: $white !important;
             background: $indigo;
             a {
                 display: flex;
                 justify-content: center;
-                padding: 0.5rem 1rem;
+                padding: 1rem;
                 &:hover {
                     color: $yellow;
                 }
@@ -293,17 +311,26 @@ h4 {
         }
     }
     .project-tech {
-        grid-column: 4 / 7;
+        grid-column: 5 / 9;
         grid-row: 1;
-        * {
-            display: block;
-            padding: 0.2rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: $indigo;
+        span {
+            color: $aqua;
+            flex: 1;
+            font-weight: bold;
+            height: 1.5rem;
         }
     }
     .project-desc {
-        grid-column: 4 / 7;
-        grid-row-start: 2;
-        text-align: left;
+        grid-column: 5 / 9;
+        grid-row: 2 / 9;
+        margin: 1.5rem;
+        p{
+            text-align: left;
+        }
     }
 }
 
