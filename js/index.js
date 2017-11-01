@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       e.target.classList.add('tab-active');
 
-      document.querySelectorAll('.project-tabs').forEach((tile) => {
-          tile.classList.remove('visible-project');
-      }); 
+      document.querySelectorAll('.project-tile').forEach(tile => {
+        tile.setAttribute('style', 'opacity: 0');
+      });
 
-      targetTile.classList.add('visible-project');
+      targetTile.setAttribute('style', 'opacity: 1');
     });
   });
 });
