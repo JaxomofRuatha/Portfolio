@@ -5,7 +5,7 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(rel="stylesheet" type="text/css" href="./css/style.css")
-        link(rel="icon" href="./images/logoicon.png")
+        link(rel="icon" href="./images/favicon.ico")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
     body
         include ./_navbar.pug
@@ -17,12 +17,7 @@ html
         section#projects.l-content-section
             include ./_projects.pug
         section#contact(class="flex-cent l-content-section")
-            img(class="portrait-pic" src="http://via.placeholder.com/200x200")
-            h3 Get in Contact
-            div.contact-links
-                a(class="l-icon-labeled")
-                    i(class="fa fa-github")
-                    span GitHub
+            include ./_contact.pug
         footer
             span #[small &copy;] 2017 John Chritton
         script(type="text/javascript" src="/js/bundle.js")

@@ -4,15 +4,16 @@ $yellow: #FFED65;
 $slate: #1E1E1D;
 $icon-purple: #7063CC;
 $indigo: #151230;
+$dark-indigo: darken($indigo, 4%);
 
 @import "./base/reset";
+@import "./base/_typography";
 @import "./font-awesome/font-awesome";
 
 /* Styles for _base.scss */
 
 body {
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
     background: url("../images/temple.svg") repeat, $indigo;
     overflow-x: hidden;
     color: $white;
@@ -24,35 +25,9 @@ a {
     cursor: pointer;
 }
 
-h1 {
-    font-size: 4.5rem;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-    color: $aqua;
-    padding: 1rem;
-}
-
-h2 {
-  color: $white;
-  font-size: 2rem;
-  padding: 0 1rem 1rem 1rem;
-}
-
-h3 {
-  color: $aqua;
-  font-size: 1.4rem;
-  padding: 0.7rem 0;
-}
-
-h4 {
-  color: $yellow;
-  font-size: 1.1rem;
-  padding: 0.5rem;
-}
-
 footer {
     text-align: center;
-    background: darken($indigo, 50%);
+    background: $dark-indigo;
 }
 
 /* Styles for _layout.scss */
@@ -97,7 +72,7 @@ footer {
     top: 0;
     height: 7vh;
     width: 100%;
-    background: $indigo;
+    background: $dark-indigo;
     border-bottom: 1px solid $icon-purple;
     z-index: 3;
     a {
@@ -120,17 +95,19 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 0 0.5rem;
-    background: $indigo;
+    background: $dark-indigo;
     border: 1px solid $icon-purple;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     z-index: 3;
     i {
+        transition: all 0.3s;
         font-size: 1.7rem;
         padding: 0.7rem 0;
         color: $icon-purple;
         &:hover {
             color: $white;
+            transform: scale(1.1);
         }
     }
 }
@@ -208,8 +185,10 @@ footer {
     padding: 0.5rem;
     width: (70% / 4);
     border-top: 1px solid $yellow;
-    transition: background 0.5s;
+    background: $slate;
+    z-index: 3;
     &:hover {
+      transition: background 0.5s;
       background: lighten($slate, 4%);
       cursor: pointer;
     }

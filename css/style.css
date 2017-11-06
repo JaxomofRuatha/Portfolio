@@ -46,6 +46,58 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+:root {
+  font-size: 14px; }
+
+@media screen and (min-width: 568px) {
+  :root {
+    font-size: 16px; } }
+
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 18px; } }
+
+@media screen and (min-width: 1400px) {
+  :root {
+    font-size: 20px; } }
+
+@media screen and (min-width: 1600px) {
+  :root {
+    font-size: 24px; } }
+
+@media screen and (min-width: 1900px) {
+  :root {
+    font-size: 28px; } }
+
+@media screen and (min-width: 2560px) {
+  :root {
+    font-size: 36px; } }
+
+body {
+  font-family: 'Lato', sans-serif; }
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  color: #59FFA0;
+  padding: 1rem; }
+
+h2 {
+  color: #FDFFF7;
+  font-size: 2rem;
+  padding: 0 1rem 1rem 1rem; }
+
+h3 {
+  color: #59FFA0;
+  font-size: 1.4rem;
+  padding: 0.7rem 0; }
+
+h4 {
+  color: #FFED65;
+  font-size: 1.1rem;
+  padding: 0.5rem; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2380,7 +2432,6 @@ table {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
   background: url("../images/temple.svg") repeat, #151230;
   overflow-x: hidden;
   color: #FDFFF7; }
@@ -2390,31 +2441,9 @@ a {
   color: #FDFFF7;
   cursor: pointer; }
 
-h1 {
-  font-size: 4.5rem;
-  font-weight: bold;
-  letter-spacing: 0.05rem;
-  color: #59FFA0;
-  padding: 1rem; }
-
-h2 {
-  color: #FDFFF7;
-  font-size: 2rem;
-  padding: 0 1rem 1rem 1rem; }
-
-h3 {
-  color: #59FFA0;
-  font-size: 1.4rem;
-  padding: 0.7rem 0; }
-
-h4 {
-  color: #FFED65;
-  font-size: 1.1rem;
-  padding: 0.5rem; }
-
 footer {
   text-align: center;
-  background: black; }
+  background: #0f0c21; }
 
 /* Styles for _layout.scss */
 .l-content-section {
@@ -2465,7 +2494,7 @@ footer {
   top: 0;
   height: 7vh;
   width: 100%;
-  background: #151230;
+  background: #0f0c21;
   border-bottom: 1px solid #7063CC;
   z-index: 3; }
   .top-bar a {
@@ -2491,17 +2520,23 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 0.5rem;
-  background: #151230;
+  background: #0f0c21;
   border: 1px solid #7063CC;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   z-index: 3; }
   .social-icons i {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     font-size: 1.7rem;
     padding: 0.7rem 0;
     color: #7063CC; }
     .social-icons i:hover {
-      color: #FDFFF7; }
+      color: #FDFFF7;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
 
 /* Styles for _welcome.scss */
 #welcome-section {
@@ -2585,10 +2620,12 @@ footer {
   padding: 0.5rem;
   width: 17.5%;
   border-top: 1px solid #FFED65;
-  -webkit-transition: background 0.5s;
-  -o-transition: background 0.5s;
-  transition: background 0.5s; }
+  background: #1E1E1D;
+  z-index: 3; }
   .skill-tabs a:hover {
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
     background: #282827;
     cursor: pointer; }
 
