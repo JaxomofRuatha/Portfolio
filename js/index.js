@@ -34,9 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.querySelectorAll('.project-tile').forEach(tile => {
         tile.setAttribute('style', 'opacity: 0');
+        tile.classList.remove('project-active');
       });
 
       targetTile.setAttribute('style', 'opacity: 1');
+      targetTile.classList.add('project-active');
     });
   });
 });
