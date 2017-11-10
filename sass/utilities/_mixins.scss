@@ -1,0 +1,35 @@
+@mixin less() {
+  @media screen and (max-width: 567px) {
+    @content;
+  }
+}
+
+@mixin tiny() {
+  @media screen and (min-width: 568px) {
+    @content;
+  }
+}
+
+@mixin sm() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin med() {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin lg() {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin xl() {
+  @media screen and (min-width: 1900px) {
+    @content;
+  }
+}

@@ -2483,6 +2483,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: minmax(3rem, auto);
+  height: 100%;
   grid-template-areas: "title title title title tech tech tech tech" "thumb thumb thumb thumb desc desc desc desc" "thumb thumb thumb thumb desc desc desc desc" "thumb thumb thumb thumb desc desc desc desc" "thumb thumb thumb thumb desc desc desc desc" "links links links links desc desc desc desc"; }
   .project-tile h2 {
     grid-area: title; }
@@ -2696,7 +2697,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
   height: 2rem; }
   .project-tabs a {
     -webkit-box-flex: 1;
@@ -2711,30 +2712,36 @@ footer {
   position: relative;
   overflow: hidden;
   -webkit-box-shadow: inset 0 0 5px black;
-          box-shadow: inset 0 0 5px black;
-  padding: 0.5rem; }
+          box-shadow: inset 0 0 5px black; }
+
+#tile-portfolio .project-thumb {
+  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
+
+#tile-top2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
 
 .project-tile {
-  border-radius: 5px;
+  padding: 0.5rem;
   top: 95vh;
   position: absolute; }
   .project-tile .project-thumb {
     overflow: hidden;
-    background: url("./images/thumbnails/spellerthumb.jpg"); }
-    .project-tile .project-thumb .project-links {
-      width: 30rem;
-      color: #FDFFF7 !important;
-      background: #151230; }
-      .project-tile .project-thumb .project-links a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        padding: 1rem; }
-        .project-tile .project-thumb .project-links a:hover {
-          color: #FFED65; }
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .project-tile .project-links {
+    width: 30rem;
+    background: #151230; }
+    .project-tile .project-links > a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 1rem; }
+      .project-tile .project-links > a:hover {
+        color: #FFED65; }
   .project-tile .project-tech {
     display: -webkit-box;
     display: -ms-flexbox;
