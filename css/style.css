@@ -2469,12 +2469,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center; }
   .l-icon-labeled * {
-    padding: 1rem 0.9rem; }
+    padding: 0.5rem; }
 
 .project-thumb {
   grid-area: thumb; }
@@ -2498,10 +2499,13 @@ footer {
     grid-area: title; }
 
 .portrait-pic {
-  grid-area: port; }
+  grid-area: port;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
 
 .mn-map {
-  grid-area: map; }
+  grid-area: map;
+  justify-self: center; }
 
 .email-button {
   grid-area: email; }
@@ -2515,7 +2519,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-auto-rows: minmax(3rem, auto);
-  grid-template-areas: "port port head head head head head head" "port port social social social social map map" "port port social social social social map map" "port port social social social social map map" "port port social social social social map map" ". . social social social social email email"; }
+  grid-template-areas: "head head head head head head head head" "port port social social social social map map" "port port social social social social map map" "port port social social social social map map" "port port social social social social map map" "port port social social social social email email"; }
   #contact h3 {
     grid-area: head;
     -ms-flex-item-align: start;
@@ -2655,13 +2659,17 @@ footer {
   grid-row-start: 2;
   grid-column: 1; }
   .tech-section img {
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     width: 5rem;
     padding: 0.8rem; }
 
 .skill-tabs a {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   text-align: center;
   padding: 0.5rem;
   width: 17.5%;
@@ -2748,7 +2756,10 @@ footer {
 .project-tile {
   top: 95vh;
   position: absolute;
-  background: #151230; }
+  background: #151230;
+  -webkit-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  transition: top 0.5s; }
   .project-tile .project-thumb {
     overflow: hidden;
     background-size: contain;
@@ -2796,20 +2807,26 @@ footer {
 #contact {
   max-height: 80vh; }
   #contact .portrait-pic {
-    max-height: 20rem; }
+    max-height: 15rem; }
   #contact .mn-map {
-    max-height: 20rem; }
+    max-height: 13rem; }
 
 .contact-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; }
+  height: 100%;
+  font-size: 1.2rem; }
+  .contact-links a {
+    width: 15rem; }
 
 /*# sourceMappingURL=style.css.map */
