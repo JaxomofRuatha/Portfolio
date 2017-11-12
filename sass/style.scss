@@ -236,6 +236,7 @@ footer {
     grid-row: 1 / 9;
     grid-column: 1 / 13;
     background: url(../images/welcome-fire-background.jpg) no-repeat center center, $indigo;
+    background-attachment: fixed;
     opacity: 0.5;
     z-index: -1;
 }
@@ -349,16 +350,23 @@ footer {
 
 .project-tabs {
     display: flex;
-    padding: 0 0.5rem 0.5rem 0.5rem;
-    height: 2rem;
+    height: 4rem;
     a {
         flex: 1;
-        padding: 0.5rem;
+        padding: 1rem 0;
         &:hover {
             background: lighten($slate, 4%);
             cursor: pointer;
         }
     }
+}
+
+.top-tabs {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.bottom-tabs {
+    padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 .project-carousel {
@@ -370,6 +378,30 @@ footer {
 
 #tile-top1 .project-thumb {
     background-image: url('../images/thumbnails/spellerthumb.jpg');
+}
+
+#tile-top3 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top4 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top2 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top2 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top2 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top2 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
 }
 
 #tile-top2 .project-thumb {
