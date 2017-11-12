@@ -106,8 +106,8 @@ h4 {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../css/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../../css/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../css/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../css/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../css/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../css/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../css/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../css/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../css/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../css/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../css/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../css/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2635,6 +2635,7 @@ footer {
   grid-row: 1 / 9;
   grid-column: 1 / 13;
   background: url(../images/welcome-fire-background.jpg) no-repeat center center, #151230;
+  background-attachment: fixed;
   opacity: 0.5;
   z-index: -1; }
 
@@ -2769,16 +2770,21 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 0.5rem 0.5rem 0.5rem;
-  height: 2rem; }
+  height: 4rem; }
   .project-tabs a {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding: 0.5rem; }
+    padding: 1rem 0; }
     .project-tabs a:hover {
       background: #282827;
       cursor: pointer; }
+
+.top-tabs {
+  padding: 0 0.5rem 0.5rem 0.5rem; }
+
+.bottom-tabs {
+  padding: 0.5rem 0.5rem 0 0.5rem; }
 
 .project-carousel {
   height: 100%;
@@ -2788,6 +2794,24 @@ footer {
 
 #tile-top1 .project-thumb {
   background-image: url("../images/thumbnails/spellerthumb.jpg"); }
+
+#tile-top3 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#tile-top4 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#tile-top2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#tile-top2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#tile-top2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#tile-top2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
 
 #tile-top2 .project-thumb {
   background-image: url("../images/thumbnails/quotethumb.JPG"); }
