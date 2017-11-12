@@ -260,7 +260,7 @@ footer {
 }
 
 .top-box {
-    height: 8rem;
+    height: 7rem;
     overflow: hidden;
     display: grid;
     grid-template-rows: repeat(2, 7rem);
@@ -272,11 +272,11 @@ footer {
     transition: all 0.5s ease-in-out;
     grid-row-start: 2;
     grid-column: 1;
-  img {
-    transition: transform 0.5s ease-in-out;
-    width: 5rem;
-    padding: 0.8rem;
-  }
+    img {
+        transition: transform 0.5s ease-in-out;
+        width: 5rem;
+        padding: 0 0.8rem;
+    }
 }
 
 @include sm {
@@ -289,10 +289,9 @@ footer {
 .skill-tabs {
     a {
         @include flex-cent-r;
-        flex-basis: 50%;
         text-align: center;
-        padding: 0.5rem;
-        height: 2rem;
+        padding: 0.7rem;
+        height: 1rem;
         border-top: 1px solid $yellow;
         background: $slate;
         z-index: 3;
@@ -380,32 +379,48 @@ footer {
     background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-#tile-top3 .project-thumb {
+#tile-top2 .project-thumb {
     background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#tile-top3 .project-thumb {
+    background-image: url('../images/thumbnails/weatherthumb.JPG');
 }
 
 #tile-top4 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+    background-image: url('../images/thumbnails/microsthumb.JPG');
 }
 
-#tile-top2 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+#tile-top5 .project-thumb {
+    background-image: url('../images/thumbnails/bmorethumb.JPG');
 }
 
-#tile-top2 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+#tile-top6 .project-thumb {
+    background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-#tile-top2 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+#tile-bottom1 .project-thumb {
+    background-image: url('../images/thumbnails/mdthumb.JPG');
 }
 
-#tile-top2 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+#tile-bottom2 .project-thumb {
+    background-image: url('../images/thumbnails/wikithumb.JPG');
 }
 
-#tile-top2 .project-thumb {
-    background-image: url('../images/thumbnails/quotethumb.JPG');
+#tile-bottom3 .project-thumb {
+    background-image: url('../images/thumbnails/bikethumb.JPG');
+}
+
+#tile-bottom4 .project-thumb {
+    background-image: url('../images/thumbnails/votethumb.JPG');
+}
+
+#tile-bottom5 .project-thumb {
+    background-image: url('../images/thumbnails/twitchthumb.JPG');
+}
+
+#tile-bottom6 .project-thumb {
+    background-image: url('../images/thumbnails/calcthumb.JPG');
 }
 
 .project-tile {
@@ -413,6 +428,9 @@ footer {
     position: absolute;
     background: $indigo;
     transition: top 0.5s;
+    h2 {
+        padding: 0.5rem 0;
+    }
     .project-thumb {
         overflow: hidden;
         background-size: contain;
@@ -433,11 +451,11 @@ footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-flow: row wrap;
         span {
             color: $aqua;
-            flex: 1;
             font-weight: bold;
-            height: 1.5rem;
+            padding: 0.5rem;
         }
     }
     .project-desc {
@@ -446,7 +464,7 @@ footer {
         padding: 0.5rem;
         bottom: 0;
         right: 0;
-        p{
+        p {
             text-align: left;
         }
     }
