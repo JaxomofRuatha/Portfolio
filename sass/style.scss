@@ -132,6 +132,8 @@ footer {
 /* Styles for _nav.scss */
 
 .nav-item {
+    padding: 1rem;
+    color: $white;
     &:hover {
         color: $aqua;
     }
@@ -143,18 +145,35 @@ footer {
     align-items: center;
     position: fixed;
     top: 0;
-    height: 7vh;
+    height: 2.5rem;
     width: 100%;
     background: $dark-indigo;
     border-bottom: 1px solid $icon-purple;
     z-index: 10;
-    a {
-        color: $white;
-        padding: 1rem;
+    i {
+        display: none;
     }
     img {
+        // Change max-height to rem
         max-height: 90%;
         padding: 0 1rem;
+        top: 0;
+        left: 0;
+    }
+}
+
+@include sm {
+    .nav-item {
+        width: 0;
+        padding: 0;
+    }
+    .top-bar {
+        nav {
+            width: 0;
+        }
+        i {
+            display: inline-block;
+        }
     }
 }
 
@@ -259,13 +278,20 @@ footer {
   }
 }
 
+@include sm {
+    .tech-section {
+        overflow-x: scroll;
+    }
+}
+
 // Do this with flex instead, go down to 2 and scale down
 .skill-tabs {
     a {
+        @include flex-cent-r;
         flex-basis: 50%;
         text-align: center;
         padding: 0.5rem;
-        width: (70% / 4);
+        height: 2rem;
         border-top: 1px solid $yellow;
         background: $slate;
         z-index: 3;
@@ -342,7 +368,7 @@ footer {
     margin: 0.5rem 0;
 }
 
-#tile-portfolio .project-thumb {
+#tile-top1 .project-thumb {
     background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 

@@ -2527,8 +2527,11 @@ footer {
     padding: 0; }
 
 /* Styles for _nav.scss */
-.nav-item:hover {
-  color: #59FFA0; }
+.nav-item {
+  padding: 1rem;
+  color: #FDFFF7; }
+  .nav-item:hover {
+    color: #59FFA0; }
 
 .top-bar {
   display: -webkit-box;
@@ -2542,17 +2545,27 @@ footer {
           align-items: center;
   position: fixed;
   top: 0;
-  height: 7vh;
+  height: 2.5rem;
   width: 100%;
   background: #0f0c21;
   border-bottom: 1px solid #7063CC;
   z-index: 10; }
-  .top-bar a {
-    color: #FDFFF7;
-    padding: 1rem; }
+  .top-bar i {
+    display: none; }
   .top-bar img {
     max-height: 90%;
-    padding: 0 1rem; }
+    padding: 0 1rem;
+    top: 0;
+    left: 0; }
+
+@media screen and (max-width: 799px) {
+  .nav-item {
+    width: 0;
+    padding: 0; }
+  .top-bar nav {
+    width: 0; }
+  .top-bar i {
+    display: inline-block; } }
 
 /* Styles for _social.scss */
 .social-icons {
@@ -2671,12 +2684,25 @@ footer {
     width: 5rem;
     padding: 0.8rem; }
 
+@media screen and (max-width: 799px) {
+  .tech-section {
+    overflow-x: scroll; } }
+
 .skill-tabs a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
   padding: 0.5rem;
-  width: 17.5%;
+  height: 2rem;
   border-top: 1px solid #FFED65;
   background: #1E1E1D;
   z-index: 3; }
@@ -2760,7 +2786,7 @@ footer {
   overflow: hidden;
   margin: 0.5rem 0; }
 
-#tile-portfolio .project-thumb {
+#tile-top1 .project-thumb {
   background-image: url("../images/thumbnails/spellerthumb.jpg"); }
 
 #tile-top2 .project-thumb {

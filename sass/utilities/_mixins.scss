@@ -1,29 +1,47 @@
+// Mobile sized
 @mixin xs() {
   @media screen and (max-width: 500px) {
     @content;
   }
 }
 
+// Tablet sized
 @mixin sm() {
   @media screen and (max-width: 799px) {
     @content;
   }
 }
 
+// Larger tablet and small laptop
 @mixin md() {
   @media screen and (max-width: 1023px) {
     @content;
   }
 }
 
+// Larger laptop, small desktop
 @mixin lg() {
   @media screen and (max-width: 1280px) {
     @content;
   }
 }
 
+// Larger desktop
 @mixin xl() {
   @media screen and (min-width: 1600px) {
     @content;
   }
+}
+
+@mixin flex-cent-r() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-cent-c() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
