@@ -2527,13 +2527,7 @@ footer {
     padding: 0; }
 
 /* Styles for _nav.scss */
-.nav-item {
-  padding: 1rem;
-  color: #FDFFF7; }
-  .nav-item:hover {
-    color: #59FFA0; }
-
-.top-bar {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2544,29 +2538,152 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  top: 0;
+  background: #0f0c21;
+  top: 0.2rem;
   height: 2.5rem;
   width: 100%;
-  background: #0f0c21;
-  border-bottom: 1px solid #7063CC;
-  z-index: 10; }
-  .top-bar i {
-    display: none; }
-  .top-bar img {
-    max-height: 90%;
+  border-bottom: 1px solid #7063CC; }
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+  .navbar li a {
+    text-decoration: none;
+    padding: 1rem;
+    color: white; }
+    .navbar li a:hover {
+      color: #59FFA0; }
+  .navbar .menu-btn:hover {
+    color: #59FFA0; }
+  .navbar img {
+    max-height: 2.4rem;
     padding: 0 1rem;
     top: 0;
     left: 0; }
+  .navbar .nav-menu {
+    max-height: 0; }
+  .navbar .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .navbar .menu-icon .nav-icon {
+      background: #FDFFF7;
+      display: block;
+      height: 2px;
+      position: relative;
+      -webkit-transition: background .2s ease-out;
+      -o-transition: background .2s ease-out;
+      transition: background .2s ease-out;
+      width: 18px; }
+      .navbar .menu-icon .nav-icon::before, .navbar .menu-icon .nav-icon::after {
+        background: #FDFFF7;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        -webkit-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+        width: 100%; }
+      .navbar .menu-icon .nav-icon::before {
+        top: 5px; }
+      .navbar .menu-icon .nav-icon::after {
+        top: -5px; }
+  .navbar .menu-btn {
+    display: none; }
+    .navbar .menu-btn:checked ~ .nav-menu {
+      max-height: 240px; }
+    .navbar .menu-btn:checked ~ .menu-icon .nav-icon {
+      background: transparent; }
+      .navbar .menu-btn:checked ~ .menu-icon .nav-icon::before {
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+      .navbar .menu-btn:checked ~ .menu-icon .nav-icon::after {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
 
-@media screen and (max-width: 799px) {
-  .nav-item {
-    width: 0;
-    padding: 0; }
-  .top-bar nav {
-    width: 0; }
-  .top-bar i {
-    display: inline-block; } }
+@media (min-width: 800px) {
+  .navbar .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 0; }
+  .navbar .nav-menu {
+    max-height: none; }
+  .navbar .menu-icon {
+    display: none; } }
 
+/*
+.nav-item {
+    padding: 1rem;
+    color: $white;
+    &:hover {
+        color: $aqua;
+    }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 2.5rem;
+    width: 100%;
+    background: $dark-indigo;
+    border-bottom: 1px solid $icon-purple;
+    z-index: 10;
+    img {
+        // Change max-height to rem
+        max-height: 90%;
+        padding: 0 1rem;
+        top: 0;
+        left: 0;
+    }
+}
+
+.nav-wrapper {
+    position: relative;
+    width: 10rem;
+    right: 0;
+    @include flex-cent-r;
+    nav {
+        position: absolute;
+        right: 0;
+    }
+    i {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+    }
+}
+
+@include sm {
+    .top-bar {
+        nav {
+            opacity: 0;
+        }
+        i {
+            opacity: 1;
+        }
+    }
+}
+*/
 /* Styles for _social.scss */
 .social-icons {
   position: fixed;

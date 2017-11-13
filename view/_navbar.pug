@@ -1,8 +1,14 @@
-div(class="top-bar")
+nav(class="navbar")
     img(src="./images/logodragonlong.svg")
-    i(class="fa fa-bars")
-    nav(class="flex-cent")
-        a(class="nav-item" href="#welcome-section") Home
-        a(class="nav-item" href="#profile") Profile
-        a(class="nav-item" href="#projects") Projects
-        a(class="nav-item" href="#contact") Contact
+    input(class="menu-btn" type="checkbox")
+    label(class="menu-icon" for="menu-btn")
+        span(class="nav-icon")
+    ul(class="nav-menu")
+        li
+            a(href="#welcome-section") Home
+        li
+            a(href="#profile") Profile
+        li
+            a(href="#projects") Projects
+        li
+            a(href="#contact") Contact

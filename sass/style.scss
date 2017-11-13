@@ -131,6 +131,109 @@ footer {
 
 /* Styles for _nav.scss */
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: $dark-indigo;
+    top: 0.2rem;
+    height: 2.5rem;
+    width: 100%;
+    border-bottom: 1px solid $icon-purple;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+    li a {
+        text-decoration: none;
+        padding: 1rem;
+        color: white;
+        &:hover {
+            color: $aqua;
+        }        
+    }
+    .menu-btn {
+        &:hover {
+            color: $aqua;
+        }
+    }
+    img {
+        // Change max-height to rem
+        max-height: 2.4rem;
+        padding: 0 1rem;
+        top: 0;
+        left: 0;
+    }
+    .nav-menu {
+        max-height: 0;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        user-select: none;
+        .nav-icon {
+            background: $white;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 18px;
+            &::before, &::after {
+                background: $white;
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 100%;
+            }
+            &::before {
+                top: 5px;
+            }
+            &::after {
+                top: -5px;
+            }
+        }
+    }
+    .menu-btn {
+        display: none;
+        &:checked {
+            & ~ .nav-menu {
+                max-height: 240px;
+            }
+            & ~ .menu-icon .nav-icon {
+                background: transparent;
+                &::before {
+                    transform: rotate(-45deg);
+                }
+                &::after {
+                    transform: rotate(45deg);
+                }                
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .navbar .nav-menu {
+        @include flex-cent-r;
+        right: 0;
+    }
+  .navbar .nav-menu {
+    max-height: none;
+  }
+  .navbar .menu-icon {
+    display: none;
+  }
+}
+
+/*
 .nav-item {
     padding: 1rem;
     color: $white;
@@ -150,9 +253,6 @@ footer {
     background: $dark-indigo;
     border-bottom: 1px solid $icon-purple;
     z-index: 10;
-    i {
-        display: none;
-    }
     img {
         // Change max-height to rem
         max-height: 90%;
@@ -162,20 +262,33 @@ footer {
     }
 }
 
-@include sm {
-    .nav-item {
-        width: 0;
-        padding: 0;
+.nav-wrapper {
+    position: relative;
+    width: 10rem;
+    right: 0;
+    @include flex-cent-r;
+    nav {
+        position: absolute;
+        right: 0;
     }
+    i {
+        position: absolute;
+        opacity: 0;
+        right: 0;
+    }
+}
+
+@include sm {
     .top-bar {
         nav {
-            width: 0;
+            opacity: 0;
         }
         i {
-            display: inline-block;
+            opacity: 1;
         }
     }
 }
+*/
 
 /* Styles for _social.scss */
 
