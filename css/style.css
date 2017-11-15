@@ -2542,30 +2542,26 @@ footer {
   top: 0.2rem;
   height: 2.5rem;
   width: 100%;
-  border-bottom: 1px solid #7063CC; }
-  .navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden; }
-  .navbar li a {
-    text-decoration: none;
-    padding: 1rem;
-    color: white; }
-    .navbar li a:hover {
-      color: #59FFA0; }
-  .navbar .menu-btn:hover {
-    color: #59FFA0; }
+  border-bottom: 1px solid #7063CC;
+  z-index: 10; }
   .navbar img {
     max-height: 2.4rem;
     padding: 0 1rem;
     top: 0;
     left: 0; }
   .navbar .nav-menu {
-    max-height: 0; }
-  .navbar .menu-icon {
+    max-height: none;
+    list-style: none;
+    overflow: hidden; }
+  .navbar li a {
+    text-decoration: none;
+    padding: 1rem;
+    color: white; }
+    .navbar li a:hover, .navbar li a :active {
+      color: #59FFA0; }
+  .navbar label {
     cursor: pointer;
-    display: inline-block;
+    display: none;
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -2573,7 +2569,7 @@ footer {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    .navbar .menu-icon .nav-icon {
+    .navbar label span {
       background: #FDFFF7;
       display: block;
       height: 2px;
@@ -2581,8 +2577,12 @@ footer {
       -webkit-transition: background .2s ease-out;
       -o-transition: background .2s ease-out;
       transition: background .2s ease-out;
-      width: 18px; }
-      .navbar .menu-icon .nav-icon::before, .navbar .menu-icon .nav-icon::after {
+      width: 18px;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+      .navbar label span::before, .navbar label span::after {
         background: #FDFFF7;
         content: '';
         display: block;
@@ -2592,9 +2592,9 @@ footer {
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
         width: 100%; }
-      .navbar .menu-icon .nav-icon::before {
+      .navbar label span::before {
         top: 5px; }
-      .navbar .menu-icon .nav-icon::after {
+      .navbar label span::after {
         top: -5px; }
   .navbar .menu-btn {
     display: none; }
@@ -2611,7 +2611,7 @@ footer {
             -ms-transform: rotate(45deg);
                 transform: rotate(45deg); }
 
-@media (min-width: 800px) {
+@media screen and (max-width: 799px) {
   .navbar .nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2624,9 +2624,9 @@ footer {
             align-items: center;
     right: 0; }
   .navbar .nav-menu {
-    max-height: none; }
+    max-height: 0; }
   .navbar .menu-icon {
-    display: none; } }
+    display: inline-block; } }
 
 /*
 .nav-item {
@@ -2907,40 +2907,40 @@ footer {
   overflow: hidden;
   margin: 0.5rem 0; }
 
-#tile-top1 .project-thumb {
+#tile-1 .project-thumb {
   background-image: url("../images/thumbnails/spellerthumb.jpg"); }
 
-#tile-top2 .project-thumb {
+#tile-2 .project-thumb {
   background-image: url("../images/thumbnails/quotethumb.JPG"); }
 
-#tile-top3 .project-thumb {
+#tile-3 .project-thumb {
   background-image: url("../images/thumbnails/weatherthumb.JPG"); }
 
-#tile-top4 .project-thumb {
+#tile-4 .project-thumb {
   background-image: url("../images/thumbnails/microsthumb.JPG"); }
 
-#tile-top5 .project-thumb {
+#tile-5 .project-thumb {
   background-image: url("../images/thumbnails/bmorethumb.JPG"); }
 
-#tile-top6 .project-thumb {
+#tile-6 .project-thumb {
   background-image: url("../images/thumbnails/spellerthumb.jpg"); }
 
-#tile-bottom1 .project-thumb {
+#tile-7 .project-thumb {
   background-image: url("../images/thumbnails/mdthumb.JPG"); }
 
-#tile-bottom2 .project-thumb {
+#tile-8 .project-thumb {
   background-image: url("../images/thumbnails/wikithumb.JPG"); }
 
-#tile-bottom3 .project-thumb {
+#tile-9 .project-thumb {
   background-image: url("../images/thumbnails/bikethumb.JPG"); }
 
-#tile-bottom4 .project-thumb {
+#tile-10 .project-thumb {
   background-image: url("../images/thumbnails/votethumb.JPG"); }
 
-#tile-bottom5 .project-thumb {
+#tile-11 .project-thumb {
   background-image: url("../images/thumbnails/twitchthumb.JPG"); }
 
-#tile-bottom6 .project-thumb {
+#tile-12 .project-thumb {
   background-image: url("../images/thumbnails/calcthumb.JPG"); }
 
 .project-tile {

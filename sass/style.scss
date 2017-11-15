@@ -141,9 +141,15 @@ footer {
     height: 2.5rem;
     width: 100%;
     border-bottom: 1px solid $icon-purple;
-    ul {
-        margin: 0;
-        padding: 0;
+    z-index: 10;
+    img {
+        max-height: 2.4rem;
+        padding: 0 1rem;
+        top: 0;
+        left: 0;
+    }
+    .nav-menu {
+        max-height: none;
         list-style: none;
         overflow: hidden;
     }
@@ -151,39 +157,25 @@ footer {
         text-decoration: none;
         padding: 1rem;
         color: white;
-        &:hover {
+        &:hover, :active {
             color: $aqua;
         }        
     }
-    .menu-btn {
-        &:hover {
-            color: $aqua;
-        }
-    }
-    img {
-        // Change max-height to rem
-        max-height: 2.4rem;
-        padding: 0 1rem;
-        top: 0;
-        left: 0;
-    }
-    .nav-menu {
-        max-height: 0;
-    }
-    .menu-icon {
+    label {
         cursor: pointer;
-        display: inline-block;
+        display: none;
         padding: 1rem;
         position: absolute;
         right: 0;
         user-select: none;
-        .nav-icon {
+        span {
             background: $white;
             display: block;
             height: 2px;
             position: relative;
             transition: background .2s ease-out;
             width: 18px;
+            user-select: none;
             &::before, &::after {
                 background: $white;
                 content: '';
@@ -220,17 +212,17 @@ footer {
     }
 }
 
-@media (min-width: 800px) {
+@include sm {
     .navbar .nav-menu {
         @include flex-cent-r;
         right: 0;
     }
-  .navbar .nav-menu {
-    max-height: none;
-  }
-  .navbar .menu-icon {
-    display: none;
-  }
+    .navbar .nav-menu {
+    max-height: 0;
+    }
+    .navbar .menu-icon {
+    display: inline-block;
+    }
 }
 
 /*
@@ -488,51 +480,51 @@ footer {
     margin: 0.5rem 0;
 }
 
-#tile-top1 .project-thumb {
+#tile-1 .project-thumb {
     background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-#tile-top2 .project-thumb {
+#tile-2 .project-thumb {
     background-image: url('../images/thumbnails/quotethumb.JPG');
 }
 
-#tile-top3 .project-thumb {
+#tile-3 .project-thumb {
     background-image: url('../images/thumbnails/weatherthumb.JPG');
 }
 
-#tile-top4 .project-thumb {
+#tile-4 .project-thumb {
     background-image: url('../images/thumbnails/microsthumb.JPG');
 }
 
-#tile-top5 .project-thumb {
+#tile-5 .project-thumb {
     background-image: url('../images/thumbnails/bmorethumb.JPG');
 }
 
-#tile-top6 .project-thumb {
+#tile-6 .project-thumb {
     background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-#tile-bottom1 .project-thumb {
+#tile-7 .project-thumb {
     background-image: url('../images/thumbnails/mdthumb.JPG');
 }
 
-#tile-bottom2 .project-thumb {
+#tile-8 .project-thumb {
     background-image: url('../images/thumbnails/wikithumb.JPG');
 }
 
-#tile-bottom3 .project-thumb {
+#tile-9 .project-thumb {
     background-image: url('../images/thumbnails/bikethumb.JPG');
 }
 
-#tile-bottom4 .project-thumb {
+#tile-10 .project-thumb {
     background-image: url('../images/thumbnails/votethumb.JPG');
 }
 
-#tile-bottom5 .project-thumb {
+#tile-11 .project-thumb {
     background-image: url('../images/thumbnails/twitchthumb.JPG');
 }
 
-#tile-bottom6 .project-thumb {
+#tile-12 .project-thumb {
     background-image: url('../images/thumbnails/calcthumb.JPG');
 }
 
