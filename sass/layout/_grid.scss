@@ -1,0 +1,86 @@
+.project-thumb {
+    grid-area: thumb;
+}
+
+.project-links {
+    grid-area: links;
+}
+
+.project-tech {
+    grid-area: tech;
+}
+
+.project-desc {
+    grid-area: desc;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(3rem, auto);
+    height: 100%;
+    grid-template-areas: 
+        "title title title title tech tech tech tech"
+        "thumb thumb thumb thumb desc desc desc desc"
+        "thumb thumb thumb thumb desc desc desc desc"
+        "thumb thumb thumb thumb desc desc desc desc"
+        "thumb thumb thumb thumb desc desc desc desc"
+        "links links links links desc desc desc desc";
+    h2 {
+        grid-area: title;
+    }
+}
+
+@include xs {
+    .project-tile {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+            "title title title title title title"
+            "thumb thumb thumb thumb links links"
+            "thumb thumb thumb thumb links links"
+            "thumb thumb thumb thumb links links"
+            "thumb thumb thumb thumb links links"
+            "tech tech tech tech tech tech"
+            "desc desc desc desc desc desc"
+            "desc desc desc desc desc desc"
+            "desc desc desc desc desc desc"
+            "desc desc desc desc desc desc";
+    }
+}
+
+.portrait-pic {
+    grid-area: port;
+    align-self: flex-start;
+}
+
+.mn-map {
+    grid-area: map;
+    justify-self: center;
+}
+
+.email-button {
+    grid-area: email;
+}
+
+.contact-links {
+    grid-area: social;
+    align-self: flex-start;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(3rem, auto);
+    grid-template-areas:
+        "head head head head head head head head"
+        "port port social social social social map map"
+        "port port social social social social map map"
+        "port port social social social social map map"
+        "port port social social social social map map"
+        "port port social social social social email email";
+    h3 {
+        grid-area: head;
+        align-self: flex-start;
+        padding: 0;
+    }
+}

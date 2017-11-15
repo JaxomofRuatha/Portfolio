@@ -13,8 +13,12 @@ $dark-indigo: darken($indigo, 4%);
 
 /* Styles for _base.scss */
 
-body {
+*, *::before, *::after {
     box-sizing: border-box;
+    outline: none;
+}
+
+body {
     background: url("../images/temple.svg") repeat, $indigo;
     overflow-x: hidden;
     color: $white;
@@ -22,30 +26,23 @@ body {
 
 a {
     text-decoration: none;
-    color: $white;
     cursor: pointer;
 }
 
 footer {
-    text-align: center;
     background: $dark-indigo;
+    text-align: center;
 }
 
 /* Styles for _layout.scss */
 
 .l-content-section {
-    text-align: center;
     background: $slate;
     border-radius: 10px;
     margin: 2rem auto;
     width: 85vw;
     padding: 1rem;
-}
-
-.flex-cent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
 }
 
 .l-icon-labeled {
@@ -57,117 +54,54 @@ footer {
     }
 }
 
-// Grid Areas
-
-.project-thumb {
-    grid-area: thumb;
-}
-
-.project-links {
-    grid-area: links;
-}
-
-.project-tech {
-    grid-area: tech;
-}
-
-.project-desc {
-    grid-area: desc;
-}
-
-.project-tile {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(3rem, auto);
-    height: 100%;
-    grid-template-areas: 
-        "title title title title tech tech tech tech"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "links links links links desc desc desc desc";
-    h2 {
-        grid-area: title;
-    }
-}
-
-.portrait-pic {
-    grid-area: port;
-    align-self: flex-start;
-}
-
-.mn-map {
-    grid-area: map;
-    justify-self: center;
-}
-
-.email-button {
-    grid-area: email;
-}
-
-.contact-links {
-    grid-area: social;
-    align-self: flex-start;
-}
-
-#contact {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(3rem, auto);
-    grid-template-areas:
-        "head head head head head head head head"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social email email";
-    h3 {
-        grid-area: head;
-        align-self: flex-start;
-        padding: 0;
-    }
-}
+@import "./layout/_grid";
 
 /* Styles for _nav.scss */
 
-.navbar {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     background: $dark-indigo;
-    top: 0.2rem;
+    top: 0;
     height: 2.5rem;
     width: 100%;
     border-bottom: 1px solid $icon-purple;
+    overflow: hidden;
     z-index: 10;
     img {
-        max-height: 2.4rem;
+        max-height: 2.3rem;
         padding: 0 1rem;
         top: 0;
         left: 0;
     }
-    .nav-menu {
-        max-height: none;
+}
+
+#nav-menu {
+    position: relative;
+    height: 100%;
+    #nav-links {
+        @include flex-cent-r;
+        max-width: none;
         list-style: none;
         overflow: hidden;
+        li a {
+            padding: 1rem;
+            color: $white;
+            &:hover, :active {
+                color: $aqua;
+            }        
+        }
     }
-    li a {
-        text-decoration: none;
-        padding: 1rem;
-        color: white;
-        &:hover, :active {
-            color: $aqua;
-        }        
-    }
-    label {
-        cursor: pointer;
+
+    // Mobile menu toggle button
+    .nav-menu-toggle {
         display: none;
         padding: 1rem;
         position: absolute;
         right: 0;
-        user-select: none;
+        top: 0;
         span {
             background: $white;
             display: block;
@@ -182,7 +116,7 @@ footer {
                 display: block;
                 height: 100%;
                 position: absolute;
-                transition: all .2s ease-out;
+                transition: all .5s ease-out;
                 width: 100%;
             }
             &::before {
@@ -192,95 +126,35 @@ footer {
                 top: -5px;
             }
         }
-    }
-    .menu-btn {
-        display: none;
-        &:checked {
-            & ~ .nav-menu {
-                max-height: 240px;
+        span .toggled-on {
+            &::before {
+                transform: rotate(45deg);
             }
-            & ~ .menu-icon .nav-icon {
-                background: transparent;
-                &::before {
-                    transform: rotate(-45deg);
-                }
-                &::after {
-                    transform: rotate(45deg);
-                }                
+            &::after {
+                transform: rotate(-45deg);
             }
         }
     }
 }
 
 @include sm {
-    .navbar .nav-menu {
-        @include flex-cent-r;
+    header {
+        width: 2.5rem;
         right: 0;
-    }
-    .navbar .nav-menu {
-    max-height: 0;
-    }
-    .navbar .menu-icon {
-    display: inline-block;
-    }
-}
-
-/*
-.nav-item {
-    padding: 1rem;
-    color: $white;
-    &:hover {
-        color: $aqua;
-    }
-}
-
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    height: 2.5rem;
-    width: 100%;
-    background: $dark-indigo;
-    border-bottom: 1px solid $icon-purple;
-    z-index: 10;
-    img {
-        // Change max-height to rem
-        max-height: 90%;
-        padding: 0 1rem;
-        top: 0;
-        left: 0;
-    }
-}
-
-.nav-wrapper {
-    position: relative;
-    width: 10rem;
-    right: 0;
-    @include flex-cent-r;
-    nav {
-        position: absolute;
-        right: 0;
-    }
-    i {
-        position: absolute;
-        opacity: 0;
-        right: 0;
-    }
-}
-
-@include sm {
-    .top-bar {
-        nav {
-            opacity: 0;
+        border: 1px solid $icon-purple;
+        img {
+            display: none;
         }
-        i {
-            opacity: 1;
+    }
+    #nav-menu {
+        #nav-links {
+            max-width: 0;
+        }
+        .nav-menu-toggle {
+            display: inline-block;
         }
     }
 }
-*/
 
 /* Styles for _social.scss */
 
@@ -296,7 +170,7 @@ footer {
     border: 1px solid $icon-purple;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    z-index: 3;
+    z-index: 10;
     i {
         transition: all 0.3s;
         font-size: 1.7rem;
@@ -309,21 +183,14 @@ footer {
     }
 }
 
-@include sm {
-    .social-icons {
-        display: none;
-    }
-}
-
 /* Styles for _welcome.scss */
 
 #welcome-section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, (93vh / 8));
+    grid-template-rows: repeat(8, 1fr);
     overflow-x: hidden;
-    margin-top: 7vh;
-    height: 93vh;
+    height: 100vh;
     width: 100vw;
 }
 
@@ -340,7 +207,7 @@ footer {
 .welcome-background {
     grid-row: 1 / 9;
     grid-column: 1 / 13;
-    background: url(../images/welcome-fire-background.jpg) no-repeat center center, $indigo;
+    background: $indigo url(../images/welcome-fire-background.jpg) no-repeat left center;
     background-attachment: fixed;
     opacity: 0.5;
     z-index: -1;
@@ -374,6 +241,7 @@ footer {
 }
 
 .tech-section {
+    @include flex-cent-r;
     transition: all 0.5s ease-in-out;
     grid-row-start: 2;
     grid-column: 1;
@@ -392,6 +260,7 @@ footer {
 
 // Do this with flex instead, go down to 2 and scale down
 .skill-tabs {
+    @include flex-cent-r;
     a {
         @include flex-cent-r;
         text-align: center;
@@ -529,12 +398,13 @@ footer {
 }
 
 .project-tile {
-    top: 95vh;
+    opacity: 0;
     position: absolute;
     background: $indigo;
-    transition: top 0.5s;
+    transition: opacity 1s;
     h2 {
         padding: 0.5rem 0;
+        text-align: center;
     }
     .project-thumb {
         overflow: hidden;
@@ -547,6 +417,7 @@ footer {
         & > a {
             display: flex;
             justify-content: center;
+            color: $white;
             &:hover {
                 color: $yellow;
             }
@@ -576,7 +447,7 @@ footer {
 }
 
 .project-active {
-    top: 0;
+    opacity: 1;
 }
 
 #contact {
@@ -598,5 +469,10 @@ footer {
     font-size: 1.2rem;
     a {
         width: 15rem;
+        color: $white;
+        
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
