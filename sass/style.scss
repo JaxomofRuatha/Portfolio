@@ -39,8 +39,7 @@ footer {
 .l-content-section {
     background: $slate;
     border-radius: 10px;
-    margin: 2rem auto;
-    width: 85vw;
+    margin: 2rem 3.5rem;
     padding: 1rem;
     text-align: center;
 }
@@ -81,6 +80,7 @@ header {
 #nav-menu {
     position: relative;
     height: 100%;
+    @include flex-cent-r;
     #nav-links {
         @include flex-cent-r;
         max-width: none;
@@ -138,14 +138,6 @@ header {
 }
 
 @include sm {
-    header {
-        width: 2.5rem;
-        right: 0;
-        border: 1px solid $icon-purple;
-        img {
-            display: none;
-        }
-    }
     #nav-menu {
         #nav-links {
             max-width: 0;
@@ -159,27 +151,34 @@ header {
 /* Styles for _social.scss */
 
 .social-icons {
+    @include flex-cent-c;
+    background: $dark-indigo;
     position: fixed;
     right: 0;
     top: 35vh;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     padding: 0 0.5rem;
-    background: $dark-indigo;
     border: 1px solid $icon-purple;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     z-index: 10;
     i {
+        flex: 1;
         transition: all 0.3s;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         padding: 0.7rem 0;
         color: $icon-purple;
-        &:hover {
+        &:hover, :active {
             color: $white;
             transform: scale(1.1);
         }
+    }
+}
+
+@include sm {
+    .social-icons {
+        top: 2.5rem;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 }
 
@@ -236,19 +235,17 @@ header {
     overflow: hidden;
     display: grid;
     grid-template-rows: repeat(2, 7rem);
-    grid-template-columns: 100%;
     align-items: start;
 }
 
 .tech-section {
     @include flex-cent-r;
-    transition: all 0.5s ease-in-out;
     grid-row-start: 2;
     grid-column: 1;
+    transition: transform 0.5s ease-in-out;
     img {
-        transition: transform 0.5s ease-in-out;
-        width: 5rem;
-        padding: 0 0.8rem;
+        width: 5.5rem;
+        padding: 0.5rem 0.8rem 0 0.8rem;
     }
 }
 
@@ -260,12 +257,15 @@ header {
 
 // Do this with flex instead, go down to 2 and scale down
 .skill-tabs {
-    @include flex-cent-r;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     a {
         @include flex-cent-r;
+        flex: 1;
         text-align: center;
-        padding: 0.7rem;
-        height: 1rem;
+        padding: 1rem;
+        height: 2rem;
         border-top: 1px solid $yellow;
         background: $slate;
         z-index: 3;
@@ -326,6 +326,7 @@ header {
     height: 4rem;
     a {
         flex: 1;
+        @include flex-cent-r;
         padding: 1rem 0;
         &:hover {
             background: lighten($slate, 4%);
@@ -413,7 +414,7 @@ header {
         background-position: center;
     }
     .project-links {
-        width: 30rem;
+        @include flex-cent-r;
         & > a {
             display: flex;
             justify-content: center;
