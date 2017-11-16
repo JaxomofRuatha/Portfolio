@@ -48,6 +48,9 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-content: center;
+    span {
+        color: $white;
+    }
     * {
         padding: 0.5rem;
     }
@@ -244,7 +247,7 @@ header {
     grid-column: 1;
     transition: transform 0.5s ease-in-out;
     img {
-        width: 5.5rem;
+        width: 5.3rem;
         padding: 0.5rem 0.8rem 0 0.8rem;
     }
 }
@@ -297,6 +300,7 @@ header {
         padding: 0.4rem 1rem;
         transition: all 0.5s;
         &:hover {
+            transform: scale(1.1);
             font-weight: bold;
             cursor: pointer;
             background: $aqua;
@@ -336,11 +340,11 @@ header {
 }
 
 .top-tabs {
-    padding: 0 0.5rem 0.5rem 0.5rem;
+    padding: 0 0.8rem 0.8rem 0.8rem;
 }
 
 .bottom-tabs {
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    padding: 0.8rem 0.8rem 0 0.8rem;
 }
 
 .project-carousel {
@@ -359,43 +363,43 @@ header {
 }
 
 #tile-3 .project-thumb {
-    background-image: url('../images/thumbnails/weatherthumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-4 .project-thumb {
-    background-image: url('../images/thumbnails/microsthumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-5 .project-thumb {
-    background-image: url('../images/thumbnails/bmorethumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-6 .project-thumb {
-    background-image: url('../images/thumbnails/spellerthumb.jpg');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-7 .project-thumb {
-    background-image: url('../images/thumbnails/mdthumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-8 .project-thumb {
-    background-image: url('../images/thumbnails/wikithumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-9 .project-thumb {
-    background-image: url('../images/thumbnails/bikethumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-10 .project-thumb {
-    background-image: url('../images/thumbnails/votethumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-11 .project-thumb {
-    background-image: url('../images/thumbnails/twitchthumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 #tile-12 .project-thumb {
-    background-image: url('../images/thumbnails/calcthumb.JPG');
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
 .project-tile {
@@ -438,11 +442,11 @@ header {
     .project-desc {
         background: $slate;
         margin: 1rem;
-        padding: 0.5rem;
+        padding: 1rem;
         bottom: 0;
         right: 0;
         p {
-            text-align: left;
+            text-align: justify;
         }
     }
 }
@@ -464,16 +468,24 @@ header {
 .contact-links {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
     font-size: 1.2rem;
     a {
         width: 15rem;
-        color: $white;
-        
+        transition: all 1s;
+        .fa-github {
+            color: #2dba4e;
+            &:hover {
+                color: $slate;
+            }
+        }
         &:hover {
-            text-decoration: underline;
+            border-left: 3px solid $yellow;
+            background: #2dba4e;
+            color: $slate;
         }
     }
 }

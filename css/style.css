@@ -2464,6 +2464,8 @@ footer {
           justify-content: flex-start;
   -ms-flex-line-pack: center;
       align-content: center; }
+  .l-icon-labeled span {
+    color: #FDFFF7; }
   .l-icon-labeled * {
     padding: 0.5rem; }
 
@@ -2751,7 +2753,7 @@ header {
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
   .tech-section img {
-    width: 5.5rem;
+    width: 5.3rem;
     padding: 0.5rem 0.8rem 0 0.8rem; }
 
 @media screen and (max-width: 799px) {
@@ -2817,6 +2819,9 @@ header {
     -o-transition: all 0.5s;
     transition: all 0.5s; }
     .profile-content button:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
       font-weight: bold;
       cursor: pointer;
       background: #59FFA0;
@@ -2870,10 +2875,10 @@ header {
       cursor: pointer; }
 
 .top-tabs {
-  padding: 0 0.5rem 0.5rem 0.5rem; }
+  padding: 0 0.8rem 0.8rem 0.8rem; }
 
 .bottom-tabs {
-  padding: 0.5rem 0.5rem 0 0.5rem; }
+  padding: 0.8rem 0.8rem 0 0.8rem; }
 
 .project-carousel {
   height: 100%;
@@ -2888,34 +2893,34 @@ header {
   background-image: url("../images/thumbnails/quotethumb.JPG"); }
 
 #tile-3 .project-thumb {
-  background-image: url("../images/thumbnails/weatherthumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-4 .project-thumb {
-  background-image: url("../images/thumbnails/microsthumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-5 .project-thumb {
-  background-image: url("../images/thumbnails/bmorethumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-6 .project-thumb {
-  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-7 .project-thumb {
-  background-image: url("../images/thumbnails/mdthumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-8 .project-thumb {
-  background-image: url("../images/thumbnails/wikithumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-9 .project-thumb {
-  background-image: url("../images/thumbnails/bikethumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-10 .project-thumb {
-  background-image: url("../images/thumbnails/votethumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-11 .project-thumb {
-  background-image: url("../images/thumbnails/twitchthumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 #tile-12 .project-thumb {
-  background-image: url("../images/thumbnails/calcthumb.JPG"); }
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
 
 .project-tile {
   opacity: 0;
@@ -2972,11 +2977,11 @@ header {
   .project-tile .project-desc {
     background: #1E1E1D;
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
     bottom: 0;
     right: 0; }
     .project-tile .project-desc p {
-      text-align: left; }
+      text-align: justify; }
 
 .project-active {
   opacity: 1; }
@@ -2995,6 +3000,9 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3005,8 +3013,16 @@ header {
   font-size: 1.2rem; }
   .contact-links a {
     width: 15rem;
-    color: #FDFFF7; }
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+    .contact-links a .fa-github {
+      color: #2dba4e; }
+      .contact-links a .fa-github:hover {
+        color: #1E1E1D; }
     .contact-links a:hover {
-      text-decoration: underline; }
+      border-left: 3px solid #FFED65;
+      background: #2dba4e;
+      color: #1E1E1D; }
 
 /*# sourceMappingURL=style.css.map */
