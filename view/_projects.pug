@@ -1,10 +1,35 @@
-div(class="project-tabs top-tabs")
-    a(class="tab-active" data-target="#tile-1") Portfolio Site
-    a(data-target="#tile-2") Quote Machine
-    a(data-target="#tile-3") React Local Weather
-    a(data-target="#tile-4") Microservices
-    a(data-target="#tile-5") Bmore Around Town
-    a(data-target="#tile-6") Speller
+div(class="project-tabs")
+    div(class="tab-expand")
+        button Live Projects
+        ul
+            li
+                a(data-target="#live-1") Portfolio Site
+            li
+                a(data-target="#live-2") Quote Machine
+            li
+                a(data-target="#live-3") Markdown Previewer
+            li
+                a(data-target="#live-4") Wikipedia Viewer
+            li
+                a(data-target="#live-5") Microservices
+            li
+                a(data-target="#live-6") Speller
+    div(class="proj-title")
+    div(class="tab-expand")
+        button In Development
+        ul
+            li
+                a(data-target="#wip-1") Bmore Around Town
+            li
+                a(data-target="#wip-2") Twitch Dashboard
+            li
+                a(data-target="#wip-3") Bikeshare Mapper
+            li
+                a(data-target="#wip-4") Twitch Dashboard
+            li
+                a(data-target="#wip-5") JavaScript Calculator
+            li
+                a(data-target="#wip-6") Freeform Vote                                
 div(class="project-carousel")
     div(class="project-tile project-active" id="tile-1")
         div(class="project-thumb")
@@ -229,10 +254,3 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework                                                
-div(class="project-tabs bottom-tabs")
-    a(data-target="#tile-7") Markdown Previewer
-    a(data-target="#tile-8") Wikipedia Viewer
-    a(data-target="#tile-9") Bikeshare Mapper
-    a(data-target="#tile-10") Freeform Vote
-    a(data-target="#tile-11") Twitch Dashboard
-    a(data-target="#tile-12") JavaScript Calculator
