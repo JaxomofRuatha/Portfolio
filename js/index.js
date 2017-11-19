@@ -22,15 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.querySelectorAll('.project-tabs').forEach(tabs => {
+  document.querySelectorAll('.tab-expand').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const targetTile = document.querySelector(e.target.dataset.target);
-
-      document.querySelectorAll('.project-tabs a').forEach(a => {
-        a.classList.remove('tab-active');
-      });
-
-      e.target.classList.add('tab-active');
 
       document.querySelectorAll('.project-tile').forEach(tile => {
         tile.setAttribute('style', 'opacity: 0');
@@ -40,5 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
       targetTile.setAttribute('style', 'opacity: 1');
       targetTile.classList.add('project-active');
     });
+  });
+  document.querySelector('.nav-menu-toggle').addEventListener('click', () => {
+    document.querySelector('#nav-links').classList.toggle('row-expanded');
+    document.querySelector('.social-icons').classList.toggle('col-expanded');
   });
 });

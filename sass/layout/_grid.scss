@@ -20,15 +20,12 @@
     grid-auto-rows: minmax(3rem, auto);
     height: 100%;
     grid-template-areas: 
-        "title title title title tech tech tech tech"
+        "thumb thumb thumb thumb tech tech tech tech"
         "thumb thumb thumb thumb desc desc desc desc"
         "thumb thumb thumb thumb desc desc desc desc"
         "thumb thumb thumb thumb desc desc desc desc"
         "thumb thumb thumb thumb desc desc desc desc"
         "links links links links desc desc desc desc";
-    h2 {
-        grid-area: title;
-    }
 }
 
 @include xs {

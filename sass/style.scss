@@ -48,9 +48,6 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-content: center;
-    span {
-        color: $white;
-    }
     * {
         padding: 0.5rem;
     }
@@ -89,6 +86,7 @@ header {
         max-width: none;
         list-style: none;
         overflow: hidden;
+        transition: max-width 0.5s;
         li a {
             padding: 1rem;
             color: $white;
@@ -104,7 +102,7 @@ header {
         padding: 1rem;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 0.2rem;
         span {
             background: $white;
             display: block;
@@ -144,10 +142,18 @@ header {
     #nav-menu {
         #nav-links {
             max-width: 0;
+            position: absolute;
+            right: 3rem;
         }
         .nav-menu-toggle {
             display: inline-block;
         }
+    }
+}
+
+@include xs {
+    header img {
+        opacity: 0;
     }
 }
 
@@ -164,9 +170,10 @@ header {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     z-index: 10;
+    transition: max-height 0.5s;
     i {
         flex: 1;
-        transition: all 0.3s;
+        transition: transform 0.3s;
         font-size: 1.5rem;
         padding: 0.7rem 0;
         color: $icon-purple;
@@ -177,11 +184,22 @@ header {
     }
 }
 
+.col-expanded {
+    max-height: none !important;
+}
+
+.row-expanded {
+    max-width: none !important;
+}
+
 @include sm {
     .social-icons {
-        top: 2.5rem;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        top: 2.45rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top: none;
+        max-height: 0;
+        overflow: hidden;
     }
 }
 
@@ -209,7 +227,7 @@ header {
 .welcome-background {
     grid-row: 1 / 9;
     grid-column: 1 / 13;
-    background: $indigo url(../images/welcome-fire-background.jpg) no-repeat left center;
+    background: $indigo url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
     background-attachment: fixed;
     opacity: 0.5;
     z-index: -1;
@@ -325,26 +343,56 @@ header {
     overflow: hidden;
 }
 
+.tab-wrapper {
+    position: relative;
+    @include flex-cent-c;
+}
+
 .project-tabs {
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
     height: 4rem;
-    a {
-        flex: 1;
-        @include flex-cent-r;
-        padding: 1rem 0;
+    .tab-toggle {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $yellow;
+        color: $white;
+        text-align: center;
+        font-size: 1.4rem;
+        width: 15rem;
+        padding: 0.5rem;
+    }
+    h2 {
+        text-shadow: 2px 2px $icon-purple;
+        padding: 0.5rem;
+    }
+}
+
+.tab-expand {
+    display: none;
+    position: absolute;
+    z-index: 8;
+    overflow: hidden;
+    text-align: left;
+    width: 15rem;
+    box-shadow: 4px 4px lighten($slate, 20%);
+    li {
+        padding: 0.5rem;
+        background: $slate;
+        border-left: 1px solid $yellow;
         &:hover {
-            background: lighten($slate, 4%);
-            cursor: pointer;
+            background: $yellow;
+            color: $slate;
         }
     }
 }
 
-.top-tabs {
-    padding: 0 0.8rem 0.8rem 0.8rem;
-}
-
-.bottom-tabs {
-    padding: 0.8rem 0.8rem 0 0.8rem;
+#live-menu, #wip-menu {
+    &:target {
+        display: block;
+    }
 }
 
 .project-carousel {
@@ -407,15 +455,12 @@ header {
     position: absolute;
     background: $indigo;
     transition: opacity 1s;
-    h2 {
-        padding: 0.5rem 0;
-        text-align: center;
-    }
     .project-thumb {
         overflow: hidden;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        margin: 1rem;
     }
     .project-links {
         @include flex-cent-r;
@@ -447,12 +492,18 @@ header {
         right: 0;
         p {
             text-align: justify;
+            text-indent: 3rem;
         }
     }
 }
 
 .project-active {
     opacity: 1;
+}
+
+.menu-open {
+    display: flex;
+    flex-direction: column;
 }
 
 #contact {
@@ -487,5 +538,16 @@ header {
             background: #2dba4e;
             color: $slate;
         }
+    }
+}
+
+.email-button {
+    align-self: center;
+    justify-self: center;
+    button {
+        background: transparent;
+        color: $white;
+        border: 1px solid $aqua;
+        border-radius: 5px;
     }
 }

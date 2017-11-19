@@ -1,7 +1,7 @@
 div(class="project-tabs")
-    div(class="tab-expand")
-        button Live Projects
-        ul
+    div(class="tab-wrapper")
+        a(href="#live-menu" class="tab-toggle") Live Projects
+        ul(class="tab-expand" id="live-menu")
             li
                 a(data-target="#live-1") Portfolio Site
             li
@@ -14,10 +14,10 @@ div(class="project-tabs")
                 a(data-target="#live-5") Microservices
             li
                 a(data-target="#live-6") Speller
-    div(class="proj-title")
-    div(class="tab-expand")
-        button In Development
-        ul
+    h2(class="proj-title") Portfolio
+    div(class="tab-wrapper")
+        a(href="#wip-menu" class="tab-toggle") In Development
+        ul(class="tab-expand" id="wip-menu")
             li
                 a(data-target="#wip-1") Bmore Around Town
             li
@@ -33,7 +33,6 @@ div(class="project-tabs")
 div(class="project-carousel")
     div(class="project-tile project-active" id="tile-1")
         div(class="project-thumb")
-        h2 Portfolio
         div(class="project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio")
                 i(class="fa fa-github")
