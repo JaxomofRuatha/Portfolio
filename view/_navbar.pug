@@ -1,9 +1,10 @@
 header
     img(src="./images/logodragonlong.svg")
-    nav(id="nav-menu")
-        div(class="nav-menu-toggle")
+    nav(class="nav-menu")
+        input(id="mobile-nav" type="checkbox")
+        label(for="mobile-nav" class="nav-menu-toggle")
             span
-        ul(id="nav-links")
+        ul(class="nav-links")
             li
                 a(href="#welcome-section") Home
             li
@@ -12,3 +13,4 @@ header
                 a(href="#projects") Projects
             li
                 a(href="#contact") Contact
+        include ./_socialicons.pug

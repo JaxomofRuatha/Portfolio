@@ -1,6 +1,8 @@
-//const Scrollbar = require("smooth-scrollbar");
-
 document.addEventListener('DOMContentLoaded', () => {
+  function toggleNav() {
+
+  }
+
   document.querySelector('.skill-tabs').addEventListener('click', e => {
     const targetIcons = document.querySelector(e.target.dataset.target);
     const priorActive = document.querySelector('.tab-active').dataset.target;
@@ -34,9 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
       targetTile.setAttribute('style', 'opacity: 1');
       targetTile.classList.add('project-active');
     });
-  });
-  document.querySelector('.nav-menu-toggle').addEventListener('click', () => {
-    document.querySelector('#nav-links').classList.toggle('row-expanded');
-    document.querySelector('.social-icons').classList.toggle('col-expanded');
   });
 });

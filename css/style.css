@@ -2437,7 +2437,10 @@ h4 {
 body {
   background: url("../images/temple.svg") repeat, #151230;
   overflow-x: hidden;
-  color: #FDFFF7; }
+  color: #FDFFF7;
+  width: 100%;
+  height: 100%;
+  right: 0; }
 
 a {
   text-decoration: none;
@@ -2544,7 +2547,7 @@ header {
     top: 0;
     left: 0; }
 
-#nav-menu {
+.nav-menu {
   position: relative;
   height: 100%;
   display: -webkit-box;
@@ -2556,75 +2559,89 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  #nav-menu #nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: none;
-    list-style: none;
-    overflow: hidden;
-    -webkit-transition: max-width 0.5s;
-    -o-transition: max-width 0.5s;
-    transition: max-width 0.5s; }
-    #nav-menu #nav-links li a {
-      padding: 1rem;
-      color: #FDFFF7; }
-      #nav-menu #nav-links li a:hover, #nav-menu #nav-links li a :active {
-        color: #59FFA0; }
-  #nav-menu .nav-menu-toggle {
-    display: none;
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: none;
+  list-style: none;
+  overflow: hidden;
+  -webkit-transition: max-width 0.5s;
+  -o-transition: max-width 0.5s;
+  transition: max-width 0.5s; }
+  .nav-links li a {
+    padding: 1rem;
+    color: #FDFFF7; }
+    .nav-links li a:hover, .nav-links li a :active {
+      color: #59FFA0; }
+
+.nav-menu-toggle {
+  display: none;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0.2rem; }
+  .nav-menu-toggle span {
+    background: #FDFFF7;
+    display: block;
+    height: 2px;
+    position: relative;
+    -webkit-transition: background .2s ease-out;
+    -o-transition: background .2s ease-out;
+    transition: background .2s ease-out;
+    width: 18px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .nav-menu-toggle span::before, .nav-menu-toggle span::after {
+      background: #FDFFF7;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      -webkit-transition: all .5s ease-out;
+      -o-transition: all .5s ease-out;
+      transition: all .5s ease-out;
+      width: 100%; }
+    .nav-menu-toggle span::before {
+      top: 5px; }
+    .nav-menu-toggle span::after {
+      top: -5px; }
+  .nav-menu-toggle span .toggled-on::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .nav-menu-toggle span .toggled-on::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+input[type="checkbox"] {
+  display: none; }
+
+@media screen and (max-width: 799px) {
+  .nav-menu input[type="checkbox"] {
     padding: 1rem;
     position: absolute;
     right: 0;
     top: 0.2rem; }
-    #nav-menu .nav-menu-toggle span {
-      background: #FDFFF7;
-      display: block;
-      height: 2px;
-      position: relative;
-      -webkit-transition: background .2s ease-out;
-      -o-transition: background .2s ease-out;
-      transition: background .2s ease-out;
-      width: 18px;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none; }
-      #nav-menu .nav-menu-toggle span::before, #nav-menu .nav-menu-toggle span::after {
-        background: #FDFFF7;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        -webkit-transition: all .5s ease-out;
-        -o-transition: all .5s ease-out;
-        transition: all .5s ease-out;
-        width: 100%; }
-      #nav-menu .nav-menu-toggle span::before {
-        top: 5px; }
-      #nav-menu .nav-menu-toggle span::after {
-        top: -5px; }
-    #nav-menu .nav-menu-toggle span .toggled-on::before {
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    #nav-menu .nav-menu-toggle span .toggled-on::after {
-      -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
-
-@media screen and (max-width: 799px) {
-  #nav-menu #nav-links {
+    .nav-menu input[type="checkbox"]:checked ~ .nav-links {
+      max-width: none; }
+    .nav-menu input[type="checkbox"]:checked ~ .social-icons {
+      max-height: none; }
+  .nav-menu .nav-links {
     max-width: 0;
     position: absolute;
     right: 3rem; }
-  #nav-menu .nav-menu-toggle {
+  .nav-menu .nav-menu-toggle {
     display: inline-block; } }
 
 @media screen and (max-width: 500px) {
@@ -2676,12 +2693,6 @@ header {
           -ms-transform: scale(1.1);
               transform: scale(1.1); }
 
-.col-expanded {
-  max-height: none !important; }
-
-.row-expanded {
-  max-width: none !important; }
-
 @media screen and (max-width: 799px) {
   .social-icons {
     top: 2.45rem;
@@ -2693,12 +2704,24 @@ header {
 
 /* Styles for _welcome.scss */
 #welcome-section {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  background: #151230 url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
+  background-attachment: fixed; }
 
 .welcome-banner {
   display: -webkit-box;
@@ -2712,17 +2735,7 @@ header {
   max-height: 11rem;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(transparent));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7), transparent);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-  grid-row: 4 / 7;
-  grid-column: 1 / 12; }
-
-.welcome-background {
-  grid-row: 1 / 9;
-  grid-column: 1 / 13;
-  background: #151230 url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
-  background-attachment: fixed;
-  opacity: 0.5;
-  z-index: -1; }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent); }
 
 /* Styles for _profile.scss */
 .visible-tile {

@@ -6,7 +6,7 @@ $icon-purple: #7063CC;
 $indigo: #151230;
 $dark-indigo: darken($indigo, 4%);
 
-@import "./base/reset";
+@import "./base/_reset";
 @import "./base/_typography";
 @import "./utilities/_mixins";
 @import "./font-awesome/font-awesome";
@@ -22,6 +22,9 @@ body {
     background: url("../images/temple.svg") repeat, $indigo;
     overflow-x: hidden;
     color: $white;
+    width: 100%;
+    height: 100%;
+    right: 0;
 }
 
 a {
@@ -77,70 +80,87 @@ header {
     }
 }
 
-#nav-menu {
+.nav-menu {
     position: relative;
     height: 100%;
     @include flex-cent-r;
-    #nav-links {
-        @include flex-cent-r;
-        max-width: none;
-        list-style: none;
-        overflow: hidden;
-        transition: max-width 0.5s;
-        li a {
-            padding: 1rem;
-            color: $white;
-            &:hover, :active {
-                color: $aqua;
-            }        
+}
+
+.nav-links {
+    @include flex-cent-r;
+    max-width: none;
+    list-style: none;
+    overflow: hidden;
+    transition: max-width 0.5s;
+    li a {
+        padding: 1rem;
+        color: $white;
+        &:hover, :active {
+            color: $aqua;
+        }        
+    }
+}
+
+// Mobile menu toggle button
+.nav-menu-toggle {
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+    span {
+        background: $white;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+        user-select: none;
+        &::before, &::after {
+            background: $white;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .5s ease-out;
+            width: 100%;
+        }
+        &::before {
+            top: 5px;
+        }
+        &::after {
+            top: -5px;
         }
     }
-
-    // Mobile menu toggle button
-    .nav-menu-toggle {
-        display: none;
-        padding: 1rem;
-        position: absolute;
-        right: 0;
-        top: 0.2rem;
-        span {
-            background: $white;
-            display: block;
-            height: 2px;
-            position: relative;
-            transition: background .2s ease-out;
-            width: 18px;
-            user-select: none;
-            &::before, &::after {
-                background: $white;
-                content: '';
-                display: block;
-                height: 100%;
-                position: absolute;
-                transition: all .5s ease-out;
-                width: 100%;
-            }
-            &::before {
-                top: 5px;
-            }
-            &::after {
-                top: -5px;
-            }
+    span .toggled-on {
+        &::before {
+            transform: rotate(45deg);
         }
-        span .toggled-on {
-            &::before {
-                transform: rotate(45deg);
-            }
-            &::after {
-                transform: rotate(-45deg);
-            }
+        &::after {
+            transform: rotate(-45deg);
         }
     }
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
 @include sm {
-    #nav-menu {
-        #nav-links {
+    .nav-menu {
+        input[type="checkbox"] {
+            padding: 1rem;
+            position: absolute;
+            right: 0;
+            top: 0.2rem;
+            &:checked ~ .nav-links {
+                max-width: none;
+            }
+            &:checked ~ .social-icons {
+                max-height: none;
+            }
+        }
+        .nav-links {
             max-width: 0;
             position: absolute;
             right: 3rem;
@@ -184,14 +204,6 @@ header {
     }
 }
 
-.col-expanded {
-    max-height: none !important;
-}
-
-.row-expanded {
-    max-width: none !important;
-}
-
 @include sm {
     .social-icons {
         top: 2.45rem;
@@ -206,12 +218,12 @@ header {
 /* Styles for _welcome.scss */
 
 #welcome-section {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    @include flex-cent-c;
     overflow-x: hidden;
     height: 100vh;
     width: 100vw;
+    background: $indigo url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
+    background-attachment: fixed;
 }
 
 .welcome-banner {
@@ -220,17 +232,6 @@ header {
     width: 100%;
     max-height: 11rem;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-    grid-row: 4 / 7;
-    grid-column: 1 / 12;
-}
-
-.welcome-background {
-    grid-row: 1 / 9;
-    grid-column: 1 / 13;
-    background: $indigo url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
-    background-attachment: fixed;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 /* Styles for _profile.scss */
