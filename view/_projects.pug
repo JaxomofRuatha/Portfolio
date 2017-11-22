@@ -1,7 +1,8 @@
 div(class="project-tabs")
     div(class="tab-wrapper")
-        a(href="#live-menu" class="tab-toggle") Live Projects
-        ul(class="tab-expand" id="live-menu")
+        input(id="live-menu" type="checkbox")
+        label(for="live-menu" class="tab-toggle") Live Projects
+        ul(class="tab-expand")
             li
                 a(data-target="#live-1") Portfolio Site
             li
@@ -16,7 +17,8 @@ div(class="project-tabs")
                 a(data-target="#live-6") Speller
     h2(class="proj-title") Portfolio
     div(class="tab-wrapper")
-        a(href="#wip-menu" class="tab-toggle") In Development
+        input(id="wip-menu" type="checkbox")
+        label(for="wip-menu" class="tab-toggle") In Development
         ul(class="tab-expand" id="wip-menu")
             li
                 a(data-target="#wip-1") Bmore Around Town
