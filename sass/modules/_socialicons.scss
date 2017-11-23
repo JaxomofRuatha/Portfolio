@@ -1,0 +1,36 @@
+.socialicons {
+  @include flex-cent-c;
+  background: $dark-indigo;
+  position: fixed;
+  right: 0;
+  top: 35vh;
+  padding: 0 0.5rem;
+  border: 1px solid $icon-purple;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  z-index: 10;
+  i {
+      flex: 1;
+      transition: transform 0.3s;
+      font-size: 1.5rem;
+      padding: 0.7rem 0;
+      color: $icon-purple;
+      &:hover, :active {
+          color: $white;
+          transform: scale(1.1);
+      }
+  }
+}
+
+@include sm {
+  .socialicons {
+      top: 2.45rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top: none;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.5s;
+      overflow: hidden;
+  }
+}

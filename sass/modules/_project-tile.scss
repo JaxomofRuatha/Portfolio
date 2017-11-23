@@ -1,0 +1,101 @@
+.project-tile {
+  opacity: 0;
+  position: absolute;
+  background: $indigo;
+  transition: opacity 1s;
+}
+
+.project-thumb {
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem;
+}
+
+.project-links {
+  @include flex-cent-r;
+  & > a {
+    @include flex-cent-r;
+    color: $white;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+.project-tech {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  span {
+    color: $aqua;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+}
+
+.project-desc {
+  background: $slate;
+  margin: 1rem;
+  padding: 1rem;
+  bottom: 0;
+  right: 0;
+  p {
+    text-align: justify;
+    text-indent: 3rem;
+  }
+}
+
+.project-active {
+  opacity: 1;
+}
+
+#live-1 .project-thumb {
+    background-image: url('../images/thumbnails/spellerthumb.jpg');
+}
+
+#live-2 .project-thumb {
+    background-image: url('../images/thumbnails/quotethumb.JPG');
+}
+
+#live-3 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#live-4 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#live-5 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#live-6 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#live-7 .project-thumb {
+    background-image: url('../images/thumbnails/spellerthumb.jpg');
+}
+
+#wip-1 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#wip-2 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#wip-3 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#wip-4 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+#wip-5 .project-thumb {
+    background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}

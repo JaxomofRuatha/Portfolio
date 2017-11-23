@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  function toggleNav() {
-
-  }
-
   document.querySelector('.skill-tabs').addEventListener('click', e => {
     const targetIcons = document.querySelector(e.target.dataset.target);
     const priorActive = document.querySelector('.tab-active').dataset.target;
@@ -28,12 +24,13 @@ document.addEventListener('DOMContentLoaded', () => {
     tabs.addEventListener('click', e => {
       const targetTile = document.querySelector(e.target.dataset.target);
 
+      document.getElementById('live-menu').checked = false;
+      document.getElementById('wip-menu').checked = false;
+
       document.querySelectorAll('.project-tile').forEach(tile => {
-        tile.setAttribute('style', 'opacity: 0');
         tile.classList.remove('project-active');
       });
 
-      targetTile.setAttribute('style', 'opacity: 1');
       targetTile.classList.add('project-active');
     });
   });

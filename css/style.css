@@ -2428,7 +2428,6 @@ h4 {
   overflow: visible;
   clip: auto; }
 
-/* Styles for _base.scss */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2443,6 +2442,9 @@ a {
   text-decoration: none;
   cursor: pointer; }
 
+header {
+  height: 2.5rem; }
+
 footer {
   background: #0f0c21;
   text-align: center; }
@@ -2450,7 +2452,6 @@ footer {
 input[type="checkbox"] {
   display: none; }
 
-/* Styles for _layout.scss */
 .l-content-section {
   background: #1E1E1D;
   border-radius: 10px;
@@ -2522,8 +2523,7 @@ input[type="checkbox"] {
         align-self: flex-start;
     padding: 0; }
 
-/* Styles for _nav.scss */
-header {
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2541,15 +2541,13 @@ header {
   border-bottom: 1px solid #7063CC;
   overflow: hidden;
   z-index: 10; }
-  header img {
-    max-height: 2.3rem;
-    padding: 0 1rem;
-    top: 0;
-    left: 0; }
 
-.nav-menu {
+.logo {
+  max-height: 2.3rem;
+  padding: 0 1rem; }
+
+.navbar-menu {
   position: relative;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2560,7 +2558,7 @@ header {
       -ms-flex-align: center;
           align-items: center; }
 
-.nav-links {
+.navbar-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2575,35 +2573,34 @@ header {
           transform: scaleX(1);
   list-style: none;
   overflow: hidden;
-  -webkit-transition: max-width 0.5s;
-  -o-transition: max-width 0.5s;
-  transition: max-width 0.5s; }
-  .nav-links li a {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s; }
+  .navbar-links li a {
     padding: 1rem;
     color: #FDFFF7; }
-    .nav-links li a:hover, .nav-links li a :active {
+    .navbar-links li a:hover, .navbar-links li a :active {
       color: #59FFA0; }
 
-.nav-menu-toggle {
+.navbar-menu-toggle {
   display: none;
   padding: 1rem;
   position: absolute;
   right: 0;
-  top: 0.2rem; }
-  .nav-menu-toggle span {
+  top: 0; }
+  .navbar-menu-toggle span {
     background: #FDFFF7;
     display: block;
     height: 2px;
     position: relative;
-    -webkit-transition: background .2s ease-out;
-    -o-transition: background .2s ease-out;
-    transition: background .2s ease-out;
     width: 18px;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    .nav-menu-toggle span::before, .nav-menu-toggle span::after {
+    .navbar-menu-toggle span::before, .navbar-menu-toggle span::after {
       background: #FDFFF7;
       content: '';
       display: block;
@@ -2613,34 +2610,34 @@ header {
       -o-transition: all .5s ease-out;
       transition: all .5s ease-out;
       width: 100%; }
-    .nav-menu-toggle span::before {
+    .navbar-menu-toggle span::before {
       top: 5px; }
-    .nav-menu-toggle span::after {
+    .navbar-menu-toggle span::after {
       top: -5px; }
-  .nav-menu-toggle span .toggled-on::before {
+  .navbar-menu-toggle input[type="checkbox"]:checked ~ .navbar-menu-toggle span::before {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg); }
-  .nav-menu-toggle span .toggled-on::after {
+  .navbar-menu-toggle input[type="checkbox"]:checked ~ .navbar-menu-toggle span::after {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg); }
 
 @media screen and (max-width: 799px) {
-  .nav-menu input[type="checkbox"] {
+  input[type="checkbox"] {
     padding: 1rem;
     position: absolute;
     right: 0;
-    top: 0.2rem; }
-    .nav-menu input[type="checkbox"]:checked ~ .nav-links {
+    top: 0; }
+    input[type="checkbox"]:checked ~ .nav-links {
       -webkit-transform: scaleX(1);
           -ms-transform: scaleX(1);
               transform: scaleX(1); }
-    .nav-menu input[type="checkbox"]:checked ~ .social-icons {
+    input[type="checkbox"]:checked ~ .social-icons {
       -webkit-transform: scaleY(1);
           -ms-transform: scaleY(1);
               transform: scaleY(1); }
-  .nav-menu .nav-links {
+  .nav-links {
     -webkit-transform: scaleX(0);
         -ms-transform: scaleX(0);
             transform: scaleX(0);
@@ -2654,15 +2651,14 @@ header {
     transition: transform 0.5s, -webkit-transform 0.5s;
     position: absolute;
     right: 3rem; }
-  .nav-menu .nav-menu-toggle {
+  .nav-menu-toggle {
     display: inline-block; } }
 
 @media screen and (max-width: 500px) {
-  header img {
+  .logo {
     opacity: 0; } }
 
-/* Styles for _social.scss */
-.social-icons {
+.socialicons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2684,11 +2680,8 @@ header {
   border: 1px solid #7063CC;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  z-index: 10;
-  -webkit-transition: max-height 0.5s;
-  -o-transition: max-height 0.5s;
-  transition: max-height 0.5s; }
-  .social-icons i {
+  z-index: 10; }
+  .socialicons i {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -2700,14 +2693,14 @@ header {
     font-size: 1.5rem;
     padding: 0.7rem 0;
     color: #7063CC; }
-    .social-icons i:hover, .social-icons i :active {
+    .socialicons i:hover, .socialicons i :active {
       color: #FDFFF7;
       -webkit-transform: scale(1.1);
           -ms-transform: scale(1.1);
               transform: scale(1.1); }
 
 @media screen and (max-width: 799px) {
-  .social-icons {
+  .socialicons {
     top: 2.45rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -2725,8 +2718,7 @@ header {
     transition: transform 0.5s, -webkit-transform 0.5s;
     overflow: hidden; } }
 
-/* Styles for _welcome.scss */
-#welcome-section {
+.welcome-background {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2740,7 +2732,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow-x: hidden;
   height: 100vh;
   width: 100vw;
   background: #151230 url(../images/welcome-fire-background.jpg) no-repeat left center/cover fixed;
@@ -2760,7 +2751,6 @@ header {
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7), transparent);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent); }
 
-/* Styles for _profile.scss */
 .visible-tile {
   -webkit-transform: translateY(-7rem);
       -ms-transform: translateY(-7rem);
@@ -2851,45 +2841,7 @@ header {
       background: #282827;
       cursor: pointer; }
 
-.profile-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .profile-content p {
-    padding: 0 2rem;
-    text-align: left; }
-  .profile-content:first-child {
-    -ms-flex-preferred-size: 2;
-        flex-basis: 2; }
-  .profile-content:nth-child(2) {
-    -ms-flex-preferred-size: 3;
-        flex-basis: 3; }
-  .profile-content button {
-    border: 1px solid #59FFA0;
-    background: inherit;
-    color: #FDFFF7;
-    border-radius: 5px;
-    padding: 0.4rem 1rem;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
-    .profile-content button:hover {
-      -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-              transform: scale(1.1);
-      font-weight: bold;
-      cursor: pointer;
-      background: #59FFA0;
-      color: #1E1E1D; }
-
-@media screen and (max-width: 1023px) {
-  .profile-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
-
-#projects {
+.projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2987,105 +2939,6 @@ input[type="checkbox"]:checked ~ .tab-expand {
   overflow: hidden;
   margin: 0.5rem 0; }
 
-#tile-1 .project-thumb {
-  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
-
-#tile-2 .project-thumb {
-  background-image: url("../images/thumbnails/quotethumb.JPG"); }
-
-#tile-3 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-4 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-5 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-6 .project-thumb {
-  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
-
-#tile-7 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-8 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-9 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-10 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-11 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-#tile-12 .project-thumb {
-  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
-
-.project-tile {
-  opacity: 0;
-  position: absolute;
-  background: #151230;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s; }
-  .project-tile .project-thumb {
-    overflow: hidden;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 1rem; }
-  .project-tile .project-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .project-tile .project-links > a {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      color: #FDFFF7; }
-      .project-tile .project-links > a:hover {
-        color: #FFED65; }
-  .project-tile .project-tech {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; }
-    .project-tile .project-tech span {
-      color: #59FFA0;
-      font-weight: bold;
-      padding: 0.5rem; }
-  .project-tile .project-desc {
-    background: #1E1E1D;
-    margin: 1rem;
-    padding: 1rem;
-    bottom: 0;
-    right: 0; }
-    .project-tile .project-desc p {
-      text-align: justify;
-      text-indent: 3rem; }
-
-.project-active {
-  opacity: 1; }
-
 .menu-open {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3095,12 +2948,120 @@ input[type="checkbox"]:checked ~ .tab-expand {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-#contact {
+.project-tile {
+  opacity: 0;
+  position: absolute;
+  background: #151230;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s; }
+
+.project-thumb {
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 1rem; }
+
+.project-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .project-links > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #FDFFF7; }
+    .project-links > a:hover {
+      color: #FFED65; }
+
+.project-tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .project-tech span {
+    color: #59FFA0;
+    font-weight: bold;
+    padding: 0.5rem; }
+
+.project-desc {
+  background: #1E1E1D;
+  margin: 1rem;
+  padding: 1rem;
+  bottom: 0;
+  right: 0; }
+  .project-desc p {
+    text-align: justify;
+    text-indent: 3rem; }
+
+.project-active {
+  opacity: 1; }
+
+#live-1 .project-thumb {
+  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
+
+#live-2 .project-thumb {
+  background-image: url("../images/thumbnails/quotethumb.JPG"); }
+
+#live-3 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#live-4 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#live-5 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#live-6 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#live-7 .project-thumb {
+  background-image: url("../images/thumbnails/spellerthumb.jpg"); }
+
+#wip-1 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#wip-2 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#wip-3 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#wip-4 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+#wip-5 .project-thumb {
+  background-image: url("http://via.placeholder.com/320x200?text=Preview+coming+soon!"); }
+
+.section-contact {
   max-height: 80vh; }
-  #contact .portrait-pic {
-    max-height: 15rem; }
-  #contact .mn-map {
-    max-height: 13rem; }
+
+.portrait-pic {
+  max-height: 15rem; }
+
+.mn-map {
+  max-height: 13rem; }
 
 .contact-links {
   display: -webkit-box;

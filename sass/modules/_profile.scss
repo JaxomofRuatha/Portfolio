@@ -1,0 +1,34 @@
+.profile-content {
+    display: flex;
+    p {
+        padding: 0 2rem;
+        text-align: left;
+    }
+    &:first-child {
+      flex-basis: 2;
+    }
+    &:nth-child(2) {
+      flex-basis: 3;
+    }
+    button {
+      border: 1px solid $aqua;
+      background: inherit;
+      color: $white;
+      border-radius: 5px;
+      padding: 0.4rem 1rem;
+      transition: all 0.5s;
+      &:hover {
+          transform: scale(1.1);
+          font-weight: bold;
+          cursor: pointer;
+          background: $aqua;
+          color: $slate;
+      }
+    }
+}
+
+@include md {
+    .profile-content {
+        flex-direction: column;
+    }
+}

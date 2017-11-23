@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: $dark-indigo;
+    top: 0;
+    height: 2.5rem;
+    width: 100%;
+    border-bottom: 1px solid $icon-purple;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.logo {
+    max-height: 2.3rem;
+    padding: 0 1rem;
+}
+
+.navbar-menu {
+    position: relative;
+    @include flex-cent-r;
+}
+
+.navbar-links {
+    @include flex-cent-r;
+    transform: scaleX(1);
+    list-style: none;
+    overflow: hidden;
+    transition: transform 0.5s;
+    li a {
+        padding: 1rem;
+        color: $white;
+        &:hover, :active {
+            color: $aqua;
+        }        
+    }
+}
+
+// Mobile menu toggle button
+.navbar-menu-toggle {
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    span {
+        background: $white;
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 18px;
+        user-select: none;
+        &::before, &::after {
+            background: $white;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .5s ease-out;
+            width: 100%;
+        }
+        &::before {
+            top: 5px;
+        }
+        &::after {
+            top: -5px;
+        }
+    }
+    input[type="checkbox"]:checked ~ .navbar-menu-toggle span {
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@include sm {
+  input[type="checkbox"] {
+      padding: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      &:checked ~ .nav-links {
+          transform: scaleX(1);
+      }
+      &:checked ~ .social-icons {
+          transform: scaleY(1);
+      }
+  }
+  .nav-links {
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+      position: absolute;
+      right: 3rem;
+  }
+  .nav-menu-toggle {
+      display: inline-block;
+  }
+}
+
+@include xs {
+  .logo {
+      opacity: 0;
+  }
+}

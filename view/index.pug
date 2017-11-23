@@ -9,14 +9,13 @@ html
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
     body
         include ./_navbar.pug
-        include ./_socialicons.pug
         include ./_welcome.pug
         section#profile
             include ./_skilltabs.pug
             include ./_profile.pug
-        section#projects.l-content-section
+        section(id="projects" class="l-content-section projects-container")
             include ./_projects.pug
-        section#contact(class="flex-cent l-content-section")
+        section#contact(class="l-content-section section-contact")
             include ./_contact.pug
         footer
             span #[small &copy;] 2017 John Chritton

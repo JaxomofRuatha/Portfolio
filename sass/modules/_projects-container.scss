@@ -1,0 +1,75 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 85vh;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.project-tabs-wrap {
+    position: relative;
+    @include flex-cent-c;
+}
+
+.project-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    height: 4rem;
+}
+
+.tab-toggle {
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid $yellow;
+    color: $white;
+    text-align: center;
+    font-size: 1.4rem;
+    width: 15rem;
+    padding: 0.5rem;
+}
+h2 {
+    text-shadow: 2px 2px $icon-purple;
+    padding: 0.5rem;
+}
+
+input[type="checkbox"]:checked ~ .tab-expand {
+    transform: scaleY(1);
+}
+
+.tab-expand {
+    transition: transform 0.5s;
+    transform-origin: top;
+    transform: scaleY(0);
+    z-index: 8;
+    overflow: hidden;
+    text-align: left;
+    width: 15rem;
+    box-shadow: 4px 4px lighten($slate, 20%);
+    li {
+        flex: 0;
+        padding: 0.5rem;
+        background: $slate;
+        border-left: 1px solid $yellow;
+        &:hover {
+            background: $yellow;
+            color: $slate;
+        }
+    }
+}
+
+.project-display {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.menu-open {
+    display: flex;
+    flex-direction: column;
+}

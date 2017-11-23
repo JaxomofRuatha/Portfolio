@@ -1,22 +1,24 @@
 div(class="project-tabs")
-    div(class="tab-wrapper")
+    div(class="project-tabs-wrap")
         input(id="live-menu" type="checkbox")
         label(for="live-menu" class="tab-toggle") Live Projects
         ul(class="tab-expand")
             li
                 a(data-target="#live-1") Portfolio Site
             li
-                a(data-target="#live-2") Quote Machine
+                a(data-target="#live-2") React Quote Machine
             li
-                a(data-target="#live-3") Markdown Previewer
+                a(data-target="#live-3") React Forecast
             li
-                a(data-target="#live-4") Wikipedia Viewer
+                a(data-target="#live-4") Express Microservices
             li
-                a(data-target="#live-5") Microservices
+                a(data-target="#live-5") React .md Previewer
             li
-                a(data-target="#live-6") Speller
-    h2(class="proj-title") Portfolio
-    div(class="tab-wrapper")
+                a(data-target="#live-6") Redux Wikipedia Viewer
+            li
+                a(data-target="#live-7") Speller
+    h2(class="project-title") Portfolio
+    div(class="project-tabs-wrap")
         input(id="wip-menu" type="checkbox")
         label(for="wip-menu" class="tab-toggle") In Development
         ul(class="tab-expand" id="wip-menu")
@@ -27,13 +29,13 @@ div(class="project-tabs")
             li
                 a(data-target="#wip-3") Bikeshare Mapper
             li
-                a(data-target="#wip-4") Twitch Dashboard
+                a(data-target="#wip-4") React Twitch Dashboard
             li
                 a(data-target="#wip-5") JavaScript Calculator
             li
                 a(data-target="#wip-6") Freeform Vote                                
-div(class="project-carousel")
-    div(class="project-tile project-active" id="tile-1")
+div(class="project-display")
+    div(class="project-tile project-active" id="live-1")
         div(class="project-thumb")
         div(class="project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio")
@@ -52,9 +54,8 @@ div(class="project-carousel")
             span First iteration complete and functional
             p This page started as part of the front end projects for Free Code Camp, but ended up serving the dual purpose of being a hub for showing the work that I've done and allowing exploration of several ways of accomplishing the display and interaction I wanted. While I could have stayed with React, I chose to work with core JavaScript and ES6, including a Gulp build process, to refine my interactions with the DOM.
             p Originally I used purely flexbox, but the current version is partially including CSS Grid for layouts. Going forward, I would like to incorporate Grid more, as well as more interactive elements. Naturally, additional projects and writing will be my highest priority.
-    div(class="project-tile" id="tile-2")
+    div(class="project-tile" id="live-2")
         div(class="project-thumb")
-        h2 React Quote Machine
         div(class=" project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-quote")
                 i(class="fa fa-github")
@@ -70,9 +71,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework
-    div(class="project-tile" id="tile-3")
+    div(class="project-tile" id="live-3")
         div(class="project-thumb")
-        h2 React Forecast
         div(class=" project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-weather")
                 i(class="fa fa-github")
@@ -89,9 +89,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First functional version after multiple feature updates.
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework 
-    div(class="project-tile" id="tile-4")
+    div(class="project-tile" id="live-4")
         div(class="project-thumb")
-        h2 Express Microservices
         div(class=" project-links")
             a(class="l-icon-labeled" href="#")
                 i(class="fa fa-github")
@@ -110,9 +109,8 @@ div(class="project-carousel")
             span First iterations complete and functional
             p Six microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.
             p The next refinement will be combining the UI from each microservice into one while still allowing access to each endpoint as an individual microservice API.
-    div(class="project-tile" id="tile-5")
+    div(class="project-tile" id="wip-1")
         div(class="project-thumb")
-        h2 Bmore Around Town
         div(class="project-links")
             a(class="l-icon-labeled" href="http://bmorearoundtown.com/")
                 i(class="fa fa-cogs")
@@ -128,9 +126,8 @@ div(class="project-carousel")
             span API and database complete, UI in review process
             p A complete rewrite of the production website bmorearoundtown.com, which currently uses jQuery, PHP, and a legacy version of MySQL. This infrastructure is no longer sufficient to support the growth of the site. I was brought in with one other developer to transition the build to React/Redux, Node with Express, and the latest version of MySQL.
             p I architected the database and API to serve the same expected data as the legacy interface (to preserve backwards compatibility until updated), but with the entirely reconstructed code. At this point the senior developer overseeing the project is completing code review, and my next contribution will be finishing the React/Redux user interface.
-    div(class="project-tile" id="tile-6")
+    div(class="project-tile" id="live-7")
         div(class="project-thumb")
-        h2 Speller.c
         div(class=" project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/CS50/tree/master/pset5/speller")
                 i(class="fa fa-github")
@@ -143,9 +140,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
-    div(class="project-tile" id="tile-7")
+    div(class="project-tile" id="live-5")
         div(class="project-thumb")
-        h2 React .md Previewer
         div(class=" project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-markdown")
                 i(class="fa fa-github")
@@ -161,9 +157,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
-    div(class="project-tile" id="tile-8")
+    div(class="project-tile" id="live-6")
         div(class="project-thumb")
-        h2 Wikipedia Viewer
         div(class="project-links")
             a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-wikiviewer")
                 i(class="fa fa-github")
@@ -180,9 +175,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-thunk and React Router.
-    div(class="project-tile" id="tile-9")
+    div(class="project-tile" id="wip-3")
         div(class="project-thumb")
-        h2 Bikeshare Mapper
         div(class=" project-links")
             a(class="l-icon-labeled" href="#")
                 i(class="fa fa-github")
@@ -200,9 +194,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span In progress, partially built with 3 now-dissolved teams
             p This full-stack application was created to take part in a contest put forth by a senior developer and streamer to emulate real team collaboration using a workflow focused on Git and Trello.
-    div(class="project-tile" id="tile-10")
+    div(class="project-tile" id="wip-6")
         div(class="project-thumb")
-        h2 Freeform Vote
         div(class=" project-links")
             a(class="l-icon-labeled" href="#")
                 i(class="fa fa-github")
@@ -220,9 +213,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span In progress
             p The very basic seed of this project came from the Free Code Camp back end project to "Build a Voting App." What I chose to do with it is put into use every technology and tool I have learned, and create a much more interesting and versatile end product.
-    div(class="project-tile" id="tile-11")
+    div(class="project-tile" id="wip-4")
         div(class="project-thumb")
-        h2 React Twitch Dashboard
         div(class=" project-links")
             a(class="l-icon-labeled" href="#")
                 i(class="fa fa-github")
@@ -238,9 +230,8 @@ div(class="project-carousel")
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework
-    div(class="project-tile" id="tile-12")
+    div(class="project-tile" id="wip-5")
         div(class="project-thumb")
-        h2 React Quote Machine
         div(class=" project-links")
             a(class="l-icon-labeled" href="#")
                 i(class="fa fa-github")

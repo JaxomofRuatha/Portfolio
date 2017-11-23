@@ -1,0 +1,62 @@
+.visible-tile {
+    transform: translateY(-7rem);
+}
+
+.tab-active {
+  background-color: $yellow !important;
+  color: $slate;
+  font-weight: bold;
+}
+
+.skill-icons {
+    display: flex;
+    flex-direction: column;
+    max-height: 11.5rem;
+}
+
+.top-box {
+    height: 7rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(2, 7rem);
+    align-items: start;
+}
+
+.tech-section {
+    @include flex-cent-r;
+    grid-row-start: 2;
+    grid-column: 1;
+    transition: transform 0.5s ease-in-out;
+    img {
+        width: 5.3rem;
+        padding: 0.5rem 0.8rem 0 0.8rem;
+    }
+}
+
+@include sm {
+    .tech-section {
+        overflow-x: scroll;
+    }
+}
+
+// Do this with flex instead, go down to 2 and scale down
+.skill-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        @include flex-cent-r;
+        flex: 1;
+        text-align: center;
+        padding: 1rem;
+        height: 2rem;
+        border-top: 1px solid $yellow;
+        background: $slate;
+        z-index: 3;
+        &:hover {
+            transition: background 0.5s;
+            background: lighten($slate, 4%);
+            cursor: pointer;
+        }
+    }
+}
