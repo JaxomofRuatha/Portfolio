@@ -2,10 +2,7 @@
   "name": "portfolio-jaxomofruatha",
   "version": "1.0.0",
   "description": "John Chritton - Portfolio of development work",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JaxomofRuatha/Portfolio.git"
@@ -16,30 +13,52 @@
     "url": "https://github.com/JaxomofRuatha/Portfolio/issues"
   },
   "homepage": "https://jaxomofruatha.github.io/Portfolio/",
+  "scripts": {
+    "bs": "browser-sync start --server 'src' --files 'src/index.html' 'src/css/style.css' 'src/js/bundle.js'",
+    "watch": "npm run watch:pug & npm run watch:sass & npm run watch:js",
+    "js": "browserify src/js/index.js -o src/js/bundle.js -t [ babelify --presets ['env']",
+    "pug": "pug -P -o ./src ./src/view/index.pug",
+    "pug-build": "pug --output-style compressed -o dist src/view/index.pug",
+    "sass": "node-sass --output-style expanded --source-map true -o src/css src/sass/style.scss",
+    "sass-build": "node-sass --output-style compressed --source-map true -o dist/css src/sass/style.scss",
+    "start": "npm run bs & npm run watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:pug": "chokidar 'src/view/*.pug' -c 'npm run pug'",
+    "watch:sass": "chokidar 'src/sass/*.scss' -c 'npm run sass'",
+    "watch:js": "chokidar 'src/js/index.js' -c 'npm run js'"
+  },
   "devDependencies": {
-    "autoprefixer": "^7.1.3",
-    "babel-preset-env": "^1.6.0",
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
-    "browserify": "^14.4.0",
+    "browser-sync": "^2.23.2",
+    "browserify": "^14.5.0",
     "chai": "^4.1.2",
-    "concurrently": "^3.5.0",
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.5.1",
+    "cypress": "^1.4.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-clean": "^0.3.2",
-    "gulp-inject": "^4.2.0",
+    "gulp-inject": "^4.3.0",
     "gulp-plumber": "^1.1.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "mocha": "^4.0.1",
-    "node-sass": "^4.5.3",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
+    "mocha": "^4.1.0",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.15",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify": "^0.1.5",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.9.0"
   },
   "dependencies": {
-    "smooth-scrollbar": "^8.1.3"
+    "smooth-scrollbar": "^8.2.5"
   }
 }
