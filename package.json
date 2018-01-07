@@ -14,17 +14,21 @@
   },
   "homepage": "https://jaxomofruatha.github.io/Portfolio/",
   "scripts": {
-    "bs": "browser-sync start --server 'src' --files 'src/index.html' 'src/css/style.css' 'src/js/bundle.js'",
+    "bs":
+      "browser-sync start --server 'src' --files 'src/index.html' 'src/css/style.css' 'src/js/bundle.js'",
     "watch": "npm run watch:pug & npm run watch:sass & npm run watch:js",
-    "js": "browserify src/js/index.js -o src/js/bundle.js -t [ babelify --presets ['env']",
+    "js":
+      "browserify src/js/index.js -o src/js/bundle.js -t [ babelify --presets ['env']",
     "pug": "pug -P -o ./src ./src/view/index.pug",
     "pug-build": "pug --output-style compressed -o dist src/view/index.pug",
-    "sass": "node-sass --output-style expanded --source-map true -o src/css src/sass/style.scss",
-    "sass-build": "node-sass --output-style compressed --source-map true -o dist/css src/sass/style.scss",
+    "sass":
+      "node-sass --output-style expanded --source-map true --source-map-embed true -o src/css src/sass/style.scss",
+    "sass-build":
+      "node-sass --output-style compressed --source-map true --source-map-embed true -o dist/css src/sass/style.scss",
     "start": "npm run bs & npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:pug": "chokidar 'src/view/*.pug' -c 'npm run pug'",
-    "watch:sass": "chokidar 'src/sass/*.scss' -c 'npm run sass'",
+    "watch:pug": "chokidar 'src/view/**/*.pug' -c 'npm run pug'",
+    "watch:sass": "chokidar 'src/sass/**/*.scss' -c 'npm run sass'",
     "watch:js": "chokidar 'src/js/index.js' -c 'npm run js'"
   },
   "devDependencies": {
@@ -51,6 +55,7 @@
     "mocha": "^4.1.0",
     "node-sass": "^4.7.2",
     "postcss": "^6.0.15",
+    "postcss-cli": "^4.1.1",
     "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "uglify": "^0.1.5",
