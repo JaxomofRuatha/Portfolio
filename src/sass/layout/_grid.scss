@@ -1,83 +1,84 @@
-.project-thumb {
-    grid-area: thumb;
+.project-view__thumb {
+  grid-area: thumb;
 }
 
-.project-links {
-    grid-area: links;
+.project-view__links {
+  grid-area: links;
 }
 
-.project-tech {
-    grid-area: tech;
+.project-view__tech {
+  grid-area: tech;
 }
 
-.project-desc {
-    grid-area: desc;
+.project-view__desc {
+  grid-area: desc;
 }
 
-.project-tile {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(3rem, auto);
-    height: 100%;
-    grid-template-areas: 
-        "thumb thumb thumb thumb tech tech tech tech"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "thumb thumb thumb thumb desc desc desc desc"
-        "links links links links desc desc desc desc";
+.project-view__tile {
+  display: grid;
+  grid-auto-rows: minmax(3rem, auto);
+  grid-template-areas:
+    'thumb thumb thumb thumb desc desc desc desc'
+    'thumb thumb thumb thumb desc desc desc desc'
+    'thumb thumb thumb thumb desc desc desc desc'
+    'thumb thumb thumb thumb desc desc desc desc'
+    'thumb thumb thumb thumb desc desc desc desc'
+    'links links links links tech tech tech tech';
+  grid-template-columns: repeat(8, 1fr);
+  height: 100%;
 }
 
 @include xs {
-    .project-tile {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 
-            "title title title title title title"
-            "thumb thumb thumb thumb links links"
-            "thumb thumb thumb thumb links links"
-            "thumb thumb thumb thumb links links"
-            "thumb thumb thumb thumb links links"
-            "tech tech tech tech tech tech"
-            "desc desc desc desc desc desc"
-            "desc desc desc desc desc desc"
-            "desc desc desc desc desc desc"
-            "desc desc desc desc desc desc";
-    }
+  .project-view__tile {
+    grid-template-areas:
+      'title title title title title title'
+      'thumb thumb thumb thumb links links'
+      'thumb thumb thumb thumb links links'
+      'thumb thumb thumb thumb links links'
+      'thumb thumb thumb thumb links links'
+      'tech tech tech tech tech tech'
+      'desc desc desc desc desc desc'
+      'desc desc desc desc desc desc'
+      'desc desc desc desc desc desc'
+      'desc desc desc desc desc desc';
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .portrait-pic {
-    grid-area: port;
-    align-self: flex-start;
+  align-self: flex-start;
+  grid-area: port;
 }
 
 .mn-map {
-    grid-area: map;
-    justify-self: center;
+  grid-area: map;
+  justify-self: center;
 }
 
 .email-button {
-    grid-area: email;
+  grid-area: email;
 }
 
 .contact-links {
-    grid-area: social;
-    align-self: flex-start;
+  align-self: flex-start;
+  grid-area: social;
 }
 
 #contact {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-auto-rows: minmax(3rem, auto);
-    grid-template-areas:
-        "head head head head head head head head"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social map map"
-        "port port social social social social email email";
-    h3 {
-        grid-area: head;
-        align-self: flex-start;
-        padding: 0;
-    }
+  display: grid;
+  grid-auto-rows: minmax(3rem, auto);
+  grid-template-areas:
+    'head head head head head head head head'
+    'port port social social social social map map'
+    'port port social social social social map map'
+    'port port social social social social map map'
+    'port port social social social social map map'
+    'port port social social social social email email';
+  grid-template-columns: repeat(8, 1fr);
+
+  h3 {
+    align-self: flex-start;
+    grid-area: head;
+    padding: 0;
+  }
 }

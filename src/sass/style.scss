@@ -1,39 +1,43 @@
-$white: #FDFFF7;
-$aqua: #59FFA0;
-$yellow: #FFED65;
-$slate: #1E1E1D;
-$icon-purple: #7063CC;
+@charset "utf-8";
+
+$white: #fdfff7;
+$aqua: #59ffa0;
+$yellow: #ffed65;
+$slate: #1e1e1d;
+$icon-purple: #7063cc;
 $indigo: #151230;
 $dark-indigo: darken($indigo, 4%);
 
-@import "./partials/_reset";
-@import "./partials/_typography";
-@import "./utilities/_mixins";
-@import "./font-awesome/font-awesome";
-@import "./partials/_base";
+@import './partials/reset';
+@import './partials/typography';
+@import './utilities/mixins';
+@import './font-awesome/font-awesome';
+@import './partials/base';
 
 .l-content-section {
-    background: $slate;
-    border-radius: 10px;
-    margin: 2rem 3.5rem;
-    padding: 1rem;
-    text-align: center;
+  background: $slate;
+  border-radius: 10px;
+  margin: 2rem 3.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .l-icon-labeled {
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    * {
-        padding: 0.5rem;
-    }
+  align-content: center;
+  display: flex;
+  justify-content: flex-start;
+
+  * {
+    padding: 0.5rem;
+  }
 }
 
-@import "./layout/_grid";
-@import "./modules/_navbar";
-@import "./modules/_socialicons";
-@import "./modules/_welcome";
-@import "./modules/_skilltabs";
-@import "./modules/_projects-container";
-@import "./modules/_project-tile";
-@import "./modules/_contact";
+@import './layout/grid';
+@import './modules/navbar';
+@import './modules/socialicons';
+@import './modules/welcome';
+@import './modules/skilltabs';
+@import './modules/profile';
+@import './modules/projects-container';
+@import './modules/project-tile';
+@import './modules/contact';

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('live-menu').checked = false;
       document.getElementById('wip-menu').checked = false;
 
-      document.querySelectorAll('.project-tile').forEach(tile => {
+      document.querySelectorAll('.project-view__tile').forEach(tile => {
         tile.classList.remove('project-active');
       });
 
