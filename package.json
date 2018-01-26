@@ -32,7 +32,7 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
-    "browser-sync": "^2.23.5",
+    "browser-sync": "^2.23.6",
     "browserify": "^15.2.0",
     "chai": "^4.1.2",
     "chokidar-cli": "^1.2.0",

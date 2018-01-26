@@ -1,6 +1,11 @@
 {
   "extends": "stylelint-config-sass-guidelines",
+  "plugins": ["stylelint-selector-bem-pattern"],
   "rules": {
-    "at-rule-whitelist": ["include", "import", "charset"]
+    "at-rule-whitelist": ["include", "import", "charset"],
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "implicitComponents": true
+    }
   }
 }
