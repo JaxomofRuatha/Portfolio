@@ -1,26 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.skill-tabs').addEventListener('click', e => {
+  document.querySelector('.skills__menu').addEventListener('click', e => {
     const targetIcons = document.querySelector(e.target.dataset.target);
-    const priorActive = document.querySelector('.tab-active').dataset.target;
+    const priorActive = document.querySelector('.skills__tab--active').dataset
+      .target;
 
-    document.querySelectorAll('.skill-tabs a').forEach(a => {
-      a.classList.remove('tab-active');
+    document.querySelectorAll('.skills__tab').forEach(a => {
+      a.classList.remove('skills__tab--active');
     });
 
-    e.target.classList.add('tab-active');
+    e.target.classList.add('skills__tab--active');
 
     if (
       e.target.tagName === 'A' &&
       document.querySelector(`${priorActive}`) !== targetIcons
     ) {
-      document.querySelector(`${priorActive}`).classList.remove('visible-tile');
+      document
+        .querySelector(`${priorActive}`)
+        .classList.remove('skills__section--visible');
       setTimeout(() => {
-        targetIcons.classList.add('visible-tile');
+        targetIcons.classList.add('skills__section--visible');
       }, 500);
     }
   });
 
-  document.querySelectorAll('.tab-expand').forEach(tabs => {
+  document.querySelectorAll('project-tabs__menu').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const targetTile = document.querySelector(e.target.dataset.target);
 
@@ -28,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('wip-menu').checked = false;
 
       document.querySelectorAll('.project-view__tile').forEach(tile => {
-        tile.classList.remove('project-active');
+        tile.classList.remove('project-view__tile--active');
       });
 
-      targetTile.classList.add('project-active');
+      targetTile.classList.add('project-view__tile--active');
     });
   });
 });

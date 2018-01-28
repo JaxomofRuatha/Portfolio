@@ -1,3 +1,47 @@
+.navbar {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 10% 1fr 30%;
+  grid-template-rows: 2.5rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar__logo {
+  grid-column: 1;
+}
+
+.navbar__menu {
+  grid-column: 3;
+}
+
+.navbar__links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+}
+
+.welcome {
+  display: grid;
+  grid-template-rows: 40% 25% 1fr;
+}
+
+.welcome__banner {
+  display: grid;
+  grid-row: 2;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.welcome__name {
+  align-self: end;
+}
+
+.welcome__title {
+  align-self: start;
+}
+
 .project-view__thumb {
   grid-area: thumb;
 }

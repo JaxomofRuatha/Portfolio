@@ -1,34 +1,39 @@
-.profile-content {
-    display: flex;
-    p {
-        padding: 0 2rem;
-        text-align: left;
+.profile-info {
+  display: flex;
+
+  p {
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  button {
+    background: inherit;
+    border: 1px solid $aqua;
+    border-radius: 5px;
+    color: $white;
+    padding: 0.4rem 1rem;
+    transition: all 0.5s;
+
+    &:hover {
+      background: $aqua;
+      color: $slate;
+      cursor: pointer;
+      font-weight: bold;
+      transform: scale(1.1);
     }
-    &:first-child {
-      flex-basis: 2;
-    }
-    &:nth-child(2) {
-      flex-basis: 3;
-    }
-    button {
-      border: 1px solid $aqua;
-      background: inherit;
-      color: $white;
-      border-radius: 5px;
-      padding: 0.4rem 1rem;
-      transition: all 0.5s;
-      &:hover {
-          transform: scale(1.1);
-          font-weight: bold;
-          cursor: pointer;
-          background: $aqua;
-          color: $slate;
-      }
-    }
+  }
+}
+
+.profile-info__summary {
+  flex-basis: 2;
+}
+
+.profile-info__education {
+  flex-basis: 3;
 }
 
 @include md {
-    .profile-content {
-        flex-direction: column;
-    }
+  .profile-content {
+    flex-direction: column;
+  }
 }

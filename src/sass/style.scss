@@ -8,11 +8,12 @@ $icon-purple: #7063cc;
 $indigo: #151230;
 $dark-indigo: darken($indigo, 4%);
 
-@import './partials/reset';
-@import './partials/typography';
-@import './utilities/mixins';
+@import './base/reset';
+@import './base/typography';
+@import './util/mixins';
 @import './font-awesome/font-awesome';
-@import './partials/base';
+@import './layout/grid';
+@import './base/base';
 
 .l-content-section {
   background: $slate;
@@ -32,7 +33,6 @@ $dark-indigo: darken($indigo, 4%);
   }
 }
 
-@import './layout/grid';
 @import './modules/navbar';
 @import './modules/socialicons';
 @import './modules/welcome';

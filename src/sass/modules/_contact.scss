@@ -1,46 +1,52 @@
-.section-contact {
-    max-height: 80vh;
+.contact-info {
+  max-height: 80vh;
 }
 
-.portrait-pic {
-    max-height: 15rem;
-}
-.mn-map {
-    max-height: 13rem;
+.contact-info__portrait {
+  max-height: 15rem;
 }
 
-.contact-links {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100%;
-    font-size: 1.2rem;
-    a {
-        width: 15rem;
-        transition: all 1s;
-        .fa-github {
-            color: #2dba4e;
-            &:hover {
-                color: $slate;
-            }
-        }
-        &:hover {
-            border-left: 3px solid $yellow;
-            background: #2dba4e;
-            color: $slate;
-        }
+.contact-info__map {
+  max-height: 13rem;
+}
+
+.contact-info__social {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  height: 100%;
+  justify-content: center;
+
+  a {
+    transition: all 1s;
+    width: 15rem;
+
+    .fa-github {
+      color: #2dba4e;
+
+      &:hover {
+        color: $slate;
+      }
     }
+
+    &:hover {
+      background: #2dba4e;
+      border-left: 3px solid $yellow;
+      color: $slate;
+    }
+  }
 }
 
-.email-button {
-    align-self: center;
-    justify-self: center;
-    button {
-        background: transparent;
-        color: $white;
-        border: 1px solid $aqua;
-        border-radius: 5px;
-    }
+.contact-info__email {
+  align-self: center;
+  justify-self: center;
+
+  button {
+    background: transparent;
+    border: 1px solid $aqua;
+    border-radius: 5px;
+    color: $white;
+  }
 }

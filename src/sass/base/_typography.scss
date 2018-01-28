@@ -1,0 +1,49 @@
+:root {
+  font-size: 14px;
+}
+@media screen and (min-width: 568px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  :root {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  :root {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1900px) {
+  :root {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  :root {
+    font-size: 36px;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.section-heading {
+  color: $aqua;
+  font-size: 1.4rem;
+  padding: 0.7rem 0;
+}
+
+.section-subheading {
+  color: $yellow;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}

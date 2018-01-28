@@ -1,15 +1,7 @@
 .navbar {
-  align-items: center;
   background: $dark-indigo;
   border-bottom: 1px solid $icon-purple;
-  display: flex;
-  height: 2.5rem;
-  justify-content: space-between;
   overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
 }
 
 .navbar__logo {
@@ -17,13 +9,7 @@
   padding: 0 1rem;
 }
 
-.navbar__menu {
-  @include flex-cent-r;
-  position: relative;
-}
-
 .navbar__links {
-  @include flex-cent-r;
   list-style: none;
   overflow: hidden;
   transform: scaleX(1);

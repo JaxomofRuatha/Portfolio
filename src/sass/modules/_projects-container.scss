@@ -1,76 +1,79 @@
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    height: 85vh;
-    padding: 0 1rem;
-    overflow: hidden;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 1rem;
 }
 
-.project-tabs-wrap {
-    position: relative;
-    @include flex-cent-c;
+.project-tabs__wrap {
+  @include flex-cent-c;
+  position: relative;
 }
 
 .project-tabs {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    position: relative;
-    height: 4rem;
+  align-items: flex-start;
+  display: flex;
+  height: 4rem;
+  justify-content: space-around;
+  position: relative;
 }
 
-.tab-toggle {
-    background: transparent;
-    cursor: pointer;
-    border: none;
-    border-bottom: 1px solid $yellow;
-    color: $white;
-    text-align: center;
-    font-size: 1.4rem;
-    width: 15rem;
+.project-tabs__toggle {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $yellow;
+  color: $white;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  text-align: center;
+  width: 15rem;
+}
+
+.project-tabs__title {
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  text-shadow: 1px 1px $icon-purple;
+}
+
+input[type='checkbox']:checked ~ .project-tabs__menu {
+  transform: scaleY(1);
+}
+
+.project-tabs__menu {
+  box-shadow: 4px 4px lighten($slate, 20%);
+  overflow: hidden;
+  text-align: left;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  width: 15rem;
+  z-index: 8;
+
+  li {
+    background: $slate;
+    border-left: 1px solid $yellow;
+    flex: 0;
     padding: 0.5rem;
-}
 
-.project-title {
-    text-shadow: 1px 1px $icon-purple;
-    padding: 0.5rem;
-}
-
-input[type="checkbox"]:checked ~ .tab-expand {
-    transform: scaleY(1);
-}
-
-.tab-expand {
-    transition: transform 0.5s;
-    transform-origin: top;
-    transform: scaleY(0);
-    z-index: 8;
-    overflow: hidden;
-    text-align: left;
-    width: 15rem;
-    box-shadow: 4px 4px lighten($slate, 20%);
-    li {
-        flex: 0;
-        padding: 0.5rem;
-        background: $slate;
-        border-left: 1px solid $yellow;
-        &:hover {
-            background: $yellow;
-            color: $slate;
-        }
+    &:hover {
+      background: $yellow;
+      color: $slate;
     }
+  }
 }
 
-.project-display {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    margin: 0.5rem 0;
+.project-view {
+  height: 100%;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  position: relative;
 }
 
-.menu-open {
-    display: flex;
-    flex-direction: column;
+.project-tabs__menu--expanded {
+  display: flex;
+  flex-direction: column;
 }
