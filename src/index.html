@@ -31,12 +31,12 @@
     </section>
     <section id="profile">
       <article class="l-content-section skills">
-        <h3>Skills and Technologies</h3>
+        <h1 class="section-heading">Skills and Technologies</h1>
         <div class="skills__view">
-          <section class="skills__section skills__section--visible" id="web-dev"><img class="skills__icon" src="./images/techicons/htmlicon.svg"><img class="skills__icon" src="./images/techicons/css3icon.svg"><img class="skills__icon" src="./images/techicons/reacticon.svg"><img class="skills__icon" src="./images/techicons/reduxicon.svg"><img class="skills__icon" src="./images/techicons/sassicon.svg"><img class="skills__icon" src="./images/techicons/jqueryicon.svg"><img class="skills__icon" src="./images/techicons/bootstrapicon.svg"></section>
-          <section class="skills__section" id="core-lang"><img class="skills__icon" src="./images/techicons/cicon.svg"><img class="skills__icon" src="./images/techicons/jsicon.svg"><img class="skills__icon" src="./images/techicons/javaicon.svg"><img class="skills__icon" src="./images/techicons/pythonicon.svg"></section>
-          <section class="skills__section" id="db-server"><img class="skills__icon" src="./images/techicons/nodejsicon.svg"><img class="skills__icon" src="./images/techicons/expressicon.svg"><img class="skills__icon" src="./images/techicons/mongodbicon.svg"><img class="skills__icon" src="./images/techicons/mysqlicon.svg"><img class="skills__icon" src="./images/techicons/postgresqlicon.svg"><img class="skills__icon" src="./images/techicons/sasicon.svg"></section>
-          <section class="skills__section" id="tools"><img class="skills__icon" src="./images/techicons/giticon.svg"><img class="skills__icon" src="./images/techicons/npmicon.svg"><img class="skills__icon" src="./images/techicons/mochaicon.svg"><img class="skills__icon" src="./images/techicons/jesticon.svg"><img class="skills__icon" src="./images/techicons/gulpicon.svg"><img class="skills__icon" src="./images/techicons/linuxicon.svg"></section>
+          <section class="skills__group skills__group--visible" id="web-dev"><img class="skills__icon" src="./images/techicons/htmlicon.svg"><img class="skills__icon" src="./images/techicons/css3icon.svg"><img class="skills__icon" src="./images/techicons/reacticon.svg"><img class="skills__icon" src="./images/techicons/reduxicon.svg"><img class="skills__icon" src="./images/techicons/sassicon.svg"><img class="skills__icon" src="./images/techicons/jqueryicon.svg"><img class="skills__icon" src="./images/techicons/bootstrapicon.svg"></section>
+          <section class="skills__group" id="core-lang"><img class="skills__icon" src="./images/techicons/cicon.svg"><img class="skills__icon" src="./images/techicons/jsicon.svg"><img class="skills__icon" src="./images/techicons/javaicon.svg"><img class="skills__icon" src="./images/techicons/pythonicon.svg"></section>
+          <section class="skills__group" id="db-server"><img class="skills__icon" src="./images/techicons/nodejsicon.svg"><img class="skills__icon" src="./images/techicons/expressicon.svg"><img class="skills__icon" src="./images/techicons/mongodbicon.svg"><img class="skills__icon" src="./images/techicons/mysqlicon.svg"><img class="skills__icon" src="./images/techicons/postgresqlicon.svg"><img class="skills__icon" src="./images/techicons/sasicon.svg"></section>
+          <section class="skills__group" id="tools"><img class="skills__icon" src="./images/techicons/giticon.svg"><img class="skills__icon" src="./images/techicons/npmicon.svg"><img class="skills__icon" src="./images/techicons/mochaicon.svg"><img class="skills__icon" src="./images/techicons/jesticon.svg"><img class="skills__icon" src="./images/techicons/gulpicon.svg"><img class="skills__icon" src="./images/techicons/linuxicon.svg"></section>
         </div>
         <nav class="skills__menu"><a class="skills__tab skills__tab--active" data-target="#web-dev">Web Development</a><a class="skills__tab" data-target="#core-lang">Core Languages</a><a class="skills__tab" data-target="#db-server">Database and Server</a><a class="skills__tab" data-target="#tools">Other Tools</a></nav>
       </article>
@@ -63,45 +63,45 @@
         </section>
       </article>
     </section>
-    <section class="l-content-section projects-container" id="projects">
-      <article class="project-tabs">
-        <div class="project-tabs__wrap">
-          <input id="live-menu" type="checkbox">
-          <label class="project-tabs__toggle" for="live-menu">Live Projects</label>
-          <ul class="project-tabs__menu">
-            <li><a data-target="#live-1">Portfolio Site</a></li>
-            <li><a data-target="#live-2">React Quote Machine</a></li>
-            <li><a data-target="#live-3">React Forecast</a></li>
-            <li><a data-target="#live-4">Express Microservices</a></li>
-            <li><a data-target="#live-5">React .md Previewer</a></li>
-            <li><a data-target="#live-6">Redux Wikipedia Viewer</a></li>
-            <li><a data-target="#live-7">Speller</a></li>
-          </ul>
-        </div>
-        <h1 class="project-tabs__title">Portfolio</h1>
-        <div class="project-tabs__wrap">
-          <input id="wip-menu" type="checkbox">
-          <label class="project-tabs__toggle" for="wip-menu">In Development</label>
-          <ul class="project-tabs__menu">
-            <li><a data-target="#wip-1">Bmore Around Town</a></li>
-            <li><a data-target="#wip-2">Twitch Dashboard</a></li>
-            <li><a data-target="#wip-3">Bikeshare Mapper</a></li>
-            <li><a data-target="#wip-4">React Twitch Dashboard</a></li>
-            <li><a data-target="#wip-5">JavaScript Calculator</a></li>
-            <li><a data-target="#wip-6">Freeform Vote                                </a></li>
-          </ul>
-        </div>
-      </article>
+    <section class="projects-container" id="projects">
       <article class="project-view">
+        <header class="project-view__tabs">
+          <nav class="project-view__nav">
+            <input id="live-menu" type="checkbox">
+            <label class="project-view__toggle" for="live-menu">Live Projects</label>
+            <ul class="project-view__menu">
+              <li><a data-target="#live-1">Portfolio Site</a></li>
+              <li><a data-target="#live-2">React Quote Machine</a></li>
+              <li><a data-target="#live-3">React Forecast</a></li>
+              <li><a data-target="#live-4">Express Microservices</a></li>
+              <li><a data-target="#live-5">React .md Previewer</a></li>
+              <li><a data-target="#live-6">Redux Wikipedia Viewer</a></li>
+              <li><a data-target="#live-7">Speller</a></li>
+            </ul>
+          </nav>
+          <h1 class="project-view__title">Portfolio</h1>
+          <nav class="project-view__nav">
+            <input id="wip-menu" type="checkbox">
+            <label class="project-view__toggle" for="wip-menu">In Development</label>
+            <ul class="project-view__menu">
+              <li><a data-target="#wip-1">Bmore Around Town</a></li>
+              <li><a data-target="#wip-2">Twitch Dashboard</a></li>
+              <li><a data-target="#wip-3">Bikeshare Mapper</a></li>
+              <li><a data-target="#wip-4">React Twitch Dashboard</a></li>
+              <li><a data-target="#wip-5">JavaScript Calculator</a></li>
+              <li><a data-target="#wip-6">Freeform Vote</a></li>
+            </ul>
+          </nav>
+        </header>
         <section class="project-view__tile project-view__tile--active" id="live-1">
           <figure class="project-view__thumb"></figure>
-          <nav class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/Portfolio"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
-          <div class="project-view__tech"><span>JavaScript</span><span>CSS Grid</span><span>SCSS</span><span>Gulp</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>This page started as part of the front end projects for Free Code Camp, but ended up serving the dual purpose of being a hub for showing the work that I've done and allowing exploration of several ways of accomplishing the display and interaction I wanted. While I could have stayed with React, I chose to work with core JavaScript and ES6, including a Gulp build process, to refine my interactions with the DOM.</p>
             <p>Originally I used purely flexbox, but the current version is partially including CSS Grid for layouts. Going forward, I would like to incorporate Grid more, as well as more interactive elements. Naturally, additional projects and writing will be my highest priority.</p>
           </div>
         </section>
+        <nav class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/Portfolio"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
+        <div class="project-view__tech"><span>JavaScript</span><span>CSS Grid</span><span>SCSS</span><span>Gulp</span></div>
         <div class="project-view__tile" id="live-2">
           <div class="project-view__thumb"></div>
           <div class=" project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-quote"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-quote/"><i class="fa fa-cogs"></i><span>Demo</span></a></div>

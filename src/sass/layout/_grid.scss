@@ -1,3 +1,5 @@
+// navbar block
+
 .navbar {
   align-items: center;
   display: grid;
@@ -23,6 +25,8 @@
   grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
 }
 
+// welcome section block
+
 .welcome {
   display: grid;
   grid-template-rows: 40% 25% 1fr;
@@ -42,73 +46,105 @@
   align-self: start;
 }
 
-.project-view__thumb {
-  grid-area: thumb;
+// skills block
+
+.skills {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 7rem 1fr;
 }
 
-.project-view__links {
-  grid-area: links;
+.skills__view {
+  align-items: start;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, 7rem);
+  justify-content: center;
 }
 
-.project-view__tech {
-  grid-area: tech;
+.skills__group {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-content: center;
 }
 
-.project-view__desc {
-  grid-area: desc;
+.skills__menu {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 25%));
+}
+
+// profile-info block
+
+// projects-container section
+
+.project-view {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr 85% 1fr;
+}
+
+.project-view__tabs {
+  grid-area: header;
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 .project-view__tile {
   display: grid;
-  grid-auto-rows: minmax(3rem, auto);
-  grid-template-areas:
-    'thumb thumb thumb thumb desc desc desc desc'
-    'thumb thumb thumb thumb desc desc desc desc'
-    'thumb thumb thumb thumb desc desc desc desc'
-    'thumb thumb thumb thumb desc desc desc desc'
-    'thumb thumb thumb thumb desc desc desc desc'
-    'links links links links tech tech tech tech';
-  grid-template-columns: repeat(8, 1fr);
+  grid-area: tile;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  grid-template-columns: 40% 60%;
   height: 100%;
 }
 
-@include xs {
-  .project-view__tile {
-    grid-template-areas:
-      'title title title title title title'
-      'thumb thumb thumb thumb links links'
-      'thumb thumb thumb thumb links links'
-      'thumb thumb thumb thumb links links'
-      'thumb thumb thumb thumb links links'
-      'tech tech tech tech tech tech'
-      'desc desc desc desc desc desc'
-      'desc desc desc desc desc desc'
-      'desc desc desc desc desc desc'
-      'desc desc desc desc desc desc';
-    grid-template-columns: repeat(6, 1fr);
-  }
+.project-view__thumb {
+  grid-column: 1;
 }
 
-.portrait-pic {
+.project-view__desc {
+  grid-column: 2;
+}
+
+.project-view__links {
+  display: grid;
+  grid-area: footer;
+  grid-auto-flow: column;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.project-view__tech {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+// contact-info block
+
+.contact-info__portrait {
   align-self: flex-start;
   grid-area: port;
 }
 
-.mn-map {
+.contact-info__map {
   grid-area: map;
   justify-self: center;
 }
 
-.email-button {
+.contact-info__email {
   grid-area: email;
 }
 
-.contact-links {
+.contact-info__link {
   align-self: flex-start;
   grid-area: social;
 }
 
-#contact {
+.contact-info {
   display: grid;
   grid-auto-rows: minmax(3rem, auto);
   grid-template-areas:

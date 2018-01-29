@@ -1,59 +1,59 @@
-article(class="project-tabs")
-    div(class="project-tabs__wrap")
-        input(id="live-menu" type="checkbox")
-        label(for="live-menu" class="project-tabs__toggle") Live Projects
-        ul(class="project-tabs__menu")
-            li
-                a(data-target="#live-1") Portfolio Site
-            li
-                a(data-target="#live-2") React Quote Machine
-            li
-                a(data-target="#live-3") React Forecast
-            li
-                a(data-target="#live-4") Express Microservices
-            li
-                a(data-target="#live-5") React .md Previewer
-            li
-                a(data-target="#live-6") Redux Wikipedia Viewer
-            li
-                a(data-target="#live-7") Speller
-    h1(class="project-tabs__title") Portfolio
-    div(class="project-tabs__wrap")
-        input(id="wip-menu" type="checkbox")
-        label(for="wip-menu" class="project-tabs__toggle") In Development
-        ul(class="project-tabs__menu")
-            li
-                a(data-target="#wip-1") Bmore Around Town
-            li
-                a(data-target="#wip-2") Twitch Dashboard
-            li
-                a(data-target="#wip-3") Bikeshare Mapper
-            li
-                a(data-target="#wip-4") React Twitch Dashboard
-            li
-                a(data-target="#wip-5") JavaScript Calculator
-            li
-                a(data-target="#wip-6") Freeform Vote                                
 article(class="project-view")
+    header(class="project-view__tabs")
+        nav(class="project-view__nav")
+            input(id="live-menu" type="checkbox")
+            label(for="live-menu" class="project-view__toggle") Live Projects
+            ul(class="project-view__menu")
+                li
+                    a(data-target="#live-1") Portfolio Site
+                li
+                    a(data-target="#live-2") React Quote Machine
+                li
+                    a(data-target="#live-3") React Forecast
+                li
+                    a(data-target="#live-4") Express Microservices
+                li
+                    a(data-target="#live-5") React .md Previewer
+                li
+                    a(data-target="#live-6") Redux Wikipedia Viewer
+                li
+                    a(data-target="#live-7") Speller
+        h1(class="project-view__title") Portfolio
+        nav(class="project-view__nav")
+            input(id="wip-menu" type="checkbox")
+            label(for="wip-menu" class="project-view__toggle") In Development
+            ul(class="project-view__menu")
+                li
+                    a(data-target="#wip-1") Bmore Around Town
+                li
+                    a(data-target="#wip-2") Twitch Dashboard
+                li
+                    a(data-target="#wip-3") Bikeshare Mapper
+                li
+                    a(data-target="#wip-4") React Twitch Dashboard
+                li
+                    a(data-target="#wip-5") JavaScript Calculator
+                li
+                    a(data-target="#wip-6") Freeform Vote
     section(class="project-view__tile project-view__tile--active" id="live-1")
         figure(class="project-view__thumb")
-        nav(class="project-view__links")
-            a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio")
-                i(class="fa fa-github")
-                span Code
-            a(class="l-icon-labeled" href="https://jaxomofruatha.github.io/Portfolio")
-                i(class="fa fa-cogs")
-                span Demo
-        div.project-view__tech
-            span JavaScript
-            span CSS Grid
-            span SCSS
-            span Gulp
         div.project-view__desc
             span(style="color: #FFED65") Status: &nbsp;
             span First iteration complete and functional
             p This page started as part of the front end projects for Free Code Camp, but ended up serving the dual purpose of being a hub for showing the work that I've done and allowing exploration of several ways of accomplishing the display and interaction I wanted. While I could have stayed with React, I chose to work with core JavaScript and ES6, including a Gulp build process, to refine my interactions with the DOM.
             p Originally I used purely flexbox, but the current version is partially including CSS Grid for layouts. Going forward, I would like to incorporate Grid more, as well as more interactive elements. Naturally, additional projects and writing will be my highest priority.
+    nav(class="project-view__links")
+        a(class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio")
+            i(class="fa fa-github")
+            span Code
+        a(class="l-icon-labeled" href="https://jaxomofruatha.github.io/Portfolio")
+            i(class="fa fa-cogs")
+            span Demo
+    div.project-view__tech
+        span JavaScript
+        span CSS Grid
+        span SCSS
+        span Gulp
     div(class="project-view__tile" id="live-2")
         div(class="project-view__thumb")
         div(class=" project-view__links")

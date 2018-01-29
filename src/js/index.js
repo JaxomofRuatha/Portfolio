@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ) {
       document
         .querySelector(`${priorActive}`)
-        .classList.remove('skills__section--visible');
+        .classList.remove('skills__group--visible');
       setTimeout(() => {
-        targetIcons.classList.add('skills__section--visible');
+        targetIcons.classList.add('skills__group--visible');
       }, 500);
     }
   });
