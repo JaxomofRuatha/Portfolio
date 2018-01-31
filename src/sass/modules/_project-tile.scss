@@ -22,20 +22,24 @@
 .project-view__demo {
   align-items: center;
   color: $white;
+  padding: 0.5rem;
 
-  &:hover {
+  &:hover,
+  :active {
     color: $yellow;
   }
 }
 
 .project-view__code:before {
-  content: '\f09b';
+  content: '\f09b\0020\0020\0020';
   font-family: FontAwesome;
+  white-space: pre;
 }
 
 .project-view__demo:before {
-  content: '\f085';
+  content: '\f085\0020\0020\0020';
   font-family: FontAwesome;
+  white-space: pre;
 }
 
 .project-view__tech {
@@ -70,50 +74,54 @@
   opacity: 1;
 }
 
-#live-1 .project-view__thumb {
-  background-image: url('../images/thumbnails/spellerthumb.jpg');
+.project-view__thumb[data-group='live-1'] {
+  background-image: url('../images/thumbnails/portfoliothumb.png');
 }
 
-#live-2 .project-view__thumb {
+.project-view__thumb[data-group='live-2'] {
   background-image: url('../images/thumbnails/quotethumb.JPG');
 }
 
-#live-3 .project-view__thumb {
+.project-view__thumb[data-group='live-3'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#live-4 .project-view__thumb {
+.project-view__thumb[data-group='live-4'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#live-5 .project-view__thumb {
+.project-view__thumb[data-group='live-5'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#live-6 .project-view__thumb {
+.project-view__thumb[data-group='live-6'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#live-7 .project-view__thumb {
+.project-view__thumb[data-group='live-7'] {
   background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-#wip-1 .project-view__thumb {
+.project-view__thumb[data-group='wip-1'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#wip-2 .project-view__thumb {
+.project-view__thumb[data-group='wip-2'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#wip-3 .project-view__thumb {
+.project-view__thumb[data-group='wip-3'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#wip-4 .project-view__thumb {
+.project-view__thumb[data-group='wip-4'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-#wip-5 .project-view__thumb {
+.project-view__thumb[data-group='wip-5'] {
+  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+}
+
+.project-view__thumb[data-group='wip-6'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }

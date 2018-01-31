@@ -83,7 +83,7 @@
 
 .project-view {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 85% 1fr;
 }
 
@@ -98,7 +98,7 @@
   grid-area: tile;
   grid-column: 1 / -1;
   grid-row: 2 / 3;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: repeat(2, 1fr);
   height: 100%;
 }
 
@@ -125,40 +125,30 @@
 
 // contact-info block
 
+.contact-info {
+  align-items: center;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 2rem max-content;
+  justify-content: center;
+}
+
+.contact-info__social {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
 .contact-info__portrait {
-  align-self: flex-start;
-  grid-area: port;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .contact-info__map {
-  grid-area: map;
-  justify-self: center;
+  grid-column: 3;
+  grid-row: 2;
 }
 
-.contact-info__email {
-  grid-area: email;
-}
-
-.contact-info__link {
-  align-self: flex-start;
-  grid-area: social;
-}
-
-.contact-info {
-  display: grid;
-  grid-auto-rows: minmax(3rem, auto);
-  grid-template-areas:
-    'head head head head head head head head'
-    'port port social social social social map map'
-    'port port social social social social map map'
-    'port port social social social social map map'
-    'port port social social social social map map'
-    'port port social social social social email email';
-  grid-template-columns: repeat(8, 1fr);
-
-  h3 {
-    align-self: flex-start;
-    grid-area: head;
-    padding: 0;
-  }
+.contact-info__slug {
+  grid-column: 2;
+  grid-row: 2;
 }

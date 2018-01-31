@@ -1,9 +1,9 @@
 .contact-info {
-  max-height: 80vh;
+  position: relative;
 }
 
 .contact-info__portrait {
-  max-height: 15rem;
+  max-height: 10rem;
 }
 
 .contact-info__map {
@@ -11,42 +11,56 @@
 }
 
 .contact-info__social {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size: 1.2rem;
-  height: 100%;
+  font-size: 1.5rem;
   justify-content: center;
-
-  a {
-    transition: all 1s;
-    width: 15rem;
-
-    .fa-github {
-      color: #2dba4e;
-
-      &:hover {
-        color: $slate;
-      }
-    }
-
-    &:hover {
-      background: #2dba4e;
-      border-left: 3px solid $yellow;
-      color: $slate;
-    }
-  }
+  position: absolute;
+  top: -2.5rem;
+  width: 100%;
 }
 
 .contact-info__email {
-  align-self: center;
-  justify-self: center;
+  background: red;
+  border-radius: 50%;
+  color: $white;
+  margin-right: 1rem;
+  padding: 1rem;
+}
 
-  button {
-    background: transparent;
-    border: 1px solid $aqua;
-    border-radius: 5px;
+.contact-info__link {
+  font-size: 2rem;
+  overflow: hidden;
+  padding: 0.5rem;
+
+  &:after {
     color: $white;
+    content: '  Text';
+    font-size: 1.5rem;
+    white-space: pre;
   }
+
+  .fa-github {
+    color: #2dba4e;
+  }
+
+  .fa-linkedin {
+    color: #0077b5;
+  }
+
+  .fa-twitter {
+    color: #00aced;
+  }
+
+  .fa-free-code-camp {
+    color: #006400;
+  }
+
+  .fa-twitch {
+    color: #6441a4;
+  }
+}
+
+.contact-info__slug {
+  font-size: 2rem;
 }
