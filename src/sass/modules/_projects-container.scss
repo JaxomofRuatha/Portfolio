@@ -7,6 +7,7 @@
   height: 100%;
   margin: 0;
   position: relative;
+  transition: opacity 1s;
   width: 100%;
 }
 
@@ -15,14 +16,14 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: flex;
-  height: 4rem;
   justify-content: space-around;
-  position: relative;
+  max-height: 3rem;
 }
 
 .project-view__nav {
   @include flex-cent-c;
   position: relative;
+  width: 15rem;
 }
 
 .project-view__toggle {
@@ -32,40 +33,37 @@
   color: $white;
   cursor: pointer;
   font-size: 1.4rem;
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
   text-align: center;
-  width: 15rem;
+  width: 100%;
 }
 
 .project-view__menu {
-  box-shadow: 4px 4px lighten($slate, 20%);
-  overflow: hidden;
+  box-shadow: 3px 3px lighten($slate, 20%);
+  position: absolute;
   text-align: left;
+  top: 87%;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.5s;
-  width: 15rem;
+  width: 100%;
   z-index: 8;
 
   li {
     background: $slate;
     border-left: 1px solid $yellow;
-    flex: 0;
     padding: 0.5rem;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
 
     &:hover {
       background: $yellow;
       color: $slate;
     }
-  }
-}
-
-.project-view__menu--expanded {
-  display: flex;
-  flex-direction: column;
-
-  li {
-    flex: 1;
   }
 }
 

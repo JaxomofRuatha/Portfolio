@@ -1,8 +1,7 @@
 .project-view__tile {
-  background: $indigo;
+  background: $dark-glass;
   opacity: 0;
   position: absolute;
-  transition: opacity 1s;
 }
 
 .project-view__thumb {
@@ -14,22 +13,39 @@
 
 .project-view__links {
   @include flex-cent-r;
+  background: $slate;
+  border-bottom-left-radius: 10px;
+  opacity: 0;
+}
 
-  & > a {
-    @include flex-cent-r;
-    color: $white;
+.project-view__code,
+.project-view__demo {
+  align-items: center;
+  color: $white;
 
-    &:hover {
-      color: $yellow;
-    }
+  &:hover {
+    color: $yellow;
   }
+}
+
+.project-view__code:before {
+  content: '\f09b';
+  font-family: FontAwesome;
+}
+
+.project-view__demo:before {
+  content: '\f085';
+  font-family: FontAwesome;
 }
 
 .project-view__tech {
   align-items: center;
+  background: $slate;
+  border-bottom-right-radius: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  opacity: 0;
 
   span {
     color: $aqua;
@@ -39,18 +55,18 @@
 }
 
 .project-view__desc {
-  bottom: 0;
   margin: 1rem;
-  padding: 1rem;
-  right: 0;
+  text-align: center;
 
   p {
     text-align: justify;
-    text-indent: 3rem;
+    text-indent: 2rem;
   }
 }
 
-.project-view__tile--active {
+.project-view__tile--active,
+.project-view__links--active,
+.project-view__tech--active {
   opacity: 1;
 }
 

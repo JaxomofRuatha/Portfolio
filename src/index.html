@@ -70,13 +70,13 @@
             <input id="live-menu" type="checkbox">
             <label class="project-view__toggle" for="live-menu">Live Projects</label>
             <ul class="project-view__menu">
-              <li><a data-target="#live-1">Portfolio Site</a></li>
-              <li><a data-target="#live-2">React Quote Machine</a></li>
-              <li><a data-target="#live-3">React Forecast</a></li>
-              <li><a data-target="#live-4">Express Microservices</a></li>
-              <li><a data-target="#live-5">React .md Previewer</a></li>
-              <li><a data-target="#live-6">Redux Wikipedia Viewer</a></li>
-              <li><a data-target="#live-7">Speller</a></li>
+              <li><a data-target="live-1">Portfolio</a></li>
+              <li><a data-target="live-2">React Quote Machine</a></li>
+              <li><a data-target="live-3">React Forecast</a></li>
+              <li><a data-target="live-4">Express Microservices</a></li>
+              <li><a data-target="live-5">React .md Previewer</a></li>
+              <li><a data-target="live-6">Redux Wikipedia Viewer</a></li>
+              <li><a data-target="live-7">Speller</a></li>
             </ul>
           </nav>
           <h1 class="project-view__title">Portfolio</h1>
@@ -84,114 +84,114 @@
             <input id="wip-menu" type="checkbox">
             <label class="project-view__toggle" for="wip-menu">In Development</label>
             <ul class="project-view__menu">
-              <li><a data-target="#wip-1">Bmore Around Town</a></li>
-              <li><a data-target="#wip-2">Twitch Dashboard</a></li>
-              <li><a data-target="#wip-3">Bikeshare Mapper</a></li>
-              <li><a data-target="#wip-4">React Twitch Dashboard</a></li>
-              <li><a data-target="#wip-5">JavaScript Calculator</a></li>
-              <li><a data-target="#wip-6">Freeform Vote</a></li>
+              <li><a data-target="wip-1">Bmore Around Town</a></li>
+              <li><a data-target="wip-2">Twitch Dashboard</a></li>
+              <li><a data-target="wip-3">Bikeshare Mapper</a></li>
+              <li><a data-target="wip-4">React Recipe Box</a></li>
+              <li><a data-target="wip-5">JavaScript Calculator</a></li>
+              <li><a data-target="wip-6">Freeform Vote</a></li>
             </ul>
           </nav>
         </header>
-        <section class="project-view__tile project-view__tile--active" id="live-1">
+        <section class="project-view__tile project-view__tile--active" data-group="live-1">
           <figure class="project-view__thumb"></figure>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>This page started as part of the front end projects for Free Code Camp, but ended up serving the dual purpose of being a hub for showing the work that I've done and allowing exploration of several ways of accomplishing the display and interaction I wanted. While I could have stayed with React, I chose to work with core JavaScript and ES6, including a Gulp build process, to refine my interactions with the DOM.</p>
             <p>Originally I used purely flexbox, but the current version is partially including CSS Grid for layouts. Going forward, I would like to incorporate Grid more, as well as more interactive elements. Naturally, additional projects and writing will be my highest priority.</p>
           </div>
         </section>
-        <nav class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/Portfolio"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/Portfolio"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
-        <div class="project-view__tech"><span>JavaScript</span><span>CSS Grid</span><span>SCSS</span><span>Gulp</span></div>
-        <div class="project-view__tile" id="live-2">
-          <div class="project-view__thumb"></div>
-          <div class=" project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-quote"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-quote/"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
-          <div class="project-view__tech"><span>React</span><span>styled-components</span><span>REST API/AJAX</span></div>
+        <nav class="project-view__links project-view__links--active" data-group="live-1"><a class="project-view__code" href="https://github.com/JaxomofRuatha/Portfolio">Code</a><a class="project-view__demo" href="https://jaxomofruatha.github.io/Portfolio">Demo</a></nav>
+        <footer class="project-view__tech project-view__tech--active" data-group="live-1"><span>JavaScript</span><span>Pug</span><span>CSS Grid</span><span>SCSS</span><span>NPM Scripts</span></footer>
+        <section class="project-view__tile" id="live-2">
+          <figure class="project-view__thumb"></figure>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="live-3">
-          <div class="project-view__thumb"></div>
-          <div class=" project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-weather"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-weather/"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
-          <div class="project-view__tech"><span>React</span><span>react-router</span><span>REST API/AJAX</span><span>SCSS</span></div>
+        </section>
+        <nav class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-quote"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-quote/"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
+        <footer class="project-view__tech"><span>React</span><span>styled-components</span><span>REST API/AJAX</span></footer>
+        <section class="project-view__tile" id="live-3">
+          <figure class="project-view__thumb"></figure>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First functional version after multiple feature updates.</span>
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework </p>
           </div>
-        </div>
-        <div class="project-view__tile" id="live-4">
-          <div class="project-view__thumb"></div>
-          <div class=" project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
-          <div class="project-view__tech"><span>JavaScript</span><span>Node</span><span>Express</span><span>MongoDB</span><span>Pug</span></div>
+        </section>
+        <nav class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-weather"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-weather/"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
+        <footer class="project-view__tech"><span>React</span><span>react-router</span><span>REST API/AJAX</span><span>SCSS</span></footer>
+        <section class="project-view__tile" id="live-4">
+          <figure class="project-view__thumb"></figure>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iterations complete and functional</span>
             <p>Six microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.</p>
             <p>The next refinement will be combining the UI from each microservice into one while still allowing access to each endpoint as an individual microservice API.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="wip-1">
-          <div class="project-view__thumb"></div>
+        </section>
+        <nav class="project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></nav>
+        <footer class="project-view__tech"><span>JavaScript</span><span>Node</span><span>Express</span><span>MongoDB</span><span>Pug</span></footer>
+        <section class="project-view__tile" id="wip-1">
+          <figure class="project-view__thumb"></figure>
           <div class="project-view__links"><a class="l-icon-labeled" href="http://bmorearoundtown.com/"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>Node</span><span>Express</span><span>MySQL</span><span>Sequelize</span><span>React/Redux</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>API and database complete, UI in review process</span>
             <p>A complete rewrite of the production website bmorearoundtown.com, which currently uses jQuery, PHP, and a legacy version of MySQL. This infrastructure is no longer sufficient to support the growth of the site. I was brought in with one other developer to transition the build to React/Redux, Node with Express, and the latest version of MySQL.</p>
             <p>I architected the database and API to serve the same expected data as the legacy interface (to preserve backwards compatibility until updated), but with the entirely reconstructed code. At this point the senior developer overseeing the project is completing code review, and my next contribution will be finishing the React/Redux user interface.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="live-7">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="live-7">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/CS50/tree/master/pset5/speller"><i class="fa fa-github"></i><span>Code</span></a></div>
           <div class="project-view__tech"><span>C</span><span>Data Structures</span><span>Algorithms</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="live-5">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="live-5">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-markdown"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-markdown/"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React</span><span>SCSS</span><span>npm</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="live-6">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="live-6">
+          <figure class="project-view__thumb"></figure>
           <div class="project-view__links"><a class="l-icon-labeled" href="https://github.com/JaxomofRuatha/fcc-wikiviewer"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="https://jaxomofruatha.github.io/fcc-wikiviewer"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React</span><span>Redux</span><span>redux-thunk</span><span>REST API/AJAX</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-thunk and React Router.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="wip-3">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="wip-3">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React</span><span>Redux</span><span>Node</span><span>Express</span><span>MongoDB</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>In progress, partially built with 3 now-dissolved teams</span>
             <p>This full-stack application was created to take part in a contest put forth by a senior developer and streamer to emulate real team collaboration using a workflow focused on Git and Trello.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="wip-6">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="wip-6">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React/Redux</span><span>Express</span><span>MongoDB</span><span>Docker</span><span>Webpack</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>In progress</span>
             <p>The very basic seed of this project came from the Free Code Camp back end project to "Build a Voting App." What I chose to do with it is put into use every technology and tool I have learned, and create a much more interesting and versatile end product.</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="wip-4">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="wip-4">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React</span><span>styled-components</span><span>REST API/AJAX</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework</p>
           </div>
-        </div>
-        <div class="project-view__tile" id="wip-5">
-          <div class="project-view__thumb"></div>
+        </section>
+        <section class="project-view__tile" id="wip-5">
+          <figure class="project-view__thumb"></figure>
           <div class=" project-view__links"><a class="l-icon-labeled" href="#"><i class="fa fa-github"></i><span>Code</span></a><a class="l-icon-labeled" href="#"><i class="fa fa-cogs"></i><span>Demo</span></a></div>
           <div class="project-view__tech"><span>React</span><span>styled-components</span><span>REST API/AJAX</span></div>
           <div class="project-view__desc"><span style="color: #FFED65;">Status: &nbsp;</span><span>First iteration complete and functional</span>
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework                                                </p>
           </div>
-        </div>
+        </section>
       </article>
     </section>
     <section class="l-content-section contact-info" id="contact">

@@ -7,6 +7,7 @@ $slate: #1e1e1d;
 $icon-purple: #7063cc;
 $indigo: #151230;
 $dark-indigo: darken($indigo, 4%);
+$dark-glass: rgba(10, 10, 10, 0.4);
 
 @import './base/reset';
 @import './base/typography';
@@ -21,16 +22,6 @@ $dark-indigo: darken($indigo, 4%);
   margin: 2rem 3.5rem;
   padding: 1rem;
   text-align: center;
-}
-
-.l-icon-labeled {
-  align-content: center;
-  display: flex;
-  justify-content: flex-start;
-
-  * {
-    padding: 0.5rem;
-  }
 }
 
 @import './modules/navbar';
