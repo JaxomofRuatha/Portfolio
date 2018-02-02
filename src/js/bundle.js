@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.project-view__menu').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const targetGroup = e.target.dataset.target;
+      const newActive = document.querySelectorAll(
+        `[data-group="${targetGroup}"]`
+      );
 
       document.getElementById('live-menu').checked = false;
       document.getElementById('wip-menu').checked = false;
@@ -38,23 +41,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Hide previously visible group content
 
-      document
-        .querySelector('.project-view__tile--active')
-        .classList.remove('project-view__tile--active');
-      document
-        .querySelector('.project-view__links--active')
-        .classList.remove('project-view__links--active');
-      document
-        .querySelector('.project-view__tech--active')
-        .classList.remove('project-view__tech--active');
+      const priorTile = document.querySelector('.project-view__tile--active');
+      if (priorTile) {
+        priorTile.classList.remove('project-view__tile--active');
+      }
+      const priorLinks = document.querySelector('.project-view__links--active');
+      if (priorLinks) {
+        priorLinks.classList.remove('project-view__links--active');
+      }
+      const priorTech = document.querySelector('.project-view__tech--active');
+      if (priorTech) {
+        priorTech.classList.remove('project-view__tech--active');
+      }
 
       // Unhide selected group content
-      console.log(targetGroup);
-      document
-        .querySelectorAll(`[data-group=${targetGroup}]`)
-        .forEach(piece => {
-          piece.classList.add(`${piece.className}--active`);
-        });
+
+      console.log(newActive);
+      newActive.forEach(piece => {
+        console.log(piece.classList[0]);
+        piece.classList.add(`${piece.classList[0]}--active`);
+      });
     });
   });
 });

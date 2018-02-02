@@ -46,18 +46,16 @@
   top: 87%;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
   width: 100%;
   z-index: 8;
 
   li {
     background: $slate;
     border-left: 1px solid $yellow;
-    padding: 0.5rem;
 
     a {
-      height: 100%;
-      width: 100%;
+      padding: 0.5rem;
     }
 
     &:hover {
@@ -68,9 +66,10 @@
 }
 
 .project-view__title {
+  color: $icon-purple;
   font-size: 1.7rem;
   padding: 0.5rem;
-  text-shadow: 1px 1px $icon-purple;
+  text-shadow: 2px 2px $indigo;
 }
 
 input[type='checkbox']:checked ~ .project-view__menu {

@@ -19,7 +19,7 @@
     "compile": "npm run pug & npm run sass & npm run js",
     "watch": "npm run watch:pug & npm run watch:sass & npm run watch:js",
     "js":
-      "browserify src/js/index.js -o src/js/bundle.js -t [ babelify --presets ['env']",
+      "browserify src/js/index.js -o src/js/bundle.js -t [ babelify --presets ['env']]",
     "pug": "pug -P -o ./src ./src/view/index.pug",
     "pug-build": "pug --output-style compressed -o dist src/view/index.pug",
     "sass":

@@ -3,6 +3,7 @@
 }
 
 .contact-info__portrait {
+  grid-row: 1 / -1;
   max-height: 10rem;
 }
 
@@ -29,35 +30,46 @@
 }
 
 .contact-info__link {
-  font-size: 2rem;
+  color: $white;
+  font-size: 1.3rem;
   overflow: hidden;
-  padding: 0.5rem;
+  width: 5rem;
 
   &:after {
     color: $white;
-    content: '  Text';
-    font-size: 1.5rem;
+    content: '  Whatever';
+    display: none;
+    font-size: 1.2rem;
     white-space: pre;
   }
 
+  &:hover::after {
+    display: block;
+  }
+
   .fa-github {
-    color: #2dba4e;
+    background: #2dba4e;
+    padding: 0.5rem;
   }
 
   .fa-linkedin {
-    color: #0077b5;
+    background: #0077b5;
+    padding: 0.5rem;
   }
 
   .fa-twitter {
-    color: #00aced;
+    background: #00aced;
+    padding: 0.5rem;
   }
 
   .fa-free-code-camp {
-    color: #006400;
+    background: #006400;
+    padding: 0.5rem;
   }
 
   .fa-twitch {
-    color: #6441a4;
+    background: #6441a4;
+    padding: 0.5rem;
   }
 }
 
