@@ -26,7 +26,7 @@
 
   &:hover,
   :active {
-    color: $yellow;
+    color: $yellow !important;
   }
 }
 
@@ -83,15 +83,15 @@
 }
 
 .project-view__thumb[data-group='live-3'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+  background-image: url('../images/thumbnails/weatherthumb.png');
 }
 
 .project-view__thumb[data-group='live-4'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+  background-image: url('../images/thumbnails/expressmicrothumb.png');
 }
 
 .project-view__thumb[data-group='live-5'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+  background-image: url('../images/thumbnails/markdownthumb.png');
 }
 
 .project-view__thumb[data-group='live-6'] {

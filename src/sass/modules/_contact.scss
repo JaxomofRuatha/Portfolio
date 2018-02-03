@@ -3,7 +3,6 @@
 }
 
 .contact-info__portrait {
-  grid-row: 1 / -1;
   max-height: 10rem;
 }
 
@@ -14,11 +13,13 @@
 .contact-info__social {
   align-items: center;
   display: flex;
+  flex-wrap: nowrap;
   font-size: 1.5rem;
   justify-content: center;
+  left: 0;
+  margin: 0 7rem;
   position: absolute;
-  top: -2.5rem;
-  width: 100%;
+  right: 0;
 }
 
 .contact-info__email {
@@ -31,45 +32,71 @@
 
 .contact-info__link {
   color: $white;
+  flex: 1 0 auto;
   font-size: 1.3rem;
-  overflow: hidden;
-  width: 5rem;
+  position: relative;
+  transition: width 0.2s;
+  width: 3rem;
 
-  &:after {
+  &:hover {
+    flex: 2;
+  }
+
+  i {
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+  }
+
+  i:after {
     color: $white;
-    content: '  Whatever';
     display: none;
     font-size: 1.2rem;
+    // position: absolute;
     white-space: pre;
   }
 
-  &:hover::after {
-    display: block;
+  i:hover::after {
+    display: inline;
   }
 
   .fa-github {
     background: #2dba4e;
-    padding: 0.5rem;
+
+    &:after {
+      content: '  Github';
+    }
   }
 
   .fa-linkedin {
     background: #0077b5;
-    padding: 0.5rem;
+
+    &:after {
+      content: '  LinkedIn';
+    }
   }
 
   .fa-twitter {
     background: #00aced;
-    padding: 0.5rem;
+
+    &:after {
+      content: '  Twitter';
+    }
   }
 
   .fa-free-code-camp {
     background: #006400;
-    padding: 0.5rem;
+
+    &:after {
+      content: '  Free Code Camp';
+    }
   }
 
   .fa-twitch {
     background: #6441a4;
-    padding: 0.5rem;
+
+    &:after {
+      content: '  Twitch';
+    }
   }
 }
 

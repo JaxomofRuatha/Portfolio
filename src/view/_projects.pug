@@ -38,7 +38,6 @@ article(class="project-view")
     section(class="project-view__tile project-view__tile--active" data-group="live-1")
         figure(class="project-view__thumb" data-group="live-1")
         div.project-view__desc
-            // span Status: First iteration complete and functional
             p This page has been through several significant refactorings, but it started out as a project using purely HTML and CSS with Flexbox. In the various versions, I've taken the opportunity to apply knowledge gained to make it a better example of best practices in web development.
             p Currently I am using NPM Scripts for a build process with distinct development, testing, and production environments. The Pug templating language, SCSS fully employing CSS Grid, and core JavaScript are what I have chosen as the basis for the page's design. The current iteration's next refinement is to integrate dynamic animation for a more interactive feel.
     nav(data-group="live-1" class="project-view__links project-view__links--active")
@@ -54,11 +53,11 @@ article(class="project-view")
     section(class="project-view__tile" data-group="live-2")
         figure(class="project-view__thumb" data-group="live-2")
         div.project-view__desc
-            span Status: First iteration complete and functional
             p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework
+            p Originally I had intended to use the "New Age Bullshit" quote generator, but unfortunately there isn't an API available for it. At some point I may create a tool that pulls quotes from that site, but for now Forismatic is the API I utilized.
     nav(class="project-view__links" data-group="live-2")
         a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-quote") Code
-        a(class="project-view__code" href="https://jaxomofruatha.github.io/fcc-quote/") Demo
+        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-quote/") Demo
     footer(class="project-view__tech" data-group="live-2")
         span React
         span styled-components
@@ -67,11 +66,11 @@ article(class="project-view")
     section(class="project-view__tile" data-group="live-3")
         figure(class="project-view__thumb" data-group="live-3")
         div.project-view__desc
-            span Status: First functional version after multiple feature updates.
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework 
+            p This application began as the fulfillment of user stories for the "Build a Weather App" project on Free Code Camp, but has turned into my primary sandbox for learning React design patterns. I've employed two third-party open source components, one of which I contributed to on Github (react-weather-icons), in addition to revising the handling of each piece of the applciation many times as I learned more.
+            p I've gone far beyond the original specifications of the project, allowing users to search for other locations by name or enter coordinates. Changing from Imperial to SI units transforms the entirety of the data, not just the Fahrenheit to Celsius. And with the rich data provided by the Darksky API, the user is provided with the most pertinent information from a 7-day forecast.
     nav(class="project-view__links" data-group="live-3")
         a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-weather") Code
-        a(class="project-view__code" href="https://jaxomofruatha.github.io/fcc-weather/") Demo
+        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-weather/") Demo
     footer(class="project-view__tech" data-group="live-3")
         span React
         span react-router
@@ -81,12 +80,11 @@ article(class="project-view")
     section(class="project-view__tile" data-group="live-4")
         figure(class="project-view__thumb" data-group="live-4")
         div.project-view__desc
-            span Status: First iterations complete and functional
             p Six microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.
             p The next refinement will be combining the UI from each microservice into one while still allowing access to each endpoint as an individual microservice API.
     nav(class="project-view__links" data-group="live-4")
         a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
+        a(class="project-view__demo" href="#") Demo
     footer(class="project-view__tech" data-group="live-4")
         span JavaScript
         span Node
@@ -97,11 +95,11 @@ article(class="project-view")
     section(class="project-view__tile" data-group="live-5")
         figure(class="project-view__thumb" data-group="live-5")
         div.project-view__desc
-            span Status: First iteration complete and functional
-            p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
+            p A relatively simple application that takes input in the form of markdown text and transforms it to be previewed in a separate pane. I specifically went into the styling on Github's website to determine precisely how their Markdown looks and replicate it as closely as possible.
+            p It made more sense to use the "marked" npm package for this project rather than creating a Markdown parser from scratch, though at some point I may do that. More likely this is a situation where it doesn't make much sense to reinvent the wheel.
     nav(class="project-view__links" data-group="live-5")
         a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-markdown") Code
-        a(class="project-view__code" href="https://jaxomofruatha.github.io/fcc-markdown/") Demo
+        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-markdown/") Demo
     footer(class="project-view__tech" data-group="live-5")
         span React
         span SCSS
@@ -110,15 +108,15 @@ article(class="project-view")
     section(class="project-view__tile" data-group="live-6")
         figure(class="project-view__thumb" data-group="live-6")
         div.project-view__desc
-            span Status: First iteration complete and functional
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-thunk and React Router.
+            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-saga and React Router.
     nav(class="project-view__links" data-group="live-6")
         a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-wikiviewer") Code
-        a(class="project-view__code" href="https://jaxomofruatha.github.io/fcc-wikiviewer") Demo
+        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-wikiviewer") Demo
     footer(class="project-view__tech" data-group="live-6")
         span React
         span Redux
-        span redux-thunk
+        span redux-saga
+        span Immutable.js
         span REST API/AJAX
 
     section(class="project-view__tile" data-group="live-7")

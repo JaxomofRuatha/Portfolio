@@ -91,7 +91,6 @@
         <section class="project-view__tile project-view__tile--active" data-group="live-1">
           <figure class="project-view__thumb" data-group="live-1"></figure>
           <div class="project-view__desc">
-            <!-- span Status: First iteration complete and functional-->
             <p>This page has been through several significant refactorings, but it started out as a project using purely HTML and CSS with Flexbox. In the various versions, I've taken the opportunity to apply knowledge gained to make it a better example of best practices in web development.</p>
             <p>Currently I am using NPM Scripts for a build process with distinct development, testing, and production environments. The Pug templating language, SCSS fully employing CSS Grid, and core JavaScript are what I have chosen as the basis for the page's design. The current iteration's next refinement is to integrate dynamic animation for a more interactive feel.</p>
           </div>
@@ -100,45 +99,48 @@
         <footer class="project-view__tech project-view__tech--active" data-group="live-1"><span>JavaScript</span><span>Pug</span><span>CSS Grid</span><span>SCSS</span><span>NPM Scripts</span></footer>
         <section class="project-view__tile" data-group="live-2">
           <figure class="project-view__thumb" data-group="live-2"></figure>
-          <div class="project-view__desc"><span>Status: First iteration complete and functional</span>
+          <div class="project-view__desc">
             <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework</p>
+            <p>Originally I had intended to use the "New Age Bullshit" quote generator, but unfortunately there isn't an API available for it. At some point I may create a tool that pulls quotes from that site, but for now Forismatic is the API I utilized.</p>
           </div>
         </section>
-        <nav class="project-view__links" data-group="live-2"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-quote">Code</a><a class="project-view__code" href="https://jaxomofruatha.github.io/fcc-quote/">Demo</a></nav>
+        <nav class="project-view__links" data-group="live-2"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-quote">Code</a><a class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-quote/">Demo</a></nav>
         <footer class="project-view__tech" data-group="live-2"><span>React</span><span>styled-components</span><span>REST API/AJAX</span></footer>
         <section class="project-view__tile" data-group="live-3">
           <figure class="project-view__thumb" data-group="live-3"></figure>
-          <div class="project-view__desc"><span>Status: First functional version after multiple feature updates.</span>
-            <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework </p>
+          <div class="project-view__desc">
+            <p>This application began as the fulfillment of user stories for the "Build a Weather App" project on Free Code Camp, but has turned into my primary sandbox for learning React design patterns. I've employed two third-party open source components, one of which I contributed to on Github (react-weather-icons), in addition to revising the handling of each piece of the applciation many times as I learned more.</p>
+            <p>I've gone far beyond the original specifications of the project, allowing users to search for other locations by name or enter coordinates. Changing from Imperial to SI units transforms the entirety of the data, not just the Fahrenheit to Celsius. And with the rich data provided by the Darksky API, the user is provided with the most pertinent information from a 7-day forecast.</p>
           </div>
         </section>
-        <nav class="project-view__links" data-group="live-3"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-weather">Code</a><a class="project-view__code" href="https://jaxomofruatha.github.io/fcc-weather/">Demo</a></nav>
+        <nav class="project-view__links" data-group="live-3"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-weather">Code</a><a class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-weather/">Demo</a></nav>
         <footer class="project-view__tech" data-group="live-3"><span>React</span><span>react-router</span><span>REST API/AJAX</span><span>SCSS</span></footer>
         <section class="project-view__tile" data-group="live-4">
           <figure class="project-view__thumb" data-group="live-4"></figure>
-          <div class="project-view__desc"><span>Status: First iterations complete and functional</span>
+          <div class="project-view__desc">
             <p>Six microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.</p>
             <p>The next refinement will be combining the UI from each microservice into one while still allowing access to each endpoint as an individual microservice API.</p>
           </div>
         </section>
-        <nav class="project-view__links" data-group="live-4"><a class="project-view__code" href="#">Code</a><a class="project-view__code" href="#">Demo</a></nav>
+        <nav class="project-view__links" data-group="live-4"><a class="project-view__code" href="#">Code</a><a class="project-view__demo" href="#">Demo</a></nav>
         <footer class="project-view__tech" data-group="live-4"><span>JavaScript</span><span>Node</span><span>Express</span><span>MongoDB</span><span>Pug</span></footer>
         <section class="project-view__tile" data-group="live-5">
           <figure class="project-view__thumb" data-group="live-5"></figure>
-          <div class="project-view__desc"><span>Status: First iteration complete and functional</span>
-            <p>The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.</p>
+          <div class="project-view__desc">
+            <p>A relatively simple application that takes input in the form of markdown text and transforms it to be previewed in a separate pane. I specifically went into the styling on Github's website to determine precisely how their Markdown looks and replicate it as closely as possible.</p>
+            <p>It made more sense to use the "marked" npm package for this project rather than creating a Markdown parser from scratch, though at some point I may do that. More likely this is a situation where it doesn't make much sense to reinvent the wheel.</p>
           </div>
         </section>
-        <nav class="project-view__links" data-group="live-5"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-markdown">Code</a><a class="project-view__code" href="https://jaxomofruatha.github.io/fcc-markdown/">Demo</a></nav>
+        <nav class="project-view__links" data-group="live-5"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-markdown">Code</a><a class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-markdown/">Demo</a></nav>
         <footer class="project-view__tech" data-group="live-5"><span>React</span><span>SCSS</span><span>npm</span></footer>
         <section class="project-view__tile" data-group="live-6">
           <figure class="project-view__thumb" data-group="live-6"></figure>
-          <div class="project-view__desc"><span>Status: First iteration complete and functional</span>
-            <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-thunk and React Router.</p>
+          <div class="project-view__desc">
+            <p>An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-saga and React Router.</p>
           </div>
         </section>
-        <nav class="project-view__links" data-group="live-6"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-wikiviewer">Code</a><a class="project-view__code" href="https://jaxomofruatha.github.io/fcc-wikiviewer">Demo</a></nav>
-        <footer class="project-view__tech" data-group="live-6"><span>React</span><span>Redux</span><span>redux-thunk</span><span>REST API/AJAX</span></footer>
+        <nav class="project-view__links" data-group="live-6"><a class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-wikiviewer">Code</a><a class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-wikiviewer">Demo</a></nav>
+        <footer class="project-view__tech" data-group="live-6"><span>React</span><span>Redux</span><span>redux-saga</span><span>Immutable.js</span><span>REST API/AJAX</span></footer>
         <section class="project-view__tile" data-group="live-7">
           <figure class="project-view__thumb" data-group="live-7"></figure>
           <div class="project-view__desc"><span>Status: First iteration complete and functional</span>
@@ -202,7 +204,7 @@
       <nav class="contact-info__social"><a class="contact-info__email" href="mailto:jchritton33@gmail.com?subject=Collaborating%20on%20my%20next%20project"> <i class="fa fa-envelope"></i></a><a class="contact-info__link" href="https://github.com/JaxomofRuatha"><i class="fa fa-github"></i></a><a class="contact-info__link" href="https://www.linkedin.com/in/john-w-chritton/"><i class="fa fa-linkedin"></i></a><a class="contact-info__link" href="https://twitter.com/jaxwhitedragon"><i class="fa fa-twitter"></i></a><a class="contact-info__link" href="https://www.freecodecamp.com/jaxomofruatha"><i class="fa fa-free-code-camp"></i></a><a class="contact-info__link" href="https://go.twitch.tv/jaxomofruatha"><i class="fa fa-twitch"></i></a></nav><img class="contact-info__portrait" src="./images/portrait-pic.jpg">
       <h1 class="contact-info__slug">It would be my pleasure to make your next project incredible!</h1>
     </section>
-    <footer><span><small>&copy;</small> 2017 John Chritton</span></footer>
+    <footer><span><small>&copy;</small> 2018 John Chritton</span></footer>
     <script type="text/javascript" src="./js/bundle.js"></script>
   </body>
 </html>
