@@ -55,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Unhide selected group content
 
-      console.log(newActive);
       newActive.forEach(piece => {
-        console.log(piece.classList[0]);
         piece.classList.add(`${piece.classList[0]}--active`);
       });
     });

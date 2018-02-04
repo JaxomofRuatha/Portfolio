@@ -6,37 +6,27 @@
   max-height: 10rem;
 }
 
-.contact-info__map {
-  max-height: 13rem;
-}
-
 .contact-info__social {
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
   font-size: 1.5rem;
-  justify-content: center;
-  left: 0;
-  margin: 0 7rem;
-  position: absolute;
-  right: 0;
+  margin: 1rem 0 1rem -1rem;
 }
 
 .contact-info__email {
-  background: red;
-  border-radius: 50%;
-  color: $white;
-  margin-right: 1rem;
-  padding: 1rem;
+  background: $dark-indigo;
+  border-radius: 10px;
+  color: orangered;
+  padding: 1.5rem;
 }
 
 .contact-info__link {
-  color: $white;
-  flex: 1 0 auto;
+  background: $dark-indigo;
+  flex: 1;
   font-size: 1.3rem;
   position: relative;
-  transition: width 0.2s;
-  width: 3rem;
+  transition: flex 0.3s;
 
   &:hover {
     flex: 2;
@@ -51,7 +41,6 @@
     color: $white;
     display: none;
     font-size: 1.2rem;
-    // position: absolute;
     white-space: pre;
   }
 
@@ -60,7 +49,7 @@
   }
 
   .fa-github {
-    background: #2dba4e;
+    color: #2dba4e;
 
     &:after {
       content: '  Github';
@@ -68,7 +57,7 @@
   }
 
   .fa-linkedin {
-    background: #0077b5;
+    color: #0077b5;
 
     &:after {
       content: '  LinkedIn';
@@ -76,7 +65,7 @@
   }
 
   .fa-twitter {
-    background: #00aced;
+    color: #00aced;
 
     &:after {
       content: '  Twitter';
@@ -84,7 +73,7 @@
   }
 
   .fa-free-code-camp {
-    background: #006400;
+    color: #006400;
 
     &:after {
       content: '  Free Code Camp';
@@ -92,7 +81,7 @@
   }
 
   .fa-twitch {
-    background: #6441a4;
+    color: #6441a4;
 
     &:after {
       content: '  Twitch';

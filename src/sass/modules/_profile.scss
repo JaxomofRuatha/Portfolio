@@ -32,8 +32,12 @@
   flex-basis: 3;
 }
 
-@include md {
-  .profile-content {
-    flex-direction: column;
+.profile-info__resume {
+  color: $icon-purple;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $yellow;
+    text-decoration: underline;
   }
 }

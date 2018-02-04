@@ -15,7 +15,7 @@
   @include flex-cent-r;
   background: $slate;
   border-bottom-left-radius: 10px;
-  opacity: 0;
+  display: none;
 }
 
 .project-view__code,
@@ -26,7 +26,7 @@
 
   &:hover,
   :active {
-    color: $yellow !important;
+    color: $yellow;
   }
 }
 
@@ -69,9 +69,12 @@
 }
 
 .project-view__tile--active,
-.project-view__links--active,
 .project-view__tech--active {
   opacity: 1;
+}
+
+.project-view__links--active {
+  display: grid;
 }
 
 .project-view__thumb[data-group='live-1'] {
