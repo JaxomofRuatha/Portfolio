@@ -5,31 +5,14 @@
     padding: 0 2rem;
     text-align: left;
   }
-
-  button {
-    background: inherit;
-    border: 1px solid $aqua;
-    border-radius: 5px;
-    color: $white;
-    padding: 0.4rem 1rem;
-    transition: all 0.5s;
-
-    &:hover {
-      background: $aqua;
-      color: $slate;
-      cursor: pointer;
-      font-weight: bold;
-      transform: scale(1.1);
-    }
-  }
 }
 
 .profile-info__summary {
-  flex-basis: 2;
+  flex: 3;
 }
 
 .profile-info__education {
-  flex-basis: 3;
+  flex: 2;
 }
 
 .profile-info__resume {
