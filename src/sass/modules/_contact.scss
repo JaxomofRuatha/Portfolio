@@ -7,18 +7,19 @@
 }
 
 .contact-info__social {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-wrap: nowrap;
   font-size: 1.5rem;
-  margin: 1rem 0 1rem -1rem;
+  margin: 1rem -1rem;
 }
 
 .contact-info__email {
   background: $dark-indigo;
-  border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
   color: orangered;
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
 
 .contact-info__link {
@@ -26,11 +27,7 @@
   flex: 1;
   font-size: 1.3rem;
   position: relative;
-  transition: flex 0.3s;
-
-  &:hover {
-    flex: 2;
-  }
+  transition: height 0.3s;
 
   i {
     padding: 0.3rem 0.5rem;
@@ -40,12 +37,13 @@
   i:after {
     color: $white;
     display: none;
-    font-size: 1.2rem;
+    font-family: 'Lato';
+    font-size: 1rem;
     white-space: pre;
   }
 
   i:hover::after {
-    display: inline;
+    display: block;
   }
 
   .fa-github {
@@ -86,6 +84,10 @@
     &:after {
       content: '  Twitch';
     }
+  }
+
+  &:last-child {
+    border-top-right-radius: 10px;
   }
 }
 
