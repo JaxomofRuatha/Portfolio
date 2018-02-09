@@ -31,14 +31,16 @@
 }
 
 .project-view__code:before {
-  content: '\f09b\0020\0020\0020';
-  font-family: FontAwesome;
+  content: '\f09b';
+  display: none;
+  font-family: 'Font Awesome 5 Brands';
   white-space: pre;
 }
 
 .project-view__demo:before {
-  content: '\f085\0020\0020\0020';
-  font-family: FontAwesome;
+  content: '\f085';
+  display: none;
+  font-family: 'Font Awesome 5 Solid';
   white-space: pre;
 }
 

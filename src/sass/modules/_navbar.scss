@@ -1,7 +1,6 @@
 .navbar {
   background: $dark-indigo;
   border-bottom: 1px solid $icon-purple;
-  overflow: hidden;
 }
 
 .navbar__logo {
@@ -11,27 +10,29 @@
 }
 
 .navbar__links {
+  display: flex;
+  flex-wrap: nowrap;
   list-style: none;
-  transition: transform 0.5s;
+  transition: transform 0.3s;
+}
 
-  li a {
-    color: $white;
-    padding: 1rem;
+.navbar__anchor {
+  color: $white;
+  padding: 1rem;
+  transition: padding 0.2s;
 
-    &:hover,
-    :active {
-      color: $aqua;
-    }
+  &:hover,
+  :active {
+    color: $aqua;
   }
 }
 
 // Mobile menu toggle button
 .navbar__toggle {
   display: none;
-  padding: 1rem;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 1rem;
+  top: 50%;
 
   span {
     background: $white;
@@ -39,7 +40,7 @@
     height: 2px;
     position: relative;
     user-select: none;
-    width: 18px;
+    width: 1.2rem;
 
     &::before,
     &::after {
@@ -48,7 +49,7 @@
       display: block;
       height: 100%;
       position: absolute;
-      transition: all 0.5s ease-out;
+      transition: transform 0.5s ease-out;
       width: 100%;
     }
 
@@ -61,42 +62,51 @@
     }
   }
 
-  input[type='checkbox']:checked ~ .navbar-menu-toggle span {
-    &::before {
-      transform: rotate(45deg);
-    }
+  input[type='checkbox']:checked ~ .navbar__toggle {
+    span {
+      &::before {
+        transform: rotate(45deg);
+      }
 
-    &::after {
-      transform: rotate(-45deg);
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
   }
 }
 
 @include sm {
-  input[type='checkbox'] {
-    padding: 1rem;
+  .navbar__links {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 3rem;
+    top: -0.3rem;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
 
-    &:checked ~ .nav-links {
+  #navbar__mobile {
+    &:checked ~ .navbar__links {
       transform: scaleX(1);
     }
 
-    &:checked ~ .social-icons {
+    &:checked ~ .socialicons {
       transform: scaleY(1);
     }
   }
 
-  .navbar__links {
-    position: absolute;
-    right: 3rem;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s;
-  }
-
   .navbar__toggle {
     display: inline-block;
+  }
+}
+
+@include xs {
+  .navbar__logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .navbar__anchor {
+    padding: 1rem 0.5rem;
   }
 }

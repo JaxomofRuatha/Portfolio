@@ -26,23 +26,21 @@
   background: $dark-indigo;
   flex: 1;
   font-size: 1.3rem;
+  padding: 0.3rem 0.5rem;
   position: relative;
   transition: height 0.3s;
+  width: 100%;
 
-  i {
-    padding: 0.3rem 0.5rem;
-    width: 100%;
-  }
-
-  i:after {
+  &:after {
     color: $white;
+    content: 'Stuff';
     display: none;
     font-family: 'Lato';
     font-size: 1rem;
     white-space: pre;
   }
 
-  i:hover::after {
+  &:hover::after {
     display: block;
   }
 

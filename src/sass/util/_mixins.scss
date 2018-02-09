@@ -1,13 +1,13 @@
 // Mobile sized
 @mixin xs() {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 475px) {
     @content;
   }
 }
 
 // Tablet sized
 @mixin sm() {
-  @media screen and (max-width: 799px) {
+  @media screen and (max-width: 800px) {
     @content;
   }
 }
@@ -34,14 +34,14 @@
 }
 
 @mixin flex-cent-r() {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 @mixin flex-cent-c() {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }

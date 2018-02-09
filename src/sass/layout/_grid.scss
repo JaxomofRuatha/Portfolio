@@ -3,7 +3,7 @@
 .navbar {
   align-items: center;
   display: grid;
-  grid-template-columns: 15% 1fr 30%;
+  grid-template-columns: 15% 1fr max-content;
   grid-template-rows: 2.5rem;
   position: fixed;
   top: 0;
@@ -16,33 +16,18 @@
 }
 
 .navbar__menu {
-  grid-column: 3;
+  grid-column: 3 / -1;
 }
 
-.navbar__links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
-}
-
-// welcome section block
+// welcome block
 
 .welcome {
   display: grid;
-  grid-template-rows: 40% 25% 1fr;
+  grid-template-rows: 1fr max-content 1fr;
 }
 
 .welcome__banner {
-  display: grid;
   grid-row: 2;
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.welcome__name {
-  align-self: end;
-}
-
-.welcome__title {
-  align-self: start;
 }
 
 // skills block
@@ -78,7 +63,21 @@
 
 // profile-info block
 
-// projects-container section
+.profile-info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.profile-info__menu {
+  grid-column: 1;
+}
+
+.profile-info__content {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+// projects-container > project-view block
 
 .project-view {
   display: grid;

@@ -1,11 +1,21 @@
 article(class="l-content-section profile-info")
-    section(class="profile-info__summary")
+    nav(class="profile-info__menu")
+        a(data-target="#summary")
+            i(class="fas fa-address-card fa-2x fa-fw")
+        a(data-target="#education")
+            i(class="fas fa-book fa-2x fa-fw")
+        a(data-target="#goals")
+            i(class="fas fa-chart-line fa-2x fa-fw")
+        a(data-target="#bonus")
+            i(class="fas fa-heartbeat fa-2x fa-fw")
+        a(href="../docs/John_Chritton_2018_Web.pdf")
+            i(class="fa fa-file-pdf fa-2x fa-fw")
+    section(class="profile-info__content" id="summary")
         h1.section-heading Profile and Direction
         p I am very excited to bring my vision and passion to life through detailed and responsive web development projects aimed to inspire. My background in psychology and gift for creating simple yet pleasurable user experiences brings a unique approach to applications.
         p I have intentionally varied my utilization of frameworks and tools to better understand the best technology for each situation. My primary focus has been on React and Redux, with related libraries. I am working to master React Native currently to allow a fully immersive user experience no matter what their platform.
         p I would be glad to make your goal my goal. Let's partner to make your project the solution you deserve!
-        a(href="../docs/John_Chritton_2018_Web.pdf" class="profile-info__resume") Resume
-    section(class="profile-info__education")
+    section(class="profile-info__content" id="education")
         h1.section-heading Education
         h2.section-subheading University of Wisconsin - Green Bay
         p

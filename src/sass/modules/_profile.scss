@@ -1,26 +1,16 @@
 .profile-info {
-  display: flex;
-
   p {
     padding: 0 2rem;
     text-align: left;
   }
 }
 
-.profile-info__summary {
-  flex: 3;
-}
+.profile-info__menu {
+  @include flex-cent-c;
+  border-right: 1px solid $icon-purple;
 
-.profile-info__education {
-  flex: 2;
-}
-
-.profile-info__resume {
-  color: $icon-purple;
-  transition: all 0.2s;
-
-  &:hover {
-    color: $yellow;
-    text-decoration: underline;
+  a {
+    color: $white;
+    padding: 1rem;
   }
 }

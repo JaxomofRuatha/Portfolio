@@ -3,12 +3,10 @@
     center/cover fixed;
   height: 100vh;
   width: 100vw;
-  z-index: 1;
 }
 
 .welcome__banner {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-  z-index: 2;
 }
 
 .welcome__name {
@@ -16,11 +14,23 @@
   font-size: 4.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
+  max-width: 90%;
   padding: 1rem;
 }
 
 .welcome__title {
   color: $white;
   font-size: 2.2rem;
-  padding: 0 1rem;
+  max-width: 90%;
+  padding: 0 1rem 1rem;
+}
+
+@include xs {
+  .welcome__name {
+    font-size: 3.8rem;
+  }
+
+  .welcome__title {
+    font-size: 1.84rem;
+  }
 }
