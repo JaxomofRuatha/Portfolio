@@ -18,3 +18,11 @@
 .profile-info__content {
   opacity: 0;
 }
+
+.profile-info__tab--active {
+  color: $aqua;
+}
+
+.profile-info__content--visible {
+  opacity: 1;
+}
