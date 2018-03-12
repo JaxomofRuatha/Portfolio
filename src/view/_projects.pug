@@ -1,219 +1,209 @@
+//-  var projectList = [
+//-   {
+//-     title: "Portfolio",
+//-     group: "live",
+//-     description: [
+//-       "This page has been through several significant refactorings, but it started out as a project using purely HTML and CSS with Flexbox. In the various versions, I've taken the opportunity to apply knowledge gained to make it a better example of best practices in web development.",
+
+//-       "Currently I am using NPM Scripts for a build process with distinct development,testing, and production environments. The Pug templating language, SCSS fully employing CSS Grid, and core JavaScript are what I have chosen as the basis for the page's design. The current iteration's next refinement -is to integrate dynamic animation for a more interactive feel."
+//-     ],
+//-     code: "https://github.com/jchritton/Portfolio",
+//-     demo: "https://jchritton.github.io/Portfolio",
+//-     techs: [
+//-       "JavaScript",
+//-       "Pug",
+//-       "CSS Grid",
+//-       "SCSS",
+//-       "NPM Scripts"
+//-     ]
+//-   },
+//-   {
+//-     title: "Quote Ex Machina",
+//-     group: "live",
+//-     description: [
+//-       "An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework.",
+
+//-       "Originally I had intended to use the "New Age Bullshit" quote generator, but unfortunately there isn't an API available for it. At some point I may create a tool that pulls quotes from that site, but for now Forismatic is the API I utilized."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-quote",
+//-     demo: "https://jchritton.github.io/jc-quote",
+//-     techs: [
+//-       "React",
+//-       "styled-components",
+//-       "REST API/AJAX"
+//-     ]
+//-   },
+//-   {
+//-     title: "React Meteorologist",
+//-     group: "live",
+//-     description: [
+//-       "This application began as the fulfillment of user stories for the "Build a Weather App" project on Free Code Camp, but has turned into my primary sandbox for learning React design patterns. I've employed two third-party open source components, one of which I contributed to on Github (react-weather-icons), in addition to revising the handling of each piece of the applciation many times as I learned more.",
+
+//-       "I've gone far beyond the original specifications of the project, allowing users to search for other locations by name or enter coordinates. Changing from Imperial to SI units transforms the entirety of the data, not just the Fahrenheit to Celsius. And with the rich data provided by the Darksky API, the user is provided with the most pertinent information from a 7-day forecast."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-forecast",
+//-     demo: "https://jchritton.github.io/jc-forecast",
+//-     techs: [
+//-       "React",
+//-       "react-router",
+//-       "REST API/AJAX",
+//-       "SCSS"
+//-     ]
+//-   },
+//-   {
+//-     title: "Express Microservices",
+//-     group: "live",
+//-     description: [
+//-       "Five microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice."
+//-     ],
+//-     code: "https://github.com/jchritton/microservices-hub",
+//-     demo: "https://github.com/jchritton/microservices-hub",
+//-     techs: [
+//-       "JavaScript",
+//-       "Node",
+//-       "Express",
+//-       "MongoDB",
+//-       "Pug"
+//-     ]
+//-   },
+//-   {
+//-     title: ".md Preview Window",
+//-     group: "live",
+//-     description: [
+//-       "A relatively simple application that takes input in the form of markdown text and transforms it to be previewed in a separate pane. I specifically went into the styling on Github's website to determine precisely how their Markdown looks and replicate it as closely as possible.",
+
+//-       "It made more sense to use the "marked" npm package for this project rather than creating a Markdown parser from scratch, though at some point I may do that. More likely this is a situation where it doesn't make much sense to reinvent the wheel."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-markdown",
+//-     demo: "https://jchritton.github.io/jc-markdown",
+//-     techs: [
+//-       "React",
+//-       "SCSS",
+//-       "NPM"
+//-     ]
+//-   },
+//-   {
+//-     title: "Wikiviewer",
+//-     group: "live",
+//-     description: [
+//-       "An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-saga and React Router."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-wikiviewer",
+//-     demo: "https://jchritton.github.io/jc-wikiviewer",
+//-     techs: [
+//-       "React",
+//-       "Redux",
+//-       "redux-saga",
+//-       "Immutable.js",
+//-       "REST API/AJAX"
+//-     ]
+//-   },
+//-   {
+//-     title: "Speller",
+//-     group: "live",
+//-     description: [
+//-       "The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary."
+//-     ],
+//-     code: "https://github.com/jchritton/CS50/tree/master/pset5/speller"
+//-     techs: [
+//-       "C",
+//-       "Data Structures",
+//-       "Algorithms"
+//-     ]
+//-   },
+//-   {
+//-     title: "Bmore Around Town",
+//-     group: "wip",
+//-     description: [
+//-       "A complete rewrite of the production website bmorearoundtown.com, which currently uses jQuery, PHP, and a legacy version of MySQL. This infrastructure is no longer sufficient to support the growth of the site. I was brought in with one other developer to transition the build to React/Redux, Node with Express, and the latest version of MySQL.",
+
+//-       "I architected the database and API to serve the same expected data as the legacy interface (to preserve backwards compatibility until updated), but with the entirely reconstructed code. At this point the senior developer overseeing the project is completing code review, and my next contribution will be finishing the React/Redux user interface."
+//-     ],
+//-     demo: "http://bmorearoundtown.com/",
+//-     techs: [
+//-       "Node",
+//-       "Express",
+//-       "MySQL",
+//-       "Sequelize",
+//-       "React/Redux"
+//-     ]
+//-   },
+//-   {
+//-     title: "Certified MTT Brand Angular Calculator",
+//-     group: "wip",
+//-     description: [
+//-       "Mettaton."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-calculator",
+//-     demo: "https://jchritton.github.io/jc-calculator",
+//-     techs: [
+//-       "Angular 5",
+//-       "TypeScript",
+//-       "Karma/Protractor"
+//-     ]
+//-   },
+//-   {
+//-     title: "Freeform Vote",
+//-     group: "wip",
+//-     description: [
+//-       "A voting application that allows for various styles of votes, including round-robin, single elimination, and simple straw polls. The very basic seed of this project came from the Free Code Camp back end project to "Build a Voting App." What I chose to do with it is put into use every technology and tool I have learned, and create a much more interesting and versatile end product."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-voting"
+//-     techs: [
+//-       "React/Redux",
+//-       "Docker",
+//-       "MongoDB",
+//-       "D3",
+//-       "GraphQL",
+//-       "Node/Express"
+//-     ]
+//-   },
+//-   {
+//-     title: "React Recipe Box",
+//-     group: "wip",
+//-     description: [
+//-       "A full stack application for keeping track of recipes and what ingredients are needed at the store."
+//-     ],
+//-     code: "https://github.com/jchritton/jc-recipe"
+//-     techs: [
+//-       "React/Redux",
+//-       "Docker",
+//-       "PostgreSQL",
+//-       "D3",
+//-       "GraphQL",
+//-       "Java Spring API"
+//-     ]
+//-   },
+//- ];
+  
 article(class="project-view")
-    header(class="project-view__tabs")
-        nav(class="project-view__nav")
-            input(id="live-menu" type="checkbox")
-            label(for="live-menu" class="project-view__toggle") Live Projects
-            ul(class="project-view__menu")
-                li
-                    a(data-target="live-1") Portfolio
-                li
-                    a(data-target="live-2") React Quote Machine
-                li
-                    a(data-target="live-3") React Forecast
-                li
-                    a(data-target="live-4") Express Microservices
-                li
-                    a(data-target="live-5") React .md Previewer
-                li
-                    a(data-target="live-6") Redux Wikipedia Viewer
-                li
-                    a(data-target="live-7") Speller
-        h1(class="project-view__title") Portfolio
-        nav(class="project-view__nav")
-            input(id="wip-menu" type="checkbox")
-            label(for="wip-menu" class="project-view__toggle") In Development
-            ul(class="project-view__menu")
-                li
-                    a(data-target="wip-1") Bmore Around Town
-                li
-                    a(data-target="wip-2") Twitch Dashboard
-                li
-                    a(data-target="wip-3") Bikeshare Mapper
-                li
-                    a(data-target="wip-4") React Recipe Box
-                li
-                    a(data-target="wip-5") JavaScript Calculator
-                li
-                    a(data-target="wip-6") Freeform Vote
-    section(class="project-view__tile project-view__tile--active" data-group="live-1")
-        figure(class="project-view__thumb" data-group="live-1")
-        div.project-view__desc
-            p This page has been through several significant refactorings, but it started out as a project using purely HTML and CSS with Flexbox. In the various versions, I've taken the opportunity to apply knowledge gained to make it a better example of best practices in web development.
-            p Currently I am using NPM Scripts for a build process with distinct development, testing, and production environments. The Pug templating language, SCSS fully employing CSS Grid, and core JavaScript are what I have chosen as the basis for the page's design. The current iteration's next refinement is to integrate dynamic animation for a more interactive feel.
-    nav(data-group="live-1" class="project-view__links project-view__links--active")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/Portfolio") Code
-        a(class="project-view__demo" href="https://jaxomofruatha.github.io/Portfolio") Demo
-    footer(data-group="live-1" class="project-view__tech project-view__tech--active")
-        span JavaScript
-        span Pug
-        span CSS Grid
-        span SCSS
-        span NPM Scripts
-
-    section(class="project-view__tile" data-group="live-2")
-        figure(class="project-view__thumb" data-group="live-2")
-        div.project-view__desc
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework
-            p Originally I had intended to use the "New Age Bullshit" quote generator, but unfortunately there isn't an API available for it. At some point I may create a tool that pulls quotes from that site, but for now Forismatic is the API I utilized.
-    nav(class="project-view__links" data-group="live-2")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-quote") Code
-        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-quote/") Demo
-    footer(class="project-view__tech" data-group="live-2")
-        span React
-        span styled-components
-        span REST API/AJAX
-
-    section(class="project-view__tile" data-group="live-3")
-        figure(class="project-view__thumb" data-group="live-3")
-        div.project-view__desc
-            p This application began as the fulfillment of user stories for the "Build a Weather App" project on Free Code Camp, but has turned into my primary sandbox for learning React design patterns. I've employed two third-party open source components, one of which I contributed to on Github (react-weather-icons), in addition to revising the handling of each piece of the applciation many times as I learned more.
-            p I've gone far beyond the original specifications of the project, allowing users to search for other locations by name or enter coordinates. Changing from Imperial to SI units transforms the entirety of the data, not just the Fahrenheit to Celsius. And with the rich data provided by the Darksky API, the user is provided with the most pertinent information from a 7-day forecast.
-    nav(class="project-view__links" data-group="live-3")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-weather") Code
-        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-weather/") Demo
-    footer(class="project-view__tech" data-group="live-3")
-        span React
-        span react-router
-        span REST API/AJAX
-        span SCSS
-
-    section(class="project-view__tile" data-group="live-4")
-        figure(class="project-view__thumb" data-group="live-4")
-        div.project-view__desc
-            p Six microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.
-            p The next refinement will be combining the UI from each microservice into one while still allowing access to each endpoint as an individual microservice API.
-    nav(class="project-view__links" data-group="live-4")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__demo" href="#") Demo
-    footer(class="project-view__tech" data-group="live-4")
-        span JavaScript
-        span Node
-        span Express
-        span MongoDB
-        span Pug
-
-    section(class="project-view__tile" data-group="live-5")
-        figure(class="project-view__thumb" data-group="live-5")
-        div.project-view__desc
-            p A relatively simple application that takes input in the form of markdown text and transforms it to be previewed in a separate pane. I specifically went into the styling on Github's website to determine precisely how their Markdown looks and replicate it as closely as possible.
-            p It made more sense to use the "marked" npm package for this project rather than creating a Markdown parser from scratch, though at some point I may do that. More likely this is a situation where it doesn't make much sense to reinvent the wheel.
-    nav(class="project-view__links" data-group="live-5")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-markdown") Code
-        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-markdown/") Demo
-    footer(class="project-view__tech" data-group="live-5")
-        span React
-        span SCSS
-        span npm
-    
-    section(class="project-view__tile" data-group="live-6")
-        figure(class="project-view__thumb" data-group="live-6")
-        div.project-view__desc
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Wikipedia Viewer." To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-saga and React Router.
-    nav(class="project-view__links" data-group="live-6")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/fcc-wikiviewer") Code
-        a(class="project-view__demo" href="https://jaxomofruatha.github.io/fcc-wikiviewer") Demo
-    footer(class="project-view__tech" data-group="live-6")
-        span React
-        span Redux
-        span redux-saga
-        span Immutable.js
-        span REST API/AJAX
-
-    section(class="project-view__tile" data-group="live-7")
-        figure(class="project-view__thumb" data-group="live-7")
-        div.project-view__desc
-            span Status: First iteration complete and functional
-            p The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.
-    nav(class="project-view__links" data-group="live-7")
-        a(class="project-view__code" href="https://github.com/JaxomofRuatha/CS50/tree/master/pset5/speller") Code
-    footer(class="project-view__tech" data-group="live-7")
-        span C
-        span Data Structures
-        span Algorithms
-
-    section(class="project-view__tile" data-group="wip-1")
-        figure(class="project-view__thumb" data-group="wip-1")
-        div.project-view__desc
-            span Status: API and database complete, UI in review process
-            p A complete rewrite of the production website bmorearoundtown.com, which currently uses jQuery, PHP, and a legacy version of MySQL. This infrastructure is no longer sufficient to support the growth of the site. I was brought in with one other developer to transition the build to React/Redux, Node with Express, and the latest version of MySQL.
-            p I architected the database and API to serve the same expected data as the legacy interface (to preserve backwards compatibility until updated), but with the entirely reconstructed code. At this point the senior developer overseeing the project is completing code review, and my next contribution will be finishing the React/Redux user interface.
-    nav(class="project-view__links" data-group="wip-1")
-        a(class="project-view__code" href="http://bmorearoundtown.com/") Demo
-    footer(class="project-view__tech" data-group="wip-1")
-        span Node
-        span Express
-        span MySQL
-        span Sequelize
-        span React/Redux
-
-    section(class="project-view__tile" data-group="wip-2")
-        figure(class="project-view__thumb" data-group="wip-2")
-        div.project-view__desc
-            span Status: In progress, partially built with 3 now-dissolved teams
-            p This full-stack application was created to take part in a contest put forth by a senior developer and streamer to emulate real team collaboration using a workflow focused on Git and Trello.
-    nav(class="project-view__links" data-group="wip-2")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
-    footer(class="project-view__tech" data-group="wip-2")
-        span React
-        span Redux
-        span Node
-        span Express
-        span MongoDB
-
-    section(class="project-view__tile" data-group="wip-3")
-        figure(class="project-view__thumb" data-group="wip-3")
-        div.project-view__desc
-            span Status: In progress, partially built with 3 now-dissolved teams
-            p This full-stack application was created to take part in a contest put forth by a senior developer and streamer to emulate real team collaboration using a workflow focused on Git and Trello.
-    nav(class="project-view__links" data-group="wip-3")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
-    footer(class="project-view__tech" data-group="wip-3")
-        span React
-        span Redux
-        span Node
-        span Express
-        span MongoDB
-
-    section(class="project-view__tile" data-group="wip-4")
-        figure(class="project-view__thumb" data-group="wip-4")
-        div.project-view__desc
-            span Status: First iteration complete and functional
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework
-    nav(class="project-view__links" data-group="wip-4")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
-    footer(class="project-view__tech" data-group="wip-4")
-        span React
-        span styled-components
-        span REST API/AJAX
-
-    section(class="project-view__tile" data-group="wip-5")
-        figure(class="project-view__thumb" data-group="wip-5")
-        div.project-view__desc
-            span Status: First iteration complete and functional
-            p An application fulfilling the user stories from the Free Code Camp front end project "Build a Random Quote Machine." I chose to make this open-ended project my introduction to using the React framework  
-    nav(class="project-view__links" data-group="wip-5")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
-    footer(class="project-view__tech" data-group="wip-5")
-        span React
-        span styled-components
-        span REST API/AJAX
-
-    section(class="project-view__tile" data-group="wip-6")
-        figure(class="project-view__thumb")
-        div.project-view__desc
-            span Status: In progress
-            p The very basic seed of this project came from the Free Code Camp back end project to "Build a Voting App." What I chose to do with it is put into use every technology and tool I have learned, and create a much more interesting and versatile end product.
-    nav(class="project-view__links" data-group="wip-6")
-        a(class="project-view__code" href="#") Code
-        a(class="project-view__code" href="#") Demo
-    footer(class="project-view__tech" data-group="wip-6")
-        span React/Redux
-        span Express
-        span MongoDB
-        span Docker
-        span Webpack
-                                              
+  header(class="project-view__tabs")
+    nav(class="project-view__nav")
+      input(id="live-menu" type="checkbox")
+      label(for="live-menu" class="project-view__toggle") Live Projects
+      ul(class="project-view__menu")
+        each project, i in projectList
+          if project.group === "live"
+            li
+              a(data-target=project.group + "-" + i) #{project.title}
+    h1(class="project-view__title") Portfolio
+    nav(class="project-view__nav")
+      input(id="wip-menu" type="checkbox")
+      label(for="wip-menu" class="project-view__toggle") In Development
+      ul(class="project-view__menu")
+        each project, i in projectList
+          if project.group === "wip"
+            li
+              a(data-target=project.group + "-" + i) #{project.title}
+each project, i in projectList
+  section(class=(i === 0 ? "project-view project-view__tile--active" : "project-view") data-group=project.group)
+    figure(class="project-view__thumb" data-group=project.group)
+      article(class="project-view__desc")
+        each pg in project.description
+          p= pg
+  nav(class=(i === 0 ? "project-view__links" : "project-view__links  project-view__links--active") data-group=project.group)
+    a(class="project-view__code" href=project.code) Code
+    a(class="project-view__demo" href=project.demo) Demo
+  footer(class=(i === 0 ? "project-view__tech" : "project-view__tech project-view__tech--active"))
+    each tech in project.techs
+      span=tech
