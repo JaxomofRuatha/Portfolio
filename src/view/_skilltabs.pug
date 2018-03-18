@@ -1,35 +1,12 @@
+- var skillIcons = viewData.skillIcons;
+
 article(class="l-content-section skills")
   h1.section-heading Skills and Technologies
   div.skills__view
-      section(class="skills__group skills__group--visible" id="web-dev")
-          img(class="skills__icon" src="./images/techicons/htmlicon.svg")
-          img(class="skills__icon" src="./images/techicons/css3icon.svg")
-          img(class="skills__icon" src="./images/techicons/reacticon.svg")
-          img(class="skills__icon" src="./images/techicons/reduxicon.svg")   
-          img(class="skills__icon" src="./images/techicons/sassicon.svg")
-          img(class="skills__icon" src="./images/techicons/jqueryicon.svg")
-          img(class="skills__icon" src="./images/techicons/bootstrapicon.svg")
-      section(class="skills__group" id="core-lang")
-          img(class="skills__icon" src="./images/techicons/cicon.svg")
-          img(class="skills__icon" src="./images/techicons/jsicon.svg")
-          img(class="skills__icon" src="./images/techicons/javaicon.svg")
-          img(class="skills__icon" src="./images/techicons/pythonicon.svg")
-          img(class="skills__icon" src="./images/techicons/phpicon.svg")
-      section(class="skills__group" id="db-server")
-          img(class="skills__icon" src="./images/techicons/nodejsicon.svg")
-          img(class="skills__icon" src="./images/techicons/expressicon.svg")
-          img(class="skills__icon" src="./images/techicons/mongodbicon.svg")
-          img(class="skills__icon" src="./images/techicons/mysqlicon.svg")
-          img(class="skills__icon" src="./images/techicons/postgresqlicon.svg")
-          img(class="skills__icon" src="./images/techicons/sasicon.svg")
-      section(class="skills__group" id="tools")
-          img(class="skills__icon" src="./images/techicons/giticon.svg")
-          img(class="skills__icon" src="./images/techicons/npmicon.svg")
-          img(class="skills__icon" src="./images/techicons/mochaicon.svg")
-          img(class="skills__icon" src="./images/techicons/jesticon.svg")
-          img(class="skills__icon" src="./images/techicons/dockericon.svg")
-          img(class="skills__icon" src="./images/techicons/gulpicon.svg")
-          img(class="skills__icon" src="./images/techicons/linuxicon.svg")
+    each skills, i in skillIcons
+        section(class=(i === 0 ? "skills__group skills__group--visible" : "skills__group") id=skills.group)
+            each icon in skills.icons
+                img(class="skills__icon" src=icon)
   nav(class="skills__menu")
       a(class="skills__tab skills__tab--active" data-target="#web-dev") Web Development
       a(class="skills__tab" data-target="#core-lang") Core Languages

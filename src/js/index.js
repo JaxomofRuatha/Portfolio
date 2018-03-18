@@ -34,29 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'profile-info__tab',
     'profile-info__content'
   );
-  // document.querySelector('.skills__menu').addEventListener('click', e => {
-  //   const targetIcons = document.querySelector(e.target.dataset.target);
-  //   const priorActive = document.querySelector('.skills__tab--active').dataset
-  //     .target;
-
-  //   document.querySelectorAll('.skills__tab').forEach(a => {
-  //     a.classList.remove('skills__tab--active');
-  //   });
-
-  //   e.target.classList.add('skills__tab--active');
-
-  //   if (
-  //     e.target.tagName === 'A' &&
-  //     document.querySelector(`${priorActive}`) !== targetIcons
-  //   ) {
-  //     document
-  //       .querySelector(`${priorActive}`)
-  //       .classList.remove('skills__group--visible');
-  //     setTimeout(() => {
-  //       targetIcons.classList.add('skills__group--visible');
-  //     }, 500);
-  //   }
-  // });
 
   document.querySelectorAll('.project-view__menu').forEach(tabs => {
     tabs.addEventListener('click', e => {
