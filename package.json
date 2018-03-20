@@ -5,44 +5,35 @@
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaxomofRuatha/Portfolio.git"
+    "url": "git+https://github.com/jchritton/Portfolio.git"
   },
   "author": "John Chritton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JaxomofRuatha/Portfolio/issues"
+    "url": "https://github.com/jchritton/Portfolio/issues"
   },
-  "homepage": "https://jaxomofruatha.github.io/Portfolio/",
+  "homepage": "https://jchritton.github.io/Portfolio/",
   "scripts": {
+    "start": "run-p bs compile watch",
+    "test": "mocha",
+    "compile": "run-p pug sass js",
+    "watch": "run-p watch:**",
+    "build": "run-p build:**",
     "bs":
       "browser-sync start -s 'public' --files 'public/index.html' 'public/css/style.css' 'public/bundle.js'",
-    "build":
-      "npm run pug-build & npm run sass-build & npm run postcss-build & npm run js-build",
-    "compile": "npm run pug & npm run sass & npm run js",
-    "css": "npm run sass && npm run postcss",
-    "css-build": "npm run sass-build && npm run postcss",
-    "watch": "run-p watch:**",
-    "js":
-      "browserify src/js/index.js --debug -o public/js/bundle.js -t [ babelify --presets ['env'] ]",
-    "js-build":
-      "browserify src/js/index.js -o dist/js/bundle.js -t [ babelify --presets ['env'] ] -t [ uglifyify -cm ]",
-    "postcss": "postcss src/css/style.css --use postcss-cssnext -d src/css/",
-    "postcss-build":
-      "postcss dist/css/style.css --use postcss-cssnext -d dist/css/",
-    "pug": "node src/scripts/compile-pug.js",
-    "pug-build": "pug --output-style compressed -o dist src/view/index.pug",
-    "sass":
-      "node-sass --output-style expanded --source-map true --source-map-embed true -o public/css src/sass/style.scss",
-    "sass-build":
-      "node-sass src/sass/style.scss --output-style compressed -o dist/css",
-    "start": "npm run bs & npm run compile & npm run watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "js": "node src/scripts/compile-js.js",
+    "pug": "node src/scripts/pug.js",
+    "sass": "node src/scripts/sass.js",
     "watch:pug": "chokidar 'src/view/**/*.pug' -c 'npm run pug'",
     "watch:sass": "chokidar 'src/sass/**/*.scss' -c 'npm run sass'",
-    "watch:js": "chokidar 'src/js/index.js' -c 'npm run js'"
+    "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run js'",
+    "build:js":
+      "browserify src/js/index.js -o dist/js/bundle.js -t [ babelify --presets ['env'] ] -t [ uglifyify -cm ]",
+    "build:pug": "pug --output-style compressed -o dist src/view/index.pug",
+    "build:sass":
+      "node-sass src/sass/style.scss --output-style compressed -o dist/css"
   },
   "devDependencies": {
-    "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
@@ -50,21 +41,21 @@
     "browserify": "^16.1.1",
     "chai": "^4.1.2",
     "chokidar-cli": "^1.2.0",
-    "cypress": "^2.1.0",
+    "eyeglass": "^1.4.0",
     "mocha": "^5.0.4",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
-    "postcss-cli": "^5.0.0",
+    "postcss": "^6.0.20",
     "postcss-cssnext": "^3.1.0",
     "pug": "^2.0.1",
-    "sharp": "^0.20.0",
+    "sharp": "^0.20.1",
     "stylelint": "^9.1.3",
     "stylelint-config-sass-guidelines": "^5.0.0",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^2.5.0",
     "stylelint-selector-bem-pattern": "^2.0.0",
     "uglify-es": "^3.3.9",
-    "uglify-js": "^3.3.15",
+    "uglify-js": "^3.3.16",
     "uglifyify": "^4.0.5",
     "uncss": "^0.16.2"
   },

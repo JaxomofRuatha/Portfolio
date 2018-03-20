@@ -8,7 +8,9 @@
       "charset",
       "mixin",
       "media",
-      "content"
+      "content",
+      "return",
+      "function"
     ],
     "plugin/selector-bem-pattern": {
       "preset": "bem",

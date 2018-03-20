@@ -6,7 +6,7 @@ const pugRenderer = pug.compileFile('src/view/index.pug', {
   pretty: true
 });
 
-fs.readFile('src/docs/viewdata.json', 'utf8', (err, data) => {
+fs.readFile('src/view/viewdata.json', 'utf8', (err, data) => {
   const locals = { viewData: JSON.parse(data) };
   const html = pugRenderer(locals);
 
