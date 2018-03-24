@@ -1,13 +1,16 @@
+import SimpleBar from 'simplebar';
+const raf = require('raf').polyfill;
+
+raf();
+
 function tabsSelect(parent, tab, content) {
   document.querySelector(`.${parent}`).addEventListener('click', e => {
     const targetContent = document.querySelector(e.target.dataset.target);
     const priorActive = document.querySelector(`.${tab}--active`).dataset
       .target;
-    console.log('event', e);
 
     document.querySelectorAll(`.${tab}`).forEach(a => {
       a.classList.remove(`${tab}--active`);
-      console.log('tab', a);
     });
 
     e.target.classList.add(`${tab}--active`);

@@ -24,10 +24,10 @@ each project, i in projectList
     figure(class="project-view__thumb" data-group=project.group)
       article(class="project-view__desc")
         each pg in project.description
-          p= pg
-  nav(class=(i === 0 ? "project-view__links" : "project-view__links  project-view__links--active") data-group=project.group + "-" + i)
+          p=pg
+  nav(class=(i === 0 ? "project-view__links  project-view__links--active" : "project-view__links") data-group=project.group + "-" + i)
     a(class="project-view__code" href=project.code) Code
     a(class="project-view__demo" href=project.demo) Demo
-  footer(class=(i === 0 ? "project-view__tech" : "project-view__tech project-view__tech--active"))
+  footer(class=(i === 0 ? "project-view__tech project-view__tech--active" : "project-view__tech"))
     each tech in project.techs
       span=tech

@@ -1,10 +1,17 @@
+/*
+*   Informational, non-skill article of Profile section.
+*/
+
 .profile-info {
+  max-width: 100%;
+
   p {
     padding: 0 2rem;
     text-align: left;
   }
 }
 
+// Navigation component
 .profile-info__menu {
   @include flex-cent-c;
   border-right: 1px solid $icon-purple;
@@ -15,12 +22,12 @@
   }
 }
 
-.profile-info__content {
-  opacity: 0;
-}
-
 .profile-info__tab--active {
   color: $aqua;
+}
+
+.profile-info__content {
+  opacity: 0;
 }
 
 .profile-info__content--visible {
