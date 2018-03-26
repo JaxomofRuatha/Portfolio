@@ -17,8 +17,11 @@
   border-right: 1px solid $icon-purple;
 
   a {
-    color: $white;
     padding: 1rem;
+  }
+
+  i {
+    pointer-events: none;
   }
 }
 

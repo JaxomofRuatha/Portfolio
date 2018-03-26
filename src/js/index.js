@@ -4,23 +4,32 @@ const raf = require('raf').polyfill;
 raf();
 
 function tabsSelect(parent, tab, content) {
+  // Attach an event listener to the containing nav element
   document.querySelector(`.${parent}`).addEventListener('click', e => {
-    const targetContent = document.querySelector(e.target.dataset.target);
+    // The content element to be displayed
+    const targetContent = document.querySelector(`#${e.target.dataset.target}`);
+
+    // The currently active content group
     const priorActive = document.querySelector(`.${tab}--active`).dataset
       .target;
 
+    console.log(targetContent, priorActive);
+    console.log(e);
+
+    // Remove the active modifier from any active tab element
     document.querySelectorAll(`.${tab}`).forEach(a => {
       a.classList.remove(`${tab}--active`);
     });
 
+    // Add the active modifier to the target of click event
     e.target.classList.add(`${tab}--active`);
 
     if (
       e.target.tagName === 'A' &&
-      document.querySelector(priorActive) !== targetContent
+      document.querySelector(`#${priorActive}`) !== targetContent
     ) {
       document
-        .querySelector(priorActive)
+        .querySelector(`#${priorActive}`)
         .classList.remove(`${content}--visible`);
       setTimeout(() => {
         targetContent.classList.add(`${content}--visible`);

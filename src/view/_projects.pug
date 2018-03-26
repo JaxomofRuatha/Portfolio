@@ -19,15 +19,15 @@ article(class="project-view")
           if project.group === "wip"
             li
               a(data-target=project.group + "-" + i) #{project.title}
-each project, i in projectList
-  section(class=(i === 0 ? "project-view__tile project-view__tile--active" : "project-view__tile") data-group=project.group + "-" + i)
-    figure(class="project-view__thumb" data-group=project.group)
+  each project, i in projectList
+    section(class=(i === 0 ? "project-view__tile project-view__tile--active" : "project-view__tile") data-group=project.group + "-" + i)
+      figure(class="project-view__thumb" data-group=project.group style="background-image:url('" + project.image +"')")
       article(class="project-view__desc")
         each pg in project.description
           p=pg
-  nav(class=(i === 0 ? "project-view__links project-view__links--active" : "project-view__links") data-group=project.group + "-" + i)
-    a(class="project-view__code" href=project.code) Code
-    a(class="project-view__demo" href=project.demo) Demo
-  footer(class=(i === 0 ? "project-view__tech project-view__tech--active" : "project-view__tech"))
-    each tech in project.techs
-      span=tech
+    nav(class=(i === 0 ? "project-view__links project-view__links--active" : "project-view__links") data-group=project.group + "-" + i)
+      a(class="project-view__code" href=project.code) Code
+      a(class="project-view__demo" href=project.demo) Demo
+    footer(class=(i === 0 ? "project-view__tech project-view__tech--active" : "project-view__tech") data-group=project.group + "-" + i)
+      each tech in project.techs
+        span=tech

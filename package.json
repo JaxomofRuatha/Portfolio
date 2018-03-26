@@ -14,21 +14,24 @@
   },
   "homepage": "https://jchritton.github.io/Portfolio/",
   "scripts": {
-    "start": "run-p compile bs watch",
+    "start": "run-p --silent compile bs watch",
     "test": "mocha",
     "compile": "run-p pug sass js",
     "watch": "run-p watch:**",
     "build": "run-p build:**",
-    "bs": "browser-sync start -s 'public' --files 'public/index.html' 'public/css/style.css' 'public/bundle.js'",
+    "bs":
+      "browser-sync start -s 'public' --files 'public/index.html' 'public/css/style.css' 'public/bundle.js'",
     "js": "node src/scripts/compile-js.js",
     "pug": "node src/scripts/pug.js",
     "sass": "node src/scripts/sass.js",
     "watch:pug": "chokidar 'src/view/**/*.pug' -c 'npm run pug'",
     "watch:sass": "chokidar 'src/sass/**/*.scss' -c 'npm run sass'",
     "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run js'",
-    "build:js": "browserify src/js/index.js -o dist/js/bundle.js -t [ babelify --presets ['env'] ] -t [ uglifyify -cm ]",
+    "build:js":
+      "browserify src/js/index.js -o dist/js/bundle.js -t [ babelify --presets ['env'] ] -t [ uglifyify -cm ]",
     "build:pug": "pug --output-style compressed -o dist src/view/index.pug",
-    "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css"
+    "build:sass":
+      "node-sass src/sass/style.scss --output-style compressed -o dist/css"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
