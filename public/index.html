@@ -48,7 +48,7 @@
       </article>
       <article class="l-content-section profile-info">
         <nav class="profile-info__menu"><a class="profile-info__tab profile-info__tab--active" data-target="#summary"><i class="fas fa-address-card fa-2x fa-fw"></i></a><a class="profile-info__tab" data-target="#education"><i class="fas fa-book fa-2x fa-fw"></i></a><a class="profile-info__tab" data-target="#goals"><i class="fas fa-chart-line fa-2x fa-fw"></i></a><a class="profile-info__tab" data-target="#bonus"><i class="fas fa-heartbeat fa-2x fa-fw"></i></a><a href="../docs/John_Chritton_Resume.pdf"><i class="fa fa-file-pdf fa-2x fa-fw"></i></a></nav>
-        <section class="profile-info__content--visible" id="summary">
+        <section class="profile-info__content profile-info__content--visible" id="summary">
           <h1 class="section-heading">Profile and Direction</h1>
           <p>I am very excited to bring my vision and passion to life through detailed and responsive web development projects aimed to inspire. My background in psychology and gift for creating simple yet pleasurable user experiences brings a unique approach to applications.</p>
           <p>I have intentionally varied my utilization of frameworks and tools to better understand the best technology for each situation. My primary focus has been on React and Redux, with related libraries. I am working to master React Native currently to allow a fully immersive user experience no matter what their platform.</p>
@@ -93,7 +93,7 @@
           </nav>
         </header>
       </article>
-      <section class="project-view project-view__tile--active" data-group="live-0">
+      <section class="project-view__tile project-view__tile--active" data-group="live-0">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>This page has been through several significant refactorings, but it started out as a project using purely HTML and CSS with Flexbox. In the various versions, I've taken the opportunity to apply knowledge gained to make it a better example of best practices in web development.</p>
@@ -101,10 +101,10 @@
           </article>
         </figure>
       </section>
-      <nav class="project-view__links  project-view__links--active" data-group="live-0"><a class="project-view__code" href="https://github.com/jchritton/Portfolio">Code</a><a class="project-view__demo" href="https://jchritton.github.io/Portfolio">Demo</a></nav>
+      <nav class="project-view__links project-view__links--active" data-group="live-0"><a class="project-view__code" href="https://github.com/jchritton/Portfolio">Code</a><a class="project-view__demo" href="https://jchritton.github.io/Portfolio">Demo</a></nav>
       <footer class="project-view__tech project-view__tech--active"><span>JavaScript</span><span>Pug</span><span>CSS Grid</span><span>SCSS</span><span>NPM Scripts</span>
       </footer>
-      <section class="project-view" data-group="live-1">
+      <section class="project-view__tile" data-group="live-1">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>An application fulfilling the user stories from the Free Code Camp front end project &quot;Build a Random Quote Machine.&quot; I chose to make this open-ended project my introduction to using the React framework.</p>
@@ -115,7 +115,7 @@
       <nav class="project-view__links" data-group="live-1"><a class="project-view__code" href="https://github.com/jchritton/jc-quote">Code</a><a class="project-view__demo" href="https://jchritton.github.io/jc-quote">Demo</a></nav>
       <footer class="project-view__tech"><span>React</span><span>styled-components</span><span>REST API/AJAX</span>
       </footer>
-      <section class="project-view" data-group="live-2">
+      <section class="project-view__tile" data-group="live-2">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>This application began as the fulfillment of user stories for the &quot;Build a Weather App&quot; project on Free Code Camp, but has turned into my primary sandbox for learning React design patterns. I've employed two third-party open source components, one of which I contributed to on Github (react-weather-icons), in addition to revising the handling of each piece of the applciation many times as I learned more.</p>
@@ -126,7 +126,7 @@
       <nav class="project-view__links" data-group="live-2"><a class="project-view__code" href="https://github.com/jchritton/jc-forecast">Code</a><a class="project-view__demo" href="https://jchritton.github.io/jc-forecast">Demo</a></nav>
       <footer class="project-view__tech"><span>React</span><span>react-router</span><span>REST API/AJAX</span><span>SCSS</span>
       </footer>
-      <section class="project-view" data-group="live-3">
+      <section class="project-view__tile" data-group="live-3">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>Five microservice Express applications that fulfill the user stories from the back end projects for Free Code Camp. The given examples and specifications only utilize URL parameters as the method of accessing the endpoint, but I also added a form in the view using the templating engine Pug for each microservice.</p>
@@ -136,7 +136,7 @@
       <nav class="project-view__links" data-group="live-3"><a class="project-view__code" href="https://github.com/jchritton/microservices-hub">Code</a><a class="project-view__demo" href="https://github.com/jchritton/microservices-hub">Demo</a></nav>
       <footer class="project-view__tech"><span>JavaScript</span><span>Node</span><span>Express</span><span>MongoDB</span><span>Pug</span>
       </footer>
-      <section class="project-view" data-group="live-4">
+      <section class="project-view__tile" data-group="live-4">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>A relatively simple application that takes input in the form of markdown text and transforms it to be previewed in a separate pane. I specifically went into the styling on Github's website to determine precisely how their Markdown looks and replicate it as closely as possible.</p>
@@ -147,7 +147,7 @@
       <nav class="project-view__links" data-group="live-4"><a class="project-view__code" href="https://github.com/jchritton/jc-markdown">Code</a><a class="project-view__demo" href="https://jchritton.github.io/jc-markdown">Demo</a></nav>
       <footer class="project-view__tech"><span>React</span><span>SCSS</span><span>NPM</span>
       </footer>
-      <section class="project-view" data-group="live-5">
+      <section class="project-view__tile" data-group="live-5">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>An application fulfilling the user stories from the Free Code Camp front end project &quot;Build a Wikipedia Viewer.&quot; To make this more educational, I used it as my introduction to Immutable.js, using it in combination with redux-saga and React Router.</p>
@@ -157,7 +157,7 @@
       <nav class="project-view__links" data-group="live-5"><a class="project-view__code" href="https://github.com/jchritton/jc-wikiviewer">Code</a><a class="project-view__demo" href="https://jchritton.github.io/jc-wikiviewer">Demo</a></nav>
       <footer class="project-view__tech"><span>React</span><span>Redux</span><span>redux-saga</span><span>Immutable.js</span><span>REST API/AJAX</span>
       </footer>
-      <section class="project-view" data-group="live-6">
+      <section class="project-view__tile" data-group="live-6">
         <figure class="project-view__thumb" data-group="live">
           <article class="project-view__desc">
             <p>The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary.</p>
@@ -167,7 +167,7 @@
       <nav class="project-view__links" data-group="live-6"><a class="project-view__code" href="https://github.com/jchritton/CS50/tree/master/pset5/speller">Code</a><a class="project-view__demo">Demo</a></nav>
       <footer class="project-view__tech"><span>C</span><span>Data Structures</span><span>Algorithms</span>
       </footer>
-      <section class="project-view" data-group="wip-7">
+      <section class="project-view__tile" data-group="wip-7">
         <figure class="project-view__thumb" data-group="wip">
           <article class="project-view__desc">
             <p>A complete rewrite of the production website bmorearoundtown.com, which currently uses jQuery, PHP, and a legacy version of MySQL. This infrastructure is no longer sufficient to support the growth of the site. I was brought in with one other developer to transition the build to React/Redux, Node with Express, and the latest version of MySQL.</p>
@@ -178,7 +178,7 @@
       <nav class="project-view__links" data-group="wip-7"><a class="project-view__code">Code</a><a class="project-view__demo" href="http://bmorearoundtown.com/">Demo</a></nav>
       <footer class="project-view__tech"><span>Node</span><span>Express</span><span>MySQL</span><span>Sequelize</span><span>React/Redux</span>
       </footer>
-      <section class="project-view" data-group="wip-8">
+      <section class="project-view__tile" data-group="wip-8">
         <figure class="project-view__thumb" data-group="wip">
           <article class="project-view__desc">
             <p>Mettaton.</p>
@@ -188,7 +188,7 @@
       <nav class="project-view__links" data-group="wip-8"><a class="project-view__code" href="https://github.com/jchritton/jc-calculator">Code</a><a class="project-view__demo" href="https://jchritton.github.io/jc-calculator">Demo</a></nav>
       <footer class="project-view__tech"><span>Angular 5</span><span>TypeScript</span><span>Karma/Protractor</span>
       </footer>
-      <section class="project-view" data-group="wip-9">
+      <section class="project-view__tile" data-group="wip-9">
         <figure class="project-view__thumb" data-group="wip">
           <article class="project-view__desc">
             <p>A voting application that allows for various styles of votes, including round-robin, single elimination, and simple straw polls. The very basic seed of this project came from the Free Code Camp back end project to &quot;Build a Voting App.&quot; What I chose to do with it is put into use every technology and tool I have learned, and create a much more interesting and versatile end product.</p>
@@ -198,7 +198,7 @@
       <nav class="project-view__links" data-group="wip-9"><a class="project-view__code" href="https://github.com/jchritton/jc-voting">Code</a><a class="project-view__demo">Demo</a></nav>
       <footer class="project-view__tech"><span>React/Redux</span><span>Docker</span><span>MongoDB</span><span>D3</span><span>GraphQL</span><span>Node/Express</span>
       </footer>
-      <section class="project-view" data-group="wip-10">
+      <section class="project-view__tile" data-group="wip-10">
         <figure class="project-view__thumb" data-group="wip">
           <article class="project-view__desc">
             <p>A full stack application for keeping track of recipes and what ingredients are needed at the store.</p>
