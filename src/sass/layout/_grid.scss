@@ -39,29 +39,28 @@
 }
 
 /*
-* skills block
+*   skills block
 */
 
 .skills {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 7rem 1fr;
+  grid-template-rows: 1fr max-content 1fr;
 }
 
 .skills__view {
-  align-items: start;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 7rem);
   justify-content: center;
 }
 
 .skills__group {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 1;
   justify-content: center;
+  align-content: center;
 }
 
 .skills__menu {
