@@ -1,4 +1,3 @@
-import SimpleBar from 'simplebar';
 const raf = require('raf').polyfill;
 
 raf();
@@ -12,9 +11,6 @@ function tabsSelect(parent, tab, content) {
     // The currently active content group
     const priorActive = document.querySelector(`.${tab}--active`).dataset
       .target;
-
-    console.log(targetContent, priorActive);
-    console.log(e);
 
     // Remove the active modifier from any active tab element
     document.querySelectorAll(`.${tab}`).forEach(a => {
