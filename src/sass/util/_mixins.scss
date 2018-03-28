@@ -1,3 +1,20 @@
+@mixin flex-cent-r() {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-cent-c() {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*
+*    Media query mixins
+*/
+
 // Mobile sized
 @mixin xs() {
   @media screen and (max-width: 475px) {
@@ -31,17 +48,4 @@
   @media screen and (min-width: 1600px) {
     @content;
   }
-}
-
-@mixin flex-cent-r() {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-@mixin flex-cent-c() {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

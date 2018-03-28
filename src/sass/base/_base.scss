@@ -1,8 +1,16 @@
+/*
+*    Default base styles for elements
+*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   outline: none;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -17,9 +25,8 @@ a {
   text-decoration: none;
 }
 
-footer {
-  background: $dark-indigo;
-  text-align: center;
+ul {
+  list-style: none;
 }
 
 input[type='checkbox'] {

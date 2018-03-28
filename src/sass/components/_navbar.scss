@@ -1,0 +1,54 @@
+/*
+*    Primary responsive navigation bar component
+*/
+
+.navbar {
+  background: $dark-indigo;
+  border-bottom: 1px solid $icon-purple;
+  transition: transform 0.4s;
+}
+
+.navbar__logo {
+  padding: 0 1rem;
+}
+
+.navbar__links {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.3s;
+  position: absolute;
+  right: 3rem;
+  top: -0.3rem;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.navbar__anchor {
+  padding: 1rem;
+
+  &:hover,
+  :active {
+    color: $aqua;
+  }
+}
+
+/* Mobile menu toggle button */
+
+.navbar__toggle {
+  padding: 0 1rem;
+}
+
+#navbar__mobile {
+  &:checked ~ .navbar__links {
+    transform: scaleX(1);
+  }
+
+  &:checked ~ .socialicons {
+    transform: scaleY(1);
+  }
+}
+
+input[type='checkbox']:checked ~ .navbar__toggle i {
+  transition: color 0.3s;
+  color: $yellow;
+}

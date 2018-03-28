@@ -1,5 +1,5 @@
 /*
-* navbar block
+*   navbar component (components/_navbar.scss)
 */
 
 .navbar {
@@ -22,7 +22,7 @@
 }
 
 /*
-* welcome block
+*   welcome module (modules/_welcome.scss)
 */
 
 .welcome {
@@ -30,7 +30,11 @@
   grid-template-rows: 1fr max-content 1fr;
 }
 
-.welcome__banner {
+/*
+*   title-banner component (components/_title-banner.scss)
+*/
+
+.title-banner {
   grid-row: 2;
 }
 

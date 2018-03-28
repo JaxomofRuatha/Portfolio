@@ -1,20 +1,28 @@
+/*
+*    Sidebar social icon navigation component
+*/
+
 .socialicons {
   @include flex-cent-c;
   background: $dark-indigo;
   border: 1px solid $icon-purple;
+  border-right: none;
+  border-top: none;
   border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
   padding: 0 0.5rem;
   position: fixed;
   right: 0;
-  top: 35vh;
   z-index: 10;
+  top: 2.5rem;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
 }
 
 .socialicons__link {
   color: $icon-purple;
   flex: 1;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding: 0.7rem 0;
   transition: transform 0.3s;
 
@@ -22,16 +30,5 @@
   :active {
     color: $white;
     transform: scale(1.05);
-  }
-}
-
-@include sm {
-  .socialicons {
-    border-top: none;
-    border-top-left-radius: 0;
-    top: 2.45rem;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.3s;
   }
 }
