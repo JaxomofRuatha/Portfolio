@@ -11,16 +11,14 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato")
         link(rel="stylesheet" type="text/css" href="css/style.css")
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-        
-        // script FontAwesomeConfig = {searchPseudoElements: true}
-        // script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+
     body
         include ./_navbar.pug
         include ./_welcome.pug
         section#profile
             include ./_skilltabs.pug
             include ./_profile.pug
-        section(id="projects" class="projects-container")
+        section(id="projects" class="l-content-section projects")
             include ./_projects.pug
         section#contact(class="l-content-section contact-info")
             include ./_contact.pug

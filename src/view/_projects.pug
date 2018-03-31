@@ -1,33 +1,33 @@
 - var projectList = viewData.projectList;
 
-article(class="project-view")
-  header(class="project-view__tabs")
-    nav(class="project-view__nav")
-      input(id="live-menu" type="checkbox")
-      label(for="live-menu" class="project-view__toggle") Live Projects
-      ul(class="project-view__menu")
-        each project, i in projectList
-          if project.group === "live"
-            li
-              a(data-target=project.group + "-" + i) #{project.title}
-    h1(class="project-view__title") Portfolio
-    nav(class="project-view__nav")
-      input(id="wip-menu" type="checkbox")
-      label(for="wip-menu" class="project-view__toggle") In Development
-      ul(class="project-view__menu")
-        each project, i in projectList
-          if project.group === "wip"
-            li
-              a(data-target=project.group + "-" + i) #{project.title}
-  each project, i in projectList
-    section(class=(i === 0 ? "project-view__tile project-view__tile--active" : "project-view__tile") data-group=project.group + "-" + i)
-      figure(class="project-view__thumb" data-group=project.group style="background-image:url('" + project.image +"')")
-      article(class="project-view__desc")
-        each pg in project.description
-          p=pg
-    nav(class=(i === 0 ? "project-view__links project-view__links--active" : "project-view__links") data-group=project.group + "-" + i)
-      a(class="project-view__code" href=project.code) Code
-      a(class="project-view__demo" href=project.demo) Demo
-    footer(class=(i === 0 ? "project-view__tech project-view__tech--active" : "project-view__tech") data-group=project.group + "-" + i)
-      each tech in project.techs
-        span=tech
+header(class="projects__tabs")
+  nav(class="projects__nav")
+    input(id="live-menu" type="checkbox")
+    label(for="live-menu" class="projects__toggle") Live Projects
+    ul(class="projects__menu")
+      each project, i in projectList
+        if project.group === "live"
+          li
+            a(data-target=project.group + "-" + i) #{project.title}
+  nav(class="projects__nav")
+    input(id="wip-menu" type="checkbox")
+    label(for="wip-menu" class="projects__toggle") In Development
+    ul(class="projects__menu")
+      each project, i in projectList
+        if project.group === "wip"
+          li
+            a(data-target=project.group + "-" + i) #{project.title}
+h1(class="projects__title") Portfolio
+each project, i in projectList
+  article(class=(i === 0 ? "projects__tile projects__tile--active" : "projects__tile") data-group=project.group + "-" + i)
+    figure(class="projects__thumb" data-group=project.group style="background-image:url('" + project.image +"')")
+    div(class="projects__desc")
+      each pg in project.description
+        p=pg
+each project, i in projectList
+  nav(class=(i === 0 ? "projects__links projects__links--active" : "projects__links") data-group=project.group + "-" + i)
+    a(class="projects__code" href=project.code) Code
+    a(class="projects__demo" href=project.demo) Demo
+  footer(class=(i === 0 ? "projects__tech projects__tech--active" : "projects__tech") data-group=project.group + "-" + i)
+    each tech in project.techs
+      span=tech

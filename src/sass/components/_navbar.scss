@@ -47,8 +47,3 @@
     transform: scaleY(1);
   }
 }
-
-input[type='checkbox']:checked ~ .navbar__toggle i {
-  transition: color 0.3s;
-  color: $yellow;
-}

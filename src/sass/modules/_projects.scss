@@ -1,36 +1,22 @@
-.projects-container {
-  height: 75vh;
-  margin: 2rem 3.5rem;
-}
-
-.project-view {
-  height: 100%;
-  margin: 0;
+.projects { 
   position: relative;
-  transition: opacity 1s;
-  width: 100%;
 }
 
-.project-view__tabs {
+.projects__tabs {
   background: $slate;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   display: flex;
-  justify-content: space-around;
-  max-height: 3rem;
+  justify-content: space-between;
 }
 
-.project-view__nav {
+.projects__nav {
   @include flex-cent-c;
   position: relative;
-  width: 15rem;
+  width: 10rem;
 }
 
-.project-view__toggle {
-  background: transparent;
+.projects__toggle {
   border: none;
   border-bottom: 1px solid $yellow;
-  color: $white;
   cursor: pointer;
   font-size: 1.4rem;
   padding-bottom: 0.5rem;
@@ -39,7 +25,7 @@
   width: 100%;
 }
 
-.project-view__menu {
+.projects__menu {
   box-shadow: 3px 3px lighten($slate, 20%);
   position: absolute;
   text-align: left;
@@ -65,13 +51,13 @@
   }
 }
 
-.project-view__title {
+.projects__title {
   color: $icon-purple;
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding: 0.5rem;
   text-shadow: 2px 2px $indigo;
 }
 
-input[type='checkbox']:checked ~ .project-view__menu {
+input[type='checkbox']:checked ~ .projects__menu {
   transform: scaleY(1);
 }

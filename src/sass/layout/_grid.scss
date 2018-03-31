@@ -71,7 +71,7 @@
 }
 
 /*
-* profile block
+*   profile block
 */
 
 .profile-info {
@@ -91,49 +91,52 @@
 }
 
 /*
-* projects-container > project-view block
+*   projects block
 */
 
-.project-view {
+.projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 85% 1fr;
+  height: 100vh;
+  grid-template-rows: 3rem max-content 1fr 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "header header header header"
+    "title title title title"
+    "tile tile tile tile"
+    "links links tech tech";
 }
 
-.project-view__tabs {
+.projects__tabs {
   grid-area: header;
-  grid-column: 1 / -1;
-  grid-row: 1;
 }
 
-.project-view__tile {
+.projects__title {
+  grid-area: title;
+}
+
+.projects__tile {
   display: grid;
   grid-area: tile;
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-  grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  grid-template-rows: 40% 60%;
+  grid-template-areas:
+    "thumb thumb thumb"
+    "desc desc desc";
 }
 
-.project-view__thumb {
-  grid-column: 1;
+.projects__thumb {
+  grid-area: thumb;
 }
 
-.project-view__desc {
-  grid-column: 2;
+.projects__desc {
+  grid-area: desc;
 }
 
-.project-view__links {
-  display: grid;
-  grid-area: footer;
-  grid-auto-flow: column;
-  grid-column: 1;
-  grid-row: 3;
+.projects__links {
+  grid-area: links;
 }
 
-.project-view__tech {
-  grid-column: 2;
-  grid-row: 3;
+.projects__tech {
+  grid-area: tech;
 }
 
 /*

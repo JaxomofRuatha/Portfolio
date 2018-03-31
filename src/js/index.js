@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'profile-info__content'
   );
 
-  document.querySelectorAll('.project-view__menu').forEach(tabs => {
+  document.querySelectorAll('.projects__menu').forEach(tabs => {
     tabs.addEventListener('click', e => {
       const targetGroup = e.target.dataset.target;
       const newActive = document.querySelectorAll(
@@ -55,22 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Change the title of the viewer
 
-      document.querySelector('.project-view__title').innerHTML =
-        e.target.innerHTML;
+      document.querySelector('.projects__title').innerHTML = e.target.innerHTML;
 
       // Hide previously visible group content
 
-      const priorTile = document.querySelector('.project-view__tile--active');
+      const priorTile = document.querySelector('.projects__tile--active');
       if (priorTile) {
-        priorTile.classList.remove('project-view__tile--active');
+        priorTile.classList.remove('projects__tile--active');
       }
-      const priorLinks = document.querySelector('.project-view__links--active');
+      const priorLinks = document.querySelector('.projects__links--active');
       if (priorLinks) {
-        priorLinks.classList.remove('project-view__links--active');
+        priorLinks.classList.remove('projects__links--active');
       }
-      const priorTech = document.querySelector('.project-view__tech--active');
+      const priorTech = document.querySelector('.projects__tech--active');
       if (priorTech) {
-        priorTech.classList.remove('project-view__tech--active');
+        priorTech.classList.remove('projects__tech--active');
       }
 
       // Unhide selected group content

@@ -1,25 +1,25 @@
-.project-view__tile {
+.projects__tile {
   background: $dark-glass;
   opacity: 0;
-  position: absolute;
 }
 
-.project-view__thumb {
+.projects__thumb {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
+  height: 12rem;
 }
 
-.project-view__links {
+.projects__links {
   @include flex-cent-r;
   background: $slate;
   border-bottom-left-radius: 10px;
   display: none;
 }
 
-.project-view__code,
-.project-view__demo {
+.projects__code,
+.projects__demo {
   align-items: center;
   color: $white;
   padding: 0.5rem;
@@ -30,21 +30,21 @@
   }
 }
 
-.project-view__code:before {
-  content: '\f09b';
+.projects__code:before {
+  content: '\f09b  ';
   font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   white-space: pre;
 }
 
-.project-view__demo:before {
-  content: '\f085';
+.projects__demo:before {
+  content: '\f085  ';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   white-space: pre;
 }
 
-.project-view__tech {
+.projects__tech {
   align-items: center;
   background: $slate;
   border-bottom-right-radius: 10px;
@@ -60,7 +60,7 @@
   }
 }
 
-.project-view__desc {
+.projects__desc {
   margin: 2rem;
   text-align: center;
 
@@ -70,63 +70,63 @@
   }
 }
 
-.project-view__tile--active,
-.project-view__tech--active {
+.projects__tile--active,
+.projects__tech--active {
   opacity: 1;
 }
 
-.project-view__links--active {
+.projects__links--active {
   display: grid;
 }
 
-.project-view__thumb[data-group='live-1'] {
+.projects__thumb[data-group='live-1'] {
   background-image: url('../images/thumbnails/portfoliothumb.png');
 }
 
-.project-view__thumb[data-group='live-2'] {
+.projects__thumb[data-group='live-2'] {
   background-image: url('../images/thumbnails/quotethumb.JPG');
 }
 
-.project-view__thumb[data-group='live-3'] {
+.projects__thumb[data-group='live-3'] {
   background-image: url('../images/thumbnails/weatherthumb.png');
 }
 
-.project-view__thumb[data-group='live-4'] {
+.projects__thumb[data-group='live-4'] {
   background-image: url('../images/thumbnails/expressmicrothumb.png');
 }
 
-.project-view__thumb[data-group='live-5'] {
+.projects__thumb[data-group='live-5'] {
   background-image: url('../images/thumbnails/markdownthumb.png');
 }
 
-.project-view__thumb[data-group='live-6'] {
+.projects__thumb[data-group='live-6'] {
   background-image: url('../images/thumbnails/wikithumb.png');
 }
 
-.project-view__thumb[data-group='live-7'] {
+.projects__thumb[data-group='live-7'] {
   background-image: url('../images/thumbnails/spellerthumb.jpg');
 }
 
-.project-view__thumb[data-group='wip-1'] {
+.projects__thumb[data-group='wip-1'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-.project-view__thumb[data-group='wip-2'] {
+.projects__thumb[data-group='wip-2'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-.project-view__thumb[data-group='wip-3'] {
+.projects__thumb[data-group='wip-3'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-.project-view__thumb[data-group='wip-4'] {
+.projects__thumb[data-group='wip-4'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-.project-view__thumb[data-group='wip-5'] {
+.projects__thumb[data-group='wip-5'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
 
-.project-view__thumb[data-group='wip-6'] {
+.projects__thumb[data-group='wip-6'] {
   background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
 }
