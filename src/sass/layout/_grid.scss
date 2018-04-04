@@ -1,6 +1,8 @@
 /*
-*   navbar component (components/_navbar.scss)
+*   CSS Grid style definitions
 */
+
+// navbar component (components/_navbar.scss)
 
 .navbar {
   align-items: center;
@@ -21,26 +23,20 @@
   grid-column: 3 / -1;
 }
 
-/*
-*   welcome module (modules/_welcome.scss)
-*/
+// welcome module (modules/_welcome.scss)
 
 .welcome {
   display: grid;
   grid-template-rows: 1fr max-content 1fr;
 }
 
-/*
-*   title-banner component (components/_title-banner.scss)
-*/
+// title-banner component (components/_title-banner.scss)
 
 .title-banner {
   grid-row: 2;
 }
 
-/*
-*   skills block
-*/
+// skills component (components/_skills.scss)
 
 .skills {
   display: grid;
@@ -70,9 +66,7 @@
   grid-template-columns: repeat(auto-fit, minmax(max-content, 25%));
 }
 
-/*
-*   profile block
-*/
+// profile module (modules/profile.scss)
 
 .profile-info {
   display: grid;
@@ -90,9 +84,7 @@
   grid-row: 1 / -1;
 }
 
-/*
-*   projects block
-*/
+// projects module (modules/_projects.scss)
 
 .projects {
   display: grid;
@@ -139,9 +131,7 @@
   grid-area: tech;
 }
 
-/*
-* contact-info block
-*/
+// contact module (modules/_contact.scss)
 
 .contact-info {
   align-items: center;
