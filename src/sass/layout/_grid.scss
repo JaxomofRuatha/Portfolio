@@ -89,13 +89,14 @@
 .projects {
   display: grid;
   height: 100vh;
-  grid-template-rows: 3rem max-content 1fr 3rem;
+  grid-template-rows: 3rem max-content 1fr 3rem max-content;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     "title title title title"
     "tile tile tile tile"
-    "links links tech tech";
+    "tech tech tech tech"
+    "links links links links";
 }
 
 .projects__tabs {
@@ -109,7 +110,7 @@
 .projects__tile {
   display: grid;
   grid-area: tile;
-  grid-template-rows: 40% 60%;
+  grid-template-rows: 35% 1fr;
   grid-template-areas:
     "thumb thumb thumb"
     "desc desc desc";

@@ -8,6 +8,15 @@
   justify-content: space-between;
 }
 
+.projects__title {
+  color: $icon-purple;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-shadow: 2px 2px $indigo;
+}
+
+// Styles for dropdown tabs
+
 .projects__nav {
   @include flex-cent-c;
   position: relative;
@@ -46,18 +55,14 @@
 
     &:hover {
       background: $yellow;
-      color: $slate;
+
+      a {
+        color: $slate;
+      }
     }
   }
 }
 
-.projects__title {
-  color: $icon-purple;
-  font-size: 2rem;
-  padding: 0.5rem;
-  text-shadow: 2px 2px $indigo;
-}
-
-input[type='checkbox']:checked ~ .projects__menu {
+input[type="checkbox"]:checked ~ .projects__menu {
   transform: scaleY(1);
 }

@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
-  height: 12rem;
+  height: 100%;
 }
 
 .projects__links {
@@ -31,25 +31,24 @@
 }
 
 .projects__code:before {
-  content: '\f09b  ';
-  font-family: 'Font Awesome 5 Brands';
+  content: "\f09b  ";
+  font-family: "Font Awesome 5 Brands";
   font-weight: 400;
   white-space: pre;
 }
 
 .projects__demo:before {
-  content: '\f085  ';
-  font-family: 'Font Awesome 5 Free';
+  content: "\f085  ";
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
   white-space: pre;
 }
 
 .projects__tech {
+  flex-wrap: nowrap;
   align-items: center;
-  background: $slate;
   border-bottom-right-radius: 10px;
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-around;
   opacity: 0;
 
@@ -61,7 +60,6 @@
 }
 
 .projects__desc {
-  margin: 2rem;
   text-align: center;
 
   p {
@@ -76,57 +74,5 @@
 }
 
 .projects__links--active {
-  display: grid;
-}
-
-.projects__thumb[data-group='live-1'] {
-  background-image: url('../images/thumbnails/portfoliothumb.png');
-}
-
-.projects__thumb[data-group='live-2'] {
-  background-image: url('../images/thumbnails/quotethumb.JPG');
-}
-
-.projects__thumb[data-group='live-3'] {
-  background-image: url('../images/thumbnails/weatherthumb.png');
-}
-
-.projects__thumb[data-group='live-4'] {
-  background-image: url('../images/thumbnails/expressmicrothumb.png');
-}
-
-.projects__thumb[data-group='live-5'] {
-  background-image: url('../images/thumbnails/markdownthumb.png');
-}
-
-.projects__thumb[data-group='live-6'] {
-  background-image: url('../images/thumbnails/wikithumb.png');
-}
-
-.projects__thumb[data-group='live-7'] {
-  background-image: url('../images/thumbnails/spellerthumb.jpg');
-}
-
-.projects__thumb[data-group='wip-1'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
-}
-
-.projects__thumb[data-group='wip-2'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
-}
-
-.projects__thumb[data-group='wip-3'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
-}
-
-.projects__thumb[data-group='wip-4'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
-}
-
-.projects__thumb[data-group='wip-5'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
-}
-
-.projects__thumb[data-group='wip-6'] {
-  background-image: url('http://via.placeholder.com/320x200?text=Preview+coming+soon!');
+  display: flex;
 }
