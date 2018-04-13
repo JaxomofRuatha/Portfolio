@@ -1,3 +1,7 @@
+/*
+*   Contact section
+*/
+
 .contact-info {
   position: relative;
 }
@@ -10,8 +14,6 @@
   align-items: flex-start;
   display: flex;
   flex-wrap: nowrap;
-  font-size: 1.5rem;
-  margin: 1rem -1rem;
 }
 
 .contact-info__email {
@@ -27,68 +29,33 @@
   flex: 1;
   font-size: 1.3rem;
   padding: 0.3rem 0.5rem;
-  position: relative;
-  transition: height 0.3s;
   width: 100%;
-
-  &:after {
-    color: $white;
-    content: 'Stuff';
-    display: none;
-    font-family: 'Lato';
-    font-size: 1rem;
-    white-space: pre;
-  }
-
-  &:hover::after {
-    display: block;
-  }
 
   .fa-github {
     color: #2dba4e;
-
-    &:after {
-      content: '  Github';
-    }
   }
 
   .fa-linkedin {
     color: #0077b5;
-
-    &:after {
-      content: '  LinkedIn';
-    }
   }
 
   .fa-twitter {
     color: #00aced;
-
-    &:after {
-      content: '  Twitter';
-    }
   }
 
   .fa-free-code-camp {
     color: #006400;
-
-    &:after {
-      content: '  Free Code Camp';
-    }
   }
 
   .fa-twitch {
     color: #6441a4;
-
-    &:after {
-      content: '  Twitch';
-    }
-  }
-
-  &:last-child {
-    border-top-right-radius: 10px;
   }
 }
 
-.contact-info__slug {
-  font-size: 2rem;
+.contact-info__desc {
+  background: red;
+}
+
+.contact-info__query {
+  font-size: 1.5rem;
 }

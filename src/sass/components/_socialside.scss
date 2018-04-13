@@ -2,7 +2,7 @@
 *    Sidebar social icon navigation component
 */
 
-.socialicons {
+.socialside {
   @include flex-cent-c;
   background: $dark-indigo;
   border: 1px solid $icon-purple;
@@ -19,7 +19,7 @@
   transition: transform 0.3s;
 }
 
-.socialicons__link {
+.socialside__link {
   color: $icon-purple;
   flex: 1;
   font-size: 1.8rem;

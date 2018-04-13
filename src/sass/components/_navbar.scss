@@ -3,13 +3,20 @@
 */
 
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   background: $dark-indigo;
   border-bottom: 1px solid $icon-purple;
   transition: transform 0.4s;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar__logo {
   padding: 0 1rem;
+  max-height: 2.5rem;
 }
 
 .navbar__links {
@@ -43,7 +50,7 @@
     transform: scaleX(1);
   }
 
-  &:checked ~ .socialicons {
+  &:checked ~ .socialside {
     transform: scaleY(1);
   }
 }

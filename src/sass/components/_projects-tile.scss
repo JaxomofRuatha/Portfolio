@@ -1,5 +1,8 @@
+/*
+*   Projects tile article (inner display for projects)
+*/
+
 .projects__tile {
-  background: $dark-glass;
   opacity: 0;
 }
 
@@ -11,10 +14,26 @@
   height: 100%;
 }
 
+.projects__desc {
+  text-align: justify;
+  text-indent: 2rem;
+}
+
+.projects__tech {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+
+  span {
+    color: $aqua;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+}
+
 .projects__links {
   @include flex-cent-r;
-  background: $slate;
-  border-bottom-left-radius: 10px;
   display: none;
 }
 
@@ -44,29 +63,7 @@
   white-space: pre;
 }
 
-.projects__tech {
-  flex-wrap: nowrap;
-  align-items: center;
-  border-bottom-right-radius: 10px;
-  display: flex;
-  justify-content: space-around;
-  opacity: 0;
-
-  span {
-    color: $aqua;
-    font-weight: bold;
-    padding: 0.5rem;
-  }
-}
-
-.projects__desc {
-  text-align: center;
-
-  p {
-    text-align: justify;
-    text-indent: 2rem;
-  }
-}
+// Styles for making active set visible
 
 .projects__tile--active,
 .projects__tech--active {

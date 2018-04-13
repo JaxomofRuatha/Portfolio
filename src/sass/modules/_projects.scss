@@ -1,5 +1,5 @@
 /*
-*   Projects display article (containing element for project-tile)
+*   Projects display section (containing element for project-tile)
 */
 
 .projects__tabs {
@@ -35,10 +35,10 @@
 }
 
 .projects__menu {
-  box-shadow: 3px 3px lighten($slate, 20%);
+  box-shadow: 2px 2px lighten($slate, 20%);
   position: absolute;
   text-align: left;
-  top: 87%;
+  top: 81%;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.2s;

@@ -1,19 +1,12 @@
 @charset "utf-8";
 
-$white: #fdfff7;
-$aqua: #59ffa0;
-$yellow: #ffed65;
-$slate: #1e1e1d;
-$icon-purple: #7063cc;
-$indigo: #151230;
-$dark-indigo: darken($indigo, 4%);
-$dark-glass: rgba(10, 10, 10, 0.4);
+@import "./util/variables";
 
-@import './base/reset';
-@import './base/typography';
-@import './util/mixins';
-@import './layout/grid';
-@import './base/base';
+@import "./base/reset";
+@import "./base/typography";
+@import "./util/mixins";
+@import "./base/base";
+@import "./layout/grid";
 
 .l-content-section {
   background: $slate;
@@ -23,12 +16,14 @@ $dark-glass: rgba(10, 10, 10, 0.4);
   text-align: center;
 }
 
-@import './components/navbar';
-@import './components/socialicons';
-@import './modules/welcome';
-@import './components/title-banner';
-@import './modules/skilltabs';
-@import './modules/profile';
-@import './modules/projects';
-@import './modules/project-tile';
-@import './modules/contact';
+@import "./components/navbar";
+@import "./components/socialside";
+@import "./modules/welcome";
+@import "./components/title-banner";
+@import "./modules/skills";
+@import "./components/skills-group";
+@import "./modules/profile";
+@import "./modules/projects";
+@import "./components/projects-tile";
+@import "./modules/contact";
+@import "./components/footer";

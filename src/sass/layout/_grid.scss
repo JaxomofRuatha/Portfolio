@@ -9,10 +9,6 @@
   display: grid;
   grid-template-columns: 15% 1fr max-content;
   grid-template-rows: 2.5rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
 }
 
 .navbar__logo {
@@ -88,7 +84,7 @@
 
 .projects {
   display: grid;
-  height: 100vh;
+  height: 90vh;
   grid-template-rows: 3rem max-content 1fr 3rem max-content;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
@@ -110,7 +106,7 @@
 .projects__tile {
   display: grid;
   grid-area: tile;
-  grid-template-rows: 35% 1fr;
+  grid-template-rows: 40% 1fr;
   grid-template-areas:
     "thumb thumb thumb"
     "desc desc desc";
@@ -141,17 +137,19 @@
   grid-template-rows: 2rem max-content;
 }
 
-.contact-info__social {
-  grid-column: 1 / -1;
-  grid-row: 1;
-}
-
 .contact-info__portrait {
   grid-column: 2;
   grid-row: 2;
 }
 
-.contact-info__slug {
+.contact-info__query {
   grid-column: 1;
   grid-row: 2;
+}
+
+// socialbot component (components/_socialbot.scss)
+
+.contact-info__social {
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
