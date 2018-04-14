@@ -8,21 +8,6 @@
   overflow: hidden;
 }
 
-.skills__group {
-  transition: transform 0.5s ease-in-out;
-  transform: translateY(100%);
-}
-
-.skills__group--visible {
-  transform: translateY(0%);
-}
-
-.skills__icon {
-  max-width: 6.5rem;
-  padding: 0.5rem;
-  flex: 33.33%;
-}
-
 .skills__menu {
   height: 2.5rem;
 }

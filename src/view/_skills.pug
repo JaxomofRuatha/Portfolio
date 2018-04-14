@@ -6,7 +6,7 @@ article(class="l-content-section skills")
     each skills, i in skillIcons
         section(class=(i === 0 ? "skills__group skills__group--visible" : "skills__group") id=skills.group)
             each icon in skills.icons
-                img(class="skills__icon" src=icon)
+                figure(class="skills__icon" style="background-image:url('" + icon +"')")
   nav(class="skills__menu")
       a(class="skills__tab skills__tab--active" data-target="web-dev") Web
       a(class="skills__tab" data-target="core-lang") Core

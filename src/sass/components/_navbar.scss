@@ -10,13 +10,12 @@
   background: $dark-indigo;
   border-bottom: 1px solid $icon-purple;
   transition: transform 0.4s;
-  display: flex;
-  justify-content: space-between;
 }
 
 .navbar__logo {
-  padding: 0 1rem;
   max-height: 2.5rem;
+  max-width: 100%;
+  padding: 0 0.2rem;
 }
 
 .navbar__links {

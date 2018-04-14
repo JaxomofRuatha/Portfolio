@@ -8,7 +8,7 @@
   align-items: center;
   display: grid;
   grid-template-columns: 15% 1fr max-content;
-  grid-template-rows: 2.5rem;
+  grid-template-rows: 3rem;
 }
 
 .navbar__logo {
@@ -134,7 +134,12 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr max-content;
-  grid-template-rows: 2rem max-content;
+  grid-template-rows: repeat(3, max-content);
+}
+
+.contact-info__title {
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 .contact-info__portrait {
@@ -142,7 +147,7 @@
   grid-row: 2;
 }
 
-.contact-info__query {
+.contact-info__desc {
   grid-column: 1;
   grid-row: 2;
 }
@@ -151,5 +156,5 @@
 
 .contact-info__social {
   grid-column: 1 / -1;
-  grid-row: 1;
+  grid-row: 3;
 }

@@ -2,34 +2,41 @@
 *   Contact section
 */
 
-.contact-info {
-  position: relative;
-}
-
 .contact-info__portrait {
   max-height: 10rem;
 }
 
 .contact-info__social {
-  align-items: flex-start;
+  align-items: flex-end;
   display: flex;
   flex-wrap: nowrap;
+  position: relative;
+  margin: 0 -1rem -1rem -1rem;
+}
+
+.contact-info__email,
+.contact-info__link {
+  background: $dark-indigo;
+  z-index: 2;
 }
 
 .contact-info__email {
-  background: $dark-indigo;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
   color: orangered;
-  padding: 1.3rem;
+  font-size: 1.5rem;
+  padding: 1.4rem;
+  &:hover {
+    background: orangered;
+    color: $dark-indigo;
+  }
 }
 
 .contact-info__link {
-  background: $dark-indigo;
   flex: 1;
   font-size: 1.3rem;
-  padding: 0.3rem 0.5rem;
   width: 100%;
+  padding: 0.5rem;
 
   .fa-github {
     color: #2dba4e;
@@ -53,7 +60,13 @@
 }
 
 .contact-info__desc {
-  background: red;
+  position: absolute;
+  height: 1rem;
+  right: 0;
+  bottom: 2rem;
+  width: 90%;
+  background: orangered;
+  z-index: 1;
 }
 
 .contact-info__query {
