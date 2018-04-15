@@ -13,9 +13,14 @@
 }
 
 .navbar__logo {
-  max-height: 2.5rem;
-  max-width: 100%;
   padding: 0 0.2rem;
+  max-width: 100%;
+}
+
+.navbar__menu {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
 }
 
 .navbar__links {
@@ -24,9 +29,9 @@
   transition: transform 0.3s;
   position: absolute;
   right: 3rem;
-  top: -0.3rem;
   transform: scaleX(0);
   transform-origin: right;
+  align-items: center;
 }
 
 .navbar__anchor {
@@ -41,7 +46,12 @@
 /* Mobile menu toggle button */
 
 .navbar__toggle {
-  padding: 0 1rem;
+  @include flex-cent-c;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #navbar__mobile {

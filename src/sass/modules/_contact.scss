@@ -6,69 +6,6 @@
   max-height: 10rem;
 }
 
-.contact-info__social {
-  align-items: flex-end;
-  display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-  margin: 0 -1rem -1rem -1rem;
-}
-
-.contact-info__email,
-.contact-info__link {
-  background: $dark-indigo;
-  z-index: 2;
-}
-
-.contact-info__email {
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: orangered;
-  font-size: 1.5rem;
-  padding: 1.4rem;
-  &:hover {
-    background: orangered;
-    color: $dark-indigo;
-  }
-}
-
-.contact-info__link {
-  flex: 1;
-  font-size: 1.3rem;
-  width: 100%;
-  padding: 0.5rem;
-
-  .fa-github {
-    color: #2dba4e;
-  }
-
-  .fa-linkedin {
-    color: #0077b5;
-  }
-
-  .fa-twitter {
-    color: #00aced;
-  }
-
-  .fa-free-code-camp {
-    color: #006400;
-  }
-
-  .fa-twitch {
-    color: #6441a4;
-  }
-}
-
-.contact-info__desc {
-  position: absolute;
-  height: 1rem;
-  right: 0;
-  bottom: 2rem;
-  width: 90%;
-  background: orangered;
-  z-index: 1;
-}
-
 .contact-info__query {
   font-size: 1.5rem;
 }

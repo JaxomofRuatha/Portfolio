@@ -5,7 +5,8 @@
 .title-banner {
   background: rgba(0, 0, 0, 0.6);
   padding: 1rem 0;
-  &__name, &__role {
+  &__name,
+  &__role {
     padding: 0.5rem 1rem;
   }
 }
@@ -19,5 +20,5 @@
 
 .title-banner__role {
   color: $white;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }

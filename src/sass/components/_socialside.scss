@@ -5,15 +5,14 @@
 .socialside {
   @include flex-cent-c;
   background: $dark-indigo;
-  border: 1px solid $icon-purple;
-  border-right: none;
-  border-top: none;
+  border-left: 1px solid $icon-purple;
+  border-bottom: 1px solid $icon-purple;
   border-bottom-left-radius: 15px;
   padding: 0 0.5rem;
   position: fixed;
   right: 0;
   z-index: 10;
-  top: 2.5rem;
+  top: 3rem;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.3s;

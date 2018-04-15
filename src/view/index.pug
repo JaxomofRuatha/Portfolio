@@ -13,15 +13,15 @@ html(lang="en")
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 
     body
-        include ./_navbar.pug
-        include ./_welcome.pug
+        include ./components/_navbar.pug
+        section#welcome-section.welcome
+            include ./components/_title-banner.pug
         section#profile
-            include ./_skills.pug
-            include ./_profile.pug
-        section(id="projects" class="l-content-section projects")
-            include ./_projects.pug
+            include ./modules/_skills.pug
+            include ./modules/_profile.pug
+        section#projects(class="l-content-section projects")
+            include ./modules/_projects.pug
         section#contact(class="l-content-section contact-info")
-            include ./_contact.pug
-        footer.footer
-            span #[small &copy;] 2018 John Chritton
+            include ./modules/_contact.pug
+        include ./components/_footer.pug
         script(type="text/javascript" src="js/bundle.js")

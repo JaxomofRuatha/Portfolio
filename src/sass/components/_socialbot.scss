@@ -1,0 +1,67 @@
+.socialbot {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -1rem -1rem -1rem;
+}
+
+.socialbot__email,
+.socialbot__link {
+  background: $dark-indigo;
+  z-index: 2;
+}
+
+.socialbot__email {
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: orangered;
+  font-size: 1.5rem;
+  padding: 1.4rem;
+  &:hover {
+    background: orangered;
+    color: $dark-indigo;
+  }
+}
+
+.socialbot__flex {
+  @include flex-cent-r;
+  position: relative;
+  width: 100%;
+}
+
+.socialbot__link {
+  flex: 1;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.5rem;
+
+  .fa-github {
+    color: #2dba4e;
+  }
+
+  .fa-linkedin {
+    color: #0077b5;
+  }
+
+  .fa-twitter {
+    color: #00aced;
+  }
+
+  .fa-free-code-camp {
+    color: #006400;
+  }
+
+  .fa-twitch {
+    color: #6441a4;
+  }
+}
+
+.socialbot__desc {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: orangered;
+  z-index: 1;
+}
