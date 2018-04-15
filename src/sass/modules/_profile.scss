@@ -4,21 +4,18 @@
 
 .profile-info {
   max-width: 100%;
-  transition: opacity 0.5s;
-
-  p {
-    padding: 0 2rem;
-    text-align: left;
-  }
 }
 
 // Navigation component
+
 .profile-info__menu {
   @include flex-cent-c;
   border-right: 1px solid $icon-purple;
 
   a {
     padding: 1rem;
+    width: 100%;
+    height: 100%;
   }
 
   i {
@@ -32,6 +29,8 @@
 
 .profile-info__content {
   opacity: 0;
+  transition: opacity 0.5s;
+  padding-left: 1rem;
 }
 
 .profile-info__content--visible {

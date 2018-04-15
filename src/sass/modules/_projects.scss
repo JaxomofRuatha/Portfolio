@@ -2,6 +2,10 @@
 *   Projects display section (containing element for project-tile)
 */
 
+.projects {
+  padding-top: 0;
+}
+
 .projects__tabs {
   background: $slate;
   display: flex;

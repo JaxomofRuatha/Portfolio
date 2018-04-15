@@ -4,6 +4,7 @@
 
 .projects__tile {
   opacity: 0;
+  padding: 1rem 0;
 }
 
 .projects__thumb {
@@ -15,9 +16,7 @@
 }
 
 .projects__desc {
-  text-align: justify;
   text-indent: 2rem;
-  background: $dark-indigo;
 }
 
 .projects__tech {
@@ -36,6 +35,7 @@
 .projects__links {
   @include flex-cent-r;
   display: none;
+  font-size: 1.2rem;
 }
 
 .projects__code,
@@ -51,20 +51,20 @@
 }
 
 .projects__code:before {
-  content: "\f09b  ";
+  content: "\f09b   ";
   font-family: "Font Awesome 5 Brands";
   font-weight: 400;
   white-space: pre;
 }
 
 .projects__demo:before {
-  content: "\f085  ";
+  content: "\f085   ";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   white-space: pre;
 }
 
-// Styles for making active set visible
+// Styles for making active group visible
 
 .projects__tile--active,
 .projects__tech--active {

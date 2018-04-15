@@ -54,6 +54,10 @@
   .fa-twitch {
     color: #6441a4;
   }
+
+  &:last-of-type {
+    border-bottom-right-radius: 10px;
+  }
 }
 
 .socialbot__desc {
@@ -64,4 +68,5 @@
   top: 0;
   background: orangered;
   z-index: 1;
+  border-bottom-right-radius: 10px;
 }
