@@ -1,11 +1,6 @@
+-var mainSocial = viewData.socialLinks.flex
+
 nav(class="socialside")
-    a(class="socialside__link" href="https://github.com/jchritton")
-        i(class="fab fa-github")
-    a(class="socialside__link" href="https://www.linkedin.com/in/john-w-chritton/")
-        i(class="fab fa-linkedin")
-    a(class="socialside__link" href="https://twitter.com/jaxwhitedragon")
-        i(class="fab fa-twitter")
-    a#profile-link(class="socialside__link" href="https://www.freecodecamp.com/jaxomofruatha")
-        i(class="fab fa-free-code-camp")
-    a(class="socialside__link" href="https://go.twitch.tv/jaxomofruatha")
-        i(class="fab fa-twitch")
+    each link, i in mainSocial
+        a(class="socialside__link" href=mainSocial.href)
+            i(class=link.icon)

@@ -81,15 +81,14 @@
 
 .projects {
   display: grid;
-  height: 95vh;
-  grid-template-rows: 3rem max-content 1fr 3rem max-content;
+  grid-template-rows: 3rem max-content 80% 3rem max-content;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "header header header header"
-    "title title title title"
-    "tile tile tile tile"
-    "tech tech tech tech"
-    "links links links links";
+    'header header header header'
+    'title title title title'
+    'tile tile tile tile'
+    'tech tech tech tech'
+    'links links links links';
 }
 
 .projects__tabs {
@@ -103,10 +102,10 @@
 .projects__tile {
   display: grid;
   grid-area: tile;
-  grid-template-rows: 40% 60%;
+  grid-template-rows: 15rem max-content;
   grid-template-areas:
-    "thumb thumb thumb"
-    "desc desc desc";
+    'thumb thumb thumb'
+    'desc desc desc';
 }
 
 .projects__thumb {

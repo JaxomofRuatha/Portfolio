@@ -2,15 +2,12 @@
 *   Informational, non-skill article of Profile section.
 */
 
-.profile-info {
-  max-width: 100%;
-}
-
 // Navigation component
 
 .profile-info__menu {
   @include flex-cent-c;
   border-right: 1px solid $icon-purple;
+  height: 100%;
 
   a {
     padding: 1rem;

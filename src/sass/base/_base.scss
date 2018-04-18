@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: url("../images/temple.svg") repeat, $indigo;
+  background: url('../images/temple.svg') repeat, $indigo;
   color: $white;
 }
 
@@ -29,11 +29,6 @@ ul {
   list-style: none;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
-}
-
-p {
-  text-align: left;
-  line-height: 120%;
 }

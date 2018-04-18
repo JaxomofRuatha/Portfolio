@@ -4,7 +4,6 @@
 
 .projects__tile {
   opacity: 0;
-  padding: 1rem 0;
 }
 
 .projects__thumb {
@@ -13,6 +12,7 @@
   background-size: contain;
   overflow: hidden;
   height: 100%;
+  padding: 1rem;
 }
 
 .projects__desc {
@@ -51,15 +51,15 @@
 }
 
 .projects__code:before {
-  content: "\f09b   ";
-  font-family: "Font Awesome 5 Brands";
+  content: '\f09b   ';
+  font-family: 'Font Awesome 5 Brands';
   font-weight: 400;
   white-space: pre;
 }
 
 .projects__demo:before {
-  content: "\f085   ";
-  font-family: "Font Awesome 5 Free";
+  content: '\f085   ';
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   white-space: pre;
 }

@@ -15,7 +15,7 @@
 .projects__title {
   color: $icon-purple;
   font-size: 2rem;
-  padding: 0.5rem;
+  padding: 1rem;
   text-shadow: 2px 2px $indigo;
 }
 
@@ -67,6 +67,6 @@
   }
 }
 
-input[type="checkbox"]:checked ~ .projects__menu {
+input[type='checkbox']:checked ~ .projects__menu {
   transform: scaleY(1);
 }

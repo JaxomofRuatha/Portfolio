@@ -1,6 +1,5 @@
 .skills__group {
   @include flex-cent-r;
-  padding: 0.5rem 0;
   flex-wrap: wrap;
   transition: transform 0.5s ease-in-out;
   transform: translateY(100%);
@@ -11,9 +10,8 @@
 }
 
 .skills__icon {
-  flex: 1 1 33.3%;
-  padding: 0.5rem;
+  padding: 1rem;
   img {
-    width: 6rem;
+    width: 5rem;
   }
 }

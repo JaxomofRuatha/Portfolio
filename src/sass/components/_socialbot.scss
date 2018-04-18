@@ -5,24 +5,6 @@
   margin: 0 -1rem -1rem -1rem;
 }
 
-.socialbot__email,
-.socialbot__link {
-  background: $dark-indigo;
-  z-index: 2;
-}
-
-.socialbot__email {
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  color: orangered;
-  font-size: 1.5rem;
-  padding: 1.4rem;
-  &:hover {
-    background: orangered;
-    color: $dark-indigo;
-  }
-}
-
 .socialbot__flex {
   @include flex-cent-r;
   position: relative;
@@ -30,6 +12,8 @@
 }
 
 .socialbot__link {
+  background: $dark-indigo;
+  z-index: 2;
   flex: 1;
   font-size: 1.3rem;
   width: 100%;
@@ -54,9 +38,16 @@
   .fa-twitch {
     color: #6441a4;
   }
+}
 
-  &:last-of-type {
-    border-bottom-right-radius: 10px;
+.socialbot__link--email {
+  border-radius: 0 10px 0 10px;
+  color: orangered;
+  font-size: 1.5rem;
+  padding: 1.4rem;
+  &:hover {
+    background: orangered;
+    color: $dark-indigo;
   }
 }
 
