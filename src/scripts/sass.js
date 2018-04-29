@@ -1,19 +1,17 @@
 const sass = require('node-sass');
 const postcss = require('postcss');
-const eyeglass = require('eyeglass');
 const fs = require('fs');
 const uncss = require('uncss').postcssPlugin;
 const cssnext = require('postcss-cssnext');
 
 const sassResult = new Promise((res, rej) => {
   sass.render(
-    eyeglass({
+    {
       file: 'src/sass/style.scss',
       outFile: 'public/css/style.css',
-      precision: 10,
       sourceMap: true,
       sourceMapEmbed: true
-    }),
+    },
     (err, result) => {
       if (err) {
         rej(err);
@@ -25,7 +23,8 @@ const sassResult = new Promise((res, rej) => {
 });
 
 const uncssOpts = {
-  html: ['public/index.html']
+  html: ['public/index.html'],
+  ignore: [/.*socialbot__desc.*/]
 };
 
 sassResult.then(result => {

@@ -11,13 +11,37 @@
   width: 100%;
 }
 
+.socialbot__desc {
+  position: absolute;
+  top: 0;
+  bottom: 40%;
+  left: -10%;
+  right: 0;
+  border-top-right-radius: 10px;
+  color: $dark-indigo;
+  font-weight: bold;
+  transition: transform 0.5s;
+
+  &--visible {
+    transform: translateY(-100%);
+  }
+}
+
 .socialbot__link {
-  background: $dark-indigo;
+  background-color: $dark-indigo;
   z-index: 2;
   flex: 1;
   font-size: 1.3rem;
   width: 100%;
   padding: 0.5rem;
+
+  &:hover i {
+    color: $dark-indigo;
+  }
+
+  i {
+    pointer-events: none;
+  }
 
   .fa-github {
     color: #2dba4e;
@@ -38,6 +62,10 @@
   .fa-twitch {
     color: #6441a4;
   }
+
+  &:last-child {
+    border-bottom-right-radius: 10px;
+  }
 }
 
 .socialbot__link--email {
@@ -45,19 +73,4 @@
   color: orangered;
   font-size: 1.5rem;
   padding: 1.4rem;
-  &:hover {
-    background: orangered;
-    color: $dark-indigo;
-  }
-}
-
-.socialbot__desc {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  background: orangered;
-  z-index: 1;
-  border-bottom-right-radius: 10px;
 }

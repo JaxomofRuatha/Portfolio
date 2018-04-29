@@ -1,10 +1,10 @@
-const raf = require("raf").polyfill;
+const raf = require('raf').polyfill;
 
 raf();
 
 function tabsSelect(parent, tab, content) {
   // Attach an event listener to the containing nav element
-  document.querySelector(`.${parent}`).addEventListener("click", e => {
+  document.querySelector(`.${parent}`).addEventListener('click', e => {
     // The content element to be displayed
     const targetContent = document.querySelector(`#${e.target.dataset.target}`);
 
@@ -21,7 +21,7 @@ function tabsSelect(parent, tab, content) {
     e.target.classList.add(`${tab}--active`);
 
     if (
-      e.target.tagName === "A" &&
+      e.target.tagName === 'A' &&
       document.querySelector(`#${priorActive}`) !== targetContent
     ) {
       document
@@ -34,48 +34,48 @@ function tabsSelect(parent, tab, content) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   /* Tab selector for skills section */
 
-  tabsSelect("skills__menu", "skills__tab", "skills__group");
+  tabsSelect('skills__menu', 'skills__tab', 'skills__group');
 
   /* Tab selector for profile section */
 
   tabsSelect(
-    "profile-info__menu",
-    "profile-info__tab",
-    "profile-info__content"
+    'profile-info__menu',
+    'profile-info__tab',
+    'profile-info__content'
   );
 
   /* Tab selector for projects section */
 
-  document.querySelectorAll(".projects__menu").forEach(tabs => {
-    tabs.addEventListener("click", e => {
+  document.querySelectorAll('.projects__menu').forEach(tabs => {
+    tabs.addEventListener('click', e => {
       const targetGroup = e.target.dataset.target;
       const newActive = document.querySelectorAll(
         `[data-group="${targetGroup}"]`
       );
 
-      document.getElementById("live-menu").checked = false;
-      document.getElementById("wip-menu").checked = false;
+      document.getElementById('live-menu').checked = false;
+      document.getElementById('wip-menu').checked = false;
 
       // Change the title of the viewer
 
-      document.querySelector(".projects__title").innerHTML = e.target.innerHTML;
+      document.querySelector('.projects__title').innerHTML = e.target.innerHTML;
 
       // Hide previously visible group content
 
-      const priorTile = document.querySelector(".projects__tile--active");
+      const priorTile = document.querySelector('.projects__tile--active');
       if (priorTile) {
-        priorTile.classList.remove("projects__tile--active");
+        priorTile.classList.remove('projects__tile--active');
       }
-      const priorLinks = document.querySelector(".projects__links--active");
+      const priorLinks = document.querySelector('.projects__links--active');
       if (priorLinks) {
-        priorLinks.classList.remove("projects__links--active");
+        priorLinks.classList.remove('projects__links--active');
       }
-      const priorTech = document.querySelector(".projects__tech--active");
+      const priorTech = document.querySelector('.projects__tech--active');
       if (priorTech) {
-        priorTech.classList.remove("projects__tech--active");
+        priorTech.classList.remove('projects__tech--active');
       }
 
       // Unhide selected group content
@@ -88,9 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* Hover/active display for socialbot navigation */
 
-  document.querySelectorAll(".socialbot__link").forEach(link => {
-    link.addEventListener("mouseover", e => {
-      console.log(e.target);
+  const sbDesc = document.querySelector('.socialbot__desc');
+
+  document.querySelectorAll('.socialbot__link').forEach(link => {
+    link.addEventListener('mouseover', e => {
+      link.style.backgroundColor = e.target.dataset.color;
+      sbDesc.textContent = e.target.dataset.name;
+      sbDesc.style.backgroundColor = e.target.dataset.color;
+      sbDesc.classList.add(`socialbot__desc--visible`);
+    });
+
+    link.addEventListener('mouseout', e => {
+      link.style.removeProperty('background-color');
+      sbDesc.classList.remove('socialbot__desc--visible');
     });
   });
 });

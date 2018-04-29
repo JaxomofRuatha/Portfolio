@@ -3,7 +3,7 @@
     "email": {
       "id": "email",
       "name": "E-Mail",
-      "color": "orangered",
+      "color": "#ff4500",
       "href":
         "mailto:jchritton33@gmail.com?subject=Collaborating%20on%20my%20next%20project",
       "icon": "fas fa-envelope"
@@ -170,7 +170,7 @@
       "description": [
         "The last project in Harvard CS50 done with C, this program takes a dictionary, creates a trie from the data, and allows spell checking text documents against the provided dictionary."
       ],
-      "image": "images/thumbnails/spellerthumb.png",
+      "image": "images/thumbnails/spellerthumb.jpg",
       "code": "https://github.com/jchritton/CS50/tree/master/pset5/speller",
       "techs": ["C", "Data Structures", "Algorithms"]
     },

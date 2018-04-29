@@ -1,10 +1,10 @@
 -var socialLinks = viewData.socialLinks
 
 nav.socialbot
-    a(class="socialbot__link socialbot__link--email" id=socialLinks.email.id href=socialLinks.email.href) 
+    a(class="socialbot__link socialbot__link--email" href=socialLinks.email.href data-color=socialLinks.email.color data-name=socialLinks.email.name) 
         i(class=socialLinks.email.icon)
     div(class="socialbot__flex")
-      each link, i in socialLinks.flex
-        a(class="socialbot__link" href=link.href)
-            i(class=link.icon)
       span(class="socialbot__desc")
+      each link, i in socialLinks.flex
+        a(class="socialbot__link" href=link.href data-color=link.color data-name=link.name)
+            i(class=link.icon)
