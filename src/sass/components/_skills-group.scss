@@ -10,7 +10,7 @@
 }
 
 .skills__icon {
-  border-radius: 10px;
+  border-radius: $radius;
   overflow: hidden;
   padding: 1rem;
   position: relative;
@@ -22,13 +22,14 @@
 
   &:after {
     @include flex-cent-r;
-    background-color: $indigo;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: $dark-glass;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
     bottom: 0;
-    color: $icon-purple;
+    color: $white;
     content: attr(data-tech);
     font-size: 1.3rem;
+    font-weight: 900;
     left: 0;
     position: absolute;
     right: 0;
