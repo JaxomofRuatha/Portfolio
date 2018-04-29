@@ -50,46 +50,52 @@
     {
       "group": "web-dev",
       "icons": [
-        "./images/techicons/htmlicon.svg",
-        "./images/techicons/css3icon.svg",
-        "./images/techicons/reacticon.svg",
-        "./images/techicons/reduxicon.svg",
-        "./images/techicons/sassicon.svg",
-        "./images/techicons/jqueryicon.svg",
-        "./images/techicons/bootstrapicon.svg"
+        {
+          "tech": "HTML 5",
+          "svg": "./images/techicons/htmlicon.svg"
+        },
+        { "tech": "CSS 3", "svg": "./images/techicons/css3icon.svg" },
+        { "tech": "React", "svg": "./images/techicons/reacticon.svg" },
+        { "tech": "Redux", "svg": "./images/techicons/reduxicon.svg" },
+        { "tech": "Sass", "svg": "./images/techicons/sassicon.svg" },
+        { "tech": "jQuery", "svg": "./images/techicons/jqueryicon.svg" },
+        { "tech": "Bootstrap", "svg": "./images/techicons/bootstrapicon.svg" }
       ]
     },
     {
       "group": "core-lang",
       "icons": [
-        "./images/techicons/cicon.svg",
-        "./images/techicons/jsicon.svg",
-        "./images/techicons/javaicon.svg",
-        "./images/techicons/pythonicon.svg",
-        "./images/techicons/phpicon.svg"
+        { "tech": "C", "svg": "./images/techicons/cicon.svg" },
+        { "tech": "JavaScript", "svg": "./images/techicons/jsicon.svg" },
+        { "tech": "Java", "svg": "./images/techicons/javaicon.svg" },
+        { "tech": "Python", "svg": "./images/techicons/pythonicon.svg" },
+        { "tech": "PHP", "svg": "./images/techicons/phpicon.svg" }
       ]
     },
     {
       "group": "db-server",
       "icons": [
-        "./images/techicons/nodejsicon.svg",
-        "./images/techicons/expressicon.svg",
-        "./images/techicons/mongodbicon.svg",
-        "./images/techicons/mysqlicon.svg",
-        "./images/techicons/postgresqlicon.svg",
-        "./images/techicons/sasicon.svg"
+        { "tech": "Node.js", "svg": "./images/techicons/nodejsicon.svg" },
+        { "tech": "Express.js", "svg": "./images/techicons/expressicon.svg" },
+        { "tech": "MongoDB", "svg": "./images/techicons/mongodbicon.svg" },
+        { "tech": "MySQL", "svg": "./images/techicons/mysqlicon.svg" },
+        {
+          "tech": "PostgreSQL",
+          "svg": "./images/techicons/postgresqlicon.svg"
+        },
+        { "tech": "SAS", "svg": "./images/techicons/sasicon.svg" }
       ]
     },
     {
       "group": "tools",
       "icons": [
-        "./images/techicons/giticon.svg",
-        "./images/techicons/npmicon.svg",
-        "./images/techicons/mochaicon.svg",
-        "./images/techicons/jesticon.svg",
-        "./images/techicons/dockericon.svg",
-        "./images/techicons/gulpicon.svg",
-        "./images/techicons/linuxicon.svg"
+        { "tech": "Git", "svg": "./images/techicons/giticon.svg" },
+        { "tech": "NPM", "svg": "./images/techicons/npmicon.svg" },
+        { "tech": "Mocha", "svg": "./images/techicons/mochaicon.svg" },
+        { "tech": "Jest", "svg": "./images/techicons/jesticon.svg" },
+        { "tech": "Docker", "svg": "./images/techicons/dockericon.svg" },
+        { "tech": "Gulp", "svg": "./images/techicons/gulpicon.svg" },
+        { "tech": "Linux", "svg": "./images/techicons/linuxicon.svg" }
       ]
     }
   ],

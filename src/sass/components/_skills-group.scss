@@ -1,8 +1,8 @@
 .skills__group {
   @include flex-cent-r;
   flex-wrap: wrap;
-  transition: transform 0.5s ease-in-out;
   transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
 }
 
 .skills__group--visible {
@@ -10,8 +10,37 @@
 }
 
 .skills__icon {
+  border-radius: 10px;
+  overflow: hidden;
   padding: 1rem;
+  position: relative;
+  transition: background-color 0.3s, transform 0.3s;
+
   img {
     width: 5rem;
+  }
+
+  &:after {
+    @include flex-cent-r;
+    background-color: $indigo;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 0;
+    color: $icon-purple;
+    content: attr(data-tech);
+    font-size: 1.3rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 70%;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $dark-indigo;
+    &:after {
+      transform: translateY(0%);
+    }
   }
 }

@@ -12,14 +12,14 @@
 }
 
 .socialbot__desc {
-  position: absolute;
-  top: 0;
-  bottom: 40%;
-  left: -10%;
-  right: 0;
   border-top-right-radius: 10px;
+  bottom: 40%;
   color: $dark-indigo;
-  font-weight: bold;
+  font-weight: 900;
+  left: -10%;
+  position: absolute;
+  right: 0;
+  top: 0;
   transition: transform 0.5s;
 
   &--visible {
@@ -29,18 +29,18 @@
 
 .socialbot__link {
   background-color: $dark-indigo;
-  z-index: 2;
   flex: 1;
   font-size: 1.3rem;
-  width: 100%;
   padding: 0.5rem;
-
-  &:hover i {
-    color: $dark-indigo;
-  }
+  width: 100%;
+  z-index: 2;
 
   i {
     pointer-events: none;
+  }
+
+  &:hover i {
+    color: $dark-indigo;
   }
 
   .fa-github {
@@ -70,7 +70,7 @@
 
 .socialbot__link--email {
   border-radius: 0 10px 0 10px;
-  color: orangered;
+  color: #ff4500;
   font-size: 1.5rem;
   padding: 1.4rem;
 }
