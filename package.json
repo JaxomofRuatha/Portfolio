@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "John Chritton - Portfolio of development work",
   "author": "John Chritton",
-  "main": "index.html",
+  "main": "public/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jchritton/Portfolio.git"
@@ -14,21 +14,22 @@
   },
   "homepage": "https://jchritton.github.io/Portfolio",
   "scripts": {
-    "start": "run-p --silent compile bs watch",
-    "test": "mocha",
-    "compile": "run-p pug sass js",
+    "start": "NODE_ENV=development run-p --silent compile bs watch",
+    "test": "NODE_ENV=test run-s compile mocha--reporter spec",
+    "compile": "run-p assets pug sass js",
     "watch": "run-p watch:**",
-    "build": "run-p build:**",
-    "bs": "browser-sync start -s 'public' --files 'public/index.html' 'public/css/style.css' 'public/bundle.js'",
+    "build": "NODE_ENV=production npm run compile",
+    "ghpages": "node src/scripts/publish.js",
+    "publish": "run-s build ghpages",
+    "bs":
+      "browser-sync start -s 'public' --files 'public/index.html' 'public/css/style.css' 'public/bundle.js'",
+    "assets": "node src/scripts/assets.js",
     "js": "node src/scripts/compile-js.js",
     "pug": "node src/scripts/pug.js",
     "sass": "node src/scripts/sass.js",
     "watch:pug": "chokidar 'src/view/**/*.pug' -c 'npm run pug'",
     "watch:sass": "chokidar 'src/sass/**/*.scss' -c 'npm run sass'",
-    "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run js'",
-    "build:js": "browserify src/js/index.js -o dist/js/bundle.js -t [ babelify --presets ['env'] ] -t [ uglifyify -cm ]",
-    "build:pug": "pug --output-style compressed -o dist src/view/index.pug",
-    "build:sass": "node-sass src/sass/style.scss --output-style compressed -o dist/css"
+    "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run js'"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -38,6 +39,7 @@
     "browserify": "^16.2.0",
     "chai": "^4.1.2",
     "chokidar-cli": "^1.2.0",
+    "gh-pages": "^1.1.0",
     "mocha": "^5.1.1",
     "node-sass": "^4.8.3",
     "npm-run-all": "^4.1.2",

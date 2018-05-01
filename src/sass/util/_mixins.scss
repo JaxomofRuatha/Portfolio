@@ -10,3 +10,9 @@
   flex-direction: column;
   justify-content: center;
 }
+
+@mixin mobile-break() {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}

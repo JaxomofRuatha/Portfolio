@@ -3,44 +3,54 @@
 */
 
 .navbar {
+  background: $dark-indigo;
+  border-bottom: 1px solid $icon-purple;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-  background: $dark-indigo;
-  border-bottom: 1px solid $icon-purple;
-  transition: transform 0.4s;
 }
 
 .navbar__logo {
-  padding: 0 0.2rem;
-  max-width: 100%;
   max-height: 95%;
+  max-width: 100%;
+  padding: 0 0.2rem;
 }
 
 .navbar__menu {
+  height: $nav-space;
   position: relative;
-  height: 3rem;
-  width: 3rem;
+  width: $nav-space;
 }
 
 .navbar__links {
-  display: flex;
+  @include flex-cent-r;
+  bottom: 0;
   flex-wrap: nowrap;
-  transition: transform 0.3s;
   position: absolute;
-  right: 3rem;
+  right: $nav-space;
+  top: 0;
   transform: scaleX(0);
   transform-origin: right;
-  align-items: center;
+  transition: transform 0.3s;
+
+  @include mobile-break {
+    right: 0;
+    transform: none;
+  }
 }
 
 .navbar__anchor {
-  padding: 1rem;
+  font-weight: 700;
+  padding: 1rem 0.5rem;
 
   &:hover,
   :active {
     color: $aqua;
+  }
+
+  @include mobile-break {
+    padding: 1rem;
   }
 }
 
@@ -49,10 +59,14 @@
 .navbar__toggle {
   @include flex-cent-c;
   height: 100%;
-  width: 100%;
   position: absolute;
   right: 0;
   top: 0;
+  width: 100%;
+
+  @include mobile-break {
+    display: none;
+  }
 }
 
 #navbar__mobile {
