@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/jchritton/Portfolio/issues"
   },
-  "homepage": "https://jchritton.github.io/Portfolio",
+  "homepage": "https://jchritton.github.io/",
   "scripts": {
     "start": "NODE_ENV=development run-p --silent compile bs watch",
     "test": "NODE_ENV=test run-s compile mocha--reporter spec",
@@ -32,29 +32,29 @@
     "watch:js": "chokidar 'src/js/**/*.js' -c 'npm run js'"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "babelify": "^8.0.0",
-    "browser-sync": "^2.23.7",
+    "browser-sync": "^2.24.1",
     "browserify": "^16.2.0",
     "chai": "^4.1.2",
     "chokidar-cli": "^1.2.0",
     "gh-pages": "^1.1.0",
     "mocha": "^5.1.1",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.0",
     "npm-run-all": "^4.1.2",
-    "postcss": "^6.0.21",
+    "postcss": "^6.0.22",
     "postcss-cssnext": "^3.1.0",
     "prettier-stylelint": "^0.4.2",
     "pug": "^2.0.3",
-    "sharp": "^0.20.1",
+    "sharp": "^0.20.2",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.1.0",
     "uglify-es": "^3.3.9",
-    "uglify-js": "^3.3.22",
-    "uglifyify": "^4.0.5",
+    "uglify-js": "^3.3.23",
+    "uglifyify": "^5.0.0",
     "uncss": "^0.16.2"
   },
   "dependencies": {
