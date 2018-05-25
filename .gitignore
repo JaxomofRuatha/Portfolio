@@ -3,6 +3,7 @@
 
 # build files
 /dist
+/public
 
 # misc
 /archive

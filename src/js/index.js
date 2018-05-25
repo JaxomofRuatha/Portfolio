@@ -1,7 +1,3 @@
-const raf = require('raf').polyfill;
-
-raf();
-
 function tabsSelect(parent, tab, content) {
   // Attach an event listener to the containing nav element
   document.querySelector(`.${parent}`).addEventListener('click', e => {
